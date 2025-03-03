@@ -1,0 +1,15 @@
+targets, factors
+User_Education, User_Education
+Security_Policies, Security_Policies
+Security_Patches, Security_Patches
+Network_Monitoring, Network_Monitoring
+Backups, Security_Policies & !Malware
+Malware, Exploits & !Antivirus & !Strong_Password & !Firewall
+Security_State, Backups & !Unauthorized_Access
+Firewall, Network_Monitoring | Security_Patches
+Unauthorized_Access, (Malware | Phishing_Attack) & !TwoFactAut & !Strong_Password & !Firewall
+Exploits, !Strong_Password | !TwoFactAut
+Antivirus, Security_Patches | User_Education
+Strong_Password, User_Education
+TwoFactAut, Strong_Password | User_Education | Security_Policies
+Phishing_Attack, !TwoFactAut | !User_Education
