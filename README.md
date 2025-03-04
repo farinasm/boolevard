@@ -52,7 +52,7 @@ For full BooLEVARD documentaiton visit our [GitHub Documentation](Pending) page.
 
 ## Citing BooLEVARD and Contributors
 
-*Citation not available. BooLEVARD has not been published and is not available as pre-prit yet.* 
+*Citation not available. BooLEVARD has not been published and is not available as pre-print yet.* 
 
 **Contributors:** Marco Fariñas, Eirini Tsirvouli, John Zobolas, Tero Aittokallio, Åsmund Flobak, Kaisa Lehti.
 
