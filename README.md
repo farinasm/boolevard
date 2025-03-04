@@ -1,11 +1,41 @@
-#### README HERE
+# BooLEVARD
 
+![BooLEVARD Logo](LOGOLINK)
 
-<b>Installation</b><br>
+[![PyPI version](https://img.shields.io/pypi/v/pydruglogics)](PYPIPACKAGE)
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://github.com/farinasm/boolevard/blob/main/LICENSE/)
+[![Documentation](https://img.shields.io/badge/docs-latest-brightgreen.svg)](https://github.com/farinasm/boolevard/blob/main/LICENSE/)
 
-Copy and paste the code below in your console<br>
-<code>pip install git+https://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@github.com/farinasm/boolevard.git</code><br><br>
+BooLEVARD is a Python package designed to compute the number of paths leading to node activations or inactivations in Boolean models.
 
-A small tutorial + toy model can be found at the tutorial folder.
+## Features
+- Import Boolean models in `.bnet` format.
+- Compute the number of paths leading to the local states of a list of nodes.
+- Perform model perturbations.
+- Export back models to `.bnet`format.
 
-Taking a mimosa in a Boolevard aha Eirini?
+## Instalation from PyPI:
+
+To install BooLEVARD from PyPi, install the main package using pip:
+
+```bash
+pip install boolevard
+```
+
+The dependencies can be installed by running the following code:
+
+```bash
+pip install -r [INSERT LINK]
+```
+
+## Installation with conda
+
+To install BooLEVARD using conda, install the main package using conda:
+
+```bash
+conda install farinasm::boolevard
+```
+
+## Installation from source
+
+To install the latest development version
