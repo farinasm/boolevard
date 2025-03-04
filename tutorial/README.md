@@ -1,6 +1,6 @@
 <h1 style="margin-bottom: 50px;"> [Tutorial] Finding vulnerabilities in a Cybersecurity model using BooLEVARD</h1>
 <p>
-    In this tutorial, we will explore a small Boolean model designed to simulate different cybersecurity scenarios using a [Jupyter Notebook](https://github.com/farinasm/boolevard/blob/main/tutorial/tutorial.ipynb). The model consists of nodes representing key components of a cybersecurity system, and the goal of this tutorial is to evaluate how different conditions and guidelines affect the overall security state of the system.
+    In this tutorial, we will explore a small Boolean model designed to simulate different cybersecurity scenarios. The model consists of nodes representing key components of a cybersecurity system, and the goal of this tutorial is to evaluate how different conditions and guidelines affect the overall security state of the system.
 </p>
 <p>
     The model includes the following nodes: <br><br>
