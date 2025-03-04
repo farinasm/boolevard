@@ -25,7 +25,7 @@ pip install boolevard
 The dependencies can be installed by running the following code:
 
 ```bash
-pip install -r [INSERT LINK]
+pip install -r https://raw.githubusercontent.com/farinasm/boolevard/main/requirements.txt
 ```
 
 ## Installation with conda
@@ -38,4 +38,22 @@ conda install farinasm::boolevard
 
 ## Installation from source
 
-To install the latest development version
+To install the latest development version, BooLEVARD can also be installed from the source:
+
+```bash
+git clone https://github.com/farinasm/boolevard.git
+cd boolevard
+pip install .
+pip install -r requirements.txt
+```
+
+## Documentation
+For full BooLEVARD documentaiton visit our [GitHub Documentation](Pending) page.
+
+## Citing BooLEVARD and Contributors
+
+*Citation not available. BooLEVARD has not been published and is not available as pre-prit yet.* 
+
+**Contributors:** Marco Fariñas, Eirini Tsirvouli, John Zobolas, Tero Aittokallio, Åsmund Flobak, Kaisa Lehti.
+
+**Contact:** Marco Fariñas - marco.farinas@gmail.com
