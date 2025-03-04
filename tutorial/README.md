@@ -28,5 +28,6 @@
     </ul>
 
 </p>
-![Network](https://github.com/farinasm/boolevard/blob/main/tutorial/security_model.png)
+
+![Network Visual](https://github.com/farinasm/boolevard/blob/main/tutorial/security_model.png)
 
