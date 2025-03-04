@@ -1,0 +1,4 @@
+pyeda==0.26.0
+mpbn
+colomoto_jupyter
+pandas
