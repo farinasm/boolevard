@@ -1,7 +1,4 @@
-<h1 style="margin-bottom: 50px;"> BooLEVARD: Boolean Logical Evaluation of Activation and Repression in Directed pathways</h1>
-<h5 style="margin-bottom: 2px; margin-top: 0px;">
-    <b><span style="color: green;">[Tutorial]</span> <span>Finding vulnerabilities in a Cybersecurity model</b></span>
-</h5>
+<h1 style="margin-bottom: 50px;"> [Tutorial] Finding vulnerabilities in a Cybersecurity model using BooLEVARD</h1>
 <p>
     In this tutorial, we will explore a small Boolean model designed to simulate different cybersecurity scenarios. The model consists of nodes representing key components of a cybersecurity system, and the goal of this tutorial is to evaluate how different conditions and guidelines affect the overall security state of the system.
 </p>
