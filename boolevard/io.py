@@ -70,7 +70,7 @@ class BooLEV:
         return Pert(self, perturbation, additive)
     
 
-def load(file_path):
+def Load(file_path):
     '''
     Loads the model and returns a BooLEV-class object
     '''
