@@ -2,14 +2,14 @@ import copy
 import mpbn
 from colomoto_jupyter import tabulate
 
-def pert(model, perturbation, additive = True):
+def Pert(model, perturbation, additive = True):
     '''
     Perturb the model by creating a perturbation node that
     targets a specific node in the model, simulating a positive (ACT)
     or negative (INH) effect in the target.
     '''
-    pert_model = copy.deepcopy(model)
-    content = model.content.splitlines()
+    pert_model = copy.copy(model)
+    content = pert_model.bnet
     rules = {}
 
     for line in content:
@@ -44,11 +44,15 @@ def pert(model, perturbation, additive = True):
     for idx, (target, factor) in enumerate(new_rules.items()):
         new_content.append(f"{target}, {factor}")
 
-    pert_model.content = "\n".join(new_content)
-    pert_model.file_path = model.file_path.replace(".bnet", "_pert_{tnode}_{pertType}.bnet")
-    pert_model_mpbn = mpbn.MPBooleanNetwork(new_rules)
-    pert_model.stable_states = tabulate(list(pert_model_mpbn.attractors()))
-    pert_model.info = pert_model.ModelInfo()
-    pert_model.info = pert_model.info.loc[:, (pert_model.info.loc[[pnode]] == 1).all(axis = 0) | pert_model.info.columns.str.contains("DNF")]
-
+    pert_model.bnet = "\n".join(new_content)
+    pert_model.Nodes = list(new_rules.keys())
+    pert_model.DNFs = dict(zip(pert_model.Nodes, [expr(rule.replace(" ", "").replace("!", "~")).to_dnf() for rule in new_rules.values()]))
+    pert_model.NDNFs = dict(zip(pert_model.Nodes, [ExprNot(expr(rule.replace(" ", "").replace("!", "~"))).to_dnf() for rule in new_rules.values()]))
+    
+    mpbn_model = mpbn.MPBooleanNetwork(new_rules)
+    pert_model.SS = tabulate(list(mpbn_model.attractors()))
+    pert_model.Info = pd.concat([pert_model.SS.transpose(), pd.DataFrame({"DNF": pert_model.DNFs, "NDNF": pert_model.NDNFs}, index = pert_model.Nodes)], axis = 1) 
+    pert_model.Info = pert_model.Info.loc[:, ~(pert_model.Info == "*").any()]
+    pert_model.Info = pert_model.Info.loc[:, (pert_model.Info.loc[[pnode]] == 1).all(axis = 0) | pert_model.Info.columns.str.contains("DNF")]
+    
     return pert_model
