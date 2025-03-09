@@ -93,7 +93,7 @@ class BooLEV:
 
         Returns:
         ********
-        Dict
+        dict
             Dictionary containing de drivers of each node within the stable state.
 
         Example:
@@ -122,7 +122,7 @@ class BooLEV:
         Example:
         **********
         >>> model = blv.Load("model.bnet")
-        >>> model.CountPaths(["Node1, "Node2"], ss_wise = False)
+        >>> model.CountPaths(["Node1", "Node2"], ss_wise = False)
         """
         return CountPaths(self.Info, tNodes, ss_wise)
     
@@ -139,7 +139,7 @@ class BooLEV:
         perturbation: str
             String containing the target node and the perturbation type separated by a percentage symbol. E.g. "Node%ACT", "Node%INH".
         additive: bool
-            If True, the perturbation is additive (i.e. the regulation is incorporated to the target node's rule). Otherwise, the perturbation is substitutive (i.e. the regulation replaces the target node's rule). By default: True    ---------
+            If True, the perturbation is additive (i.e. the regulation is incorporated to the target node's rule). Otherwise, the perturbation is substitutive (i.e. the regulation replaces the target node's rule). By default: True
 
         Returns:
         ********
@@ -169,12 +169,11 @@ def Load(file_path:str):
 
     Returns:
     **********
-    BooLEV object
+    BooLEV: object
         A `BooLEV` object containing the model with the following attributes:
         
         - `Nodes` (list): List containing the nodes of the model.
-        - `DNFs` (dict): Dictionary with the canonical Disjunctive Normal Form (cDNF) 
-        of each node.
+        - `DNFs` (dict): Dictionary with the canonical Disjunctive Normal Form (cDNF) of each node.
         - `NDNFs` (dict): Dictionary with the cDNF of the negated rule of each node.
         - `SS` (pd.DataFrame): DataFrame containing the stable states.
         - `Info` (pd.DataFrame): DataFrame containing the stable states, cDNFs, and cNDNFs.
