@@ -54,20 +54,15 @@ class BooLEV:
     
     # Methods
     def Export(self, file_path:str):
-        '''
-        Exports the model in .bnet format. 
+        """
+        Exports the model in .bnet format.
 
-        Arguments
-        ---------
-        file_path (str): path to export the model in .bnet format..
-        ---------
+        Args:
+            - file_path (str): Path to export the model.
 
-        Returns
-        ---------
-        BooLEV object
-            Model (BooLEV object) updated with the perturbation while saving it in the specified location.
-        ---------
-        '''
+        Returns:
+            - BooLEV: The updated BooLEV object.
+        """
 
         with open(file_path, "w") as f:
             
@@ -87,21 +82,17 @@ class BooLEV:
         return self
     
     def Drivers(self, ss: int):
-        '''
+        """
         Extracts drivers from (N)DNFs based on the local state of the node within a given stable state.
         
-        Arguments
-        ---------
-        model_info (pd.DataFrame): Info attribute of the BooLEV object.
-        ss (int): Stable State to evaluate.
-        ---------
+        Args:
+
+        - model_info (pd.DataFrame): Info attribute of the BooLEV object.
+        - ss (int): Stable State to evaluate.
 
         Returns
-        ---------
-        dict
-            Dictionary containing de drivers of each node within the stable state.
-        ---------
-        '''
+            - Dict: Dictionary containing de drivers of each node within the stable state.
+        """
         return Drivers(self.Info, ss)
 
     def CountPaths(self, tNodes:list, ss_wise = False):
