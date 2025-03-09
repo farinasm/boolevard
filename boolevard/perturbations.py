@@ -43,6 +43,8 @@ def Pert(model, perturbation, additive = True):
     pnode = tnode + "_" + pertType
     new_rules[pnode] = pnode
     new_content = []
+
+    new_content.append(f"# Perturbation: {perturbation}")
     new_content.append("targets, factors")
 
     for idx, (target, factor) in enumerate(new_rules.items()):
@@ -52,6 +54,8 @@ def Pert(model, perturbation, additive = True):
     pert_model.Nodes = list(new_rules.keys())
     pert_model.DNFs = dict(zip(pert_model.Nodes, [expr(rule.replace(" ", "").replace("!", "~")).to_dnf() for rule in new_rules.values()]))
     pert_model.NDNFs = dict(zip(pert_model.Nodes, [ExprNot(expr(rule.replace(" ", "").replace("!", "~"))).to_dnf() for rule in new_rules.values()]))
+    pert_model._IsPert = any(line.startswith("# Perturbed") for line in pert_model.bnet)
+    pert_model._Pert = [line.split(":")[1].strip() for line in pert_model.bnet if line.startswith("# Perturbed")]
     
     mpbn_model = mpbn.MPBooleanNetwork(new_rules)
     pert_model.SS = tabulate(list(mpbn_model.attractors()))

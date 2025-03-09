@@ -17,7 +17,9 @@ class BooLEV:
         self.DNFs = dict(zip(self.Nodes, self.Info["DNF"]))
         self.NDNFs = dict(zip(self.Nodes, self.Info["NDNF"]))
         self.SS = self.Info.drop(["DNF", "NDNF"], axis = 1)
-        self.IsPert = False
+        self._IsPert = any(line.startswith("# Perturbed") for line in self.bnet)
+        self._Pert = [line.split(":")[1].strip() for line in self.bnet if line.startswith("# Perturbed")]
+        self._PertType
 
     def __repr__(self):
         return f"<BooLEV object at {hex(id(self))}>"
@@ -49,6 +51,10 @@ class BooLEV:
         '''
 
         with open(file_path, "w") as f:
+            
+            if self._IsPert == True:
+                f.write(f"# Perturbed model with {self._Pert} {self._PertType} perturbation\n")
+            
             f.write("targets, factors\n")
 
             for line, (target, factor) in enumerate(zip(self.Nodes, self.Info["DNF"])):
