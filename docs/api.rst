@@ -1,23 +1,15 @@
 API Reference
 =============
 
-This page contains the API reference for the Neko package.
-
-BooLEV Class
-
--------------
-
-BooLEVARD uses objects of ``BooLEV`` class, generated from Boolean models in ``.bnet`` format. A ``BooLEV`` object is generated as follows:
+This page contains the API reference for the Neko package. Boolevard can be imported as follows:
 
 .. code-block:: python
-
     import boolevard as blv
 
-    model = blv.Load("PATH STORING THE MODEL")
+Loading an object of BooLEV class
+-------------
 
-``BooLEV``objects include the following attributes:
-
-
-``BooLEV`` objects integrate the following methods:
+BooLEVARD uses objects of ``BooLEV`` class, generated from Boolean models in ``.bnet`` format. A ``BooLEV`` object is generated using the ``Load`` function:
 
 .. autofunction:: boolevard.io.Load
+    :no-index:

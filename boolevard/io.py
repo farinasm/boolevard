@@ -158,5 +158,9 @@ def Load(file_path:str):
         - `NDNFs` (dict): Dictionary with the cDNF of the negated rule of each node.
         - `SS` (pd.DataFrame): DataFrame containing the stable states.
         - `Info` (pd.DataFrame): DataFrame containing the stable states, cDNFs, and cNDNFs.
+
+    Example:
+    **********
+    >>> model = blv.Load("model.bnet")
     """
     return BooLEV(file_path)

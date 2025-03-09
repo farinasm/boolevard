@@ -3,8 +3,7 @@ API Reference
 
 This page contains the API reference for the Neko package.
 
-BooLEV Class
-
+Loading an object of BooLEV class
 -------------
 
 BooLEVARD uses objects of ``BooLEV`` class, generated from Boolean models in ``.bnet`` format. A ``BooLEV`` object is generated as follows:
@@ -21,3 +20,4 @@ BooLEVARD uses objects of ``BooLEV`` class, generated from Boolean models in ``.
 ``BooLEV`` objects integrate the following methods:
 
 .. autofunction:: boolevard.io.Load
+    :no-index:

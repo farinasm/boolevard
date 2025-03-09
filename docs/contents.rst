@@ -7,6 +7,6 @@ Contents
    :caption: API Reference
 
    api
-   BooLEV
+   Load() a model <api#boolevard.io.Load>
 
 
