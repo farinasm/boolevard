@@ -13,7 +13,15 @@ drivers = {}
 
 def Drivers(model_info, ss):
     '''
-    Extracts drivers from (N)DNFs based on the local state of the node within a given stable state
+    Extracts drivers from (N)DNFs based on the local state of the node within a given stable state.aaaaaaaaaaaaaaaaaa
+    a
+    a
+    a
+    a
+    - Args:
+        - whatever
+    @param model_info: Info attribute of the BooLEV object.
+    @param ss: Stable State to evaluate.
     '''
     print(f"Evaluating Stable State: {ss}")
 
@@ -38,15 +46,16 @@ def Drivers(model_info, ss):
         
 def CountPaths(model_info, tNodes, ss_wise = False):
     '''
-    Calculates the signed path count leading to the local state of a node
-    contained in a list. Positive if the local state is 1 and negative if 0.
+    Calculates the signed path count leading to the local state of a node contained in a list. Positive if the local state is 1 and negative if 0.
+    @param: model_info: Info attribute of the BooLEV object.
+    @param: tNodes: list of target nodes to evaluate.
+    @param: ss_wise: if True, returns a list with the corresponding path counts leading to a target's local state for each stable state. Otherwise, it computes the average path count across all stable states contained in the Info attribute of the BooLEV object. By default: False.
     '''
 
     # Functions:
     def _LinearPaths(tNode):
         '''
-        Calls resolvePaths and asigns a positive sign if
-        the local state of the target node is 1, negative if 0.
+        Calls resolvePaths and asigns a positive sign if the local state of the target node is 1, negative if 0.
         '''
         _ResolvePaths([tNode], True)
 
@@ -55,8 +64,7 @@ def CountPaths(model_info, tNodes, ss_wise = False):
 
     def _ResolvePaths(path:list, save):
         '''
-        Construct paths leading to the target's node local state
-        and add them to a counter.
+        Construct paths leading to the target's node local state and add them to a counter.
         '''
         global completePaths
 
@@ -104,8 +112,7 @@ def CountPaths(model_info, tNodes, ss_wise = False):
     
     def _FilterLoops(path, block):
         '''
-        Check for loops at current elongation step.
-        Loops will be discarded.
+        Check for loops at current elongation step. Loops will be discarded.
         '''
         if block[0]== path[-1]:
             return False, True
@@ -118,8 +125,7 @@ def CountPaths(model_info, tNodes, ss_wise = False):
     
     def _ExtractNodes(last):
         '''
-        Extracts the nodes from a path and replaces
-        them by their drivers.
+        Extracts the nodes from a path and replaces them by their drivers.
         '''
         global stored_nodes, drivers
         
@@ -154,8 +160,7 @@ def CountPaths(model_info, tNodes, ss_wise = False):
 
     def _ExtractNodesOptimizeDrivers(last): 
         '''
-        Retrieves the nodes and processes the node list when
-        drivers are being optimized.
+        Retrieves the nodes and processes the node list when drivers are being optimized.
         '''
         global drivers
 
