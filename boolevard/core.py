@@ -143,9 +143,9 @@ class BooLEV:
         tNodes: list
             List of target nodes to evaluate.
         perturbation: str
-            String containing the target node and the perturbation type separated by a percentage symbol. E.g. "Node%ACT", "Node%INH".
+            String containing the target node and the perturbation type separated by a percentage symbol. E.g. `"Node%ACT"`, `"Node%INH"`.
         additive: bool
-            If True, the perturbation is additive (i.e. the regulation is incorporated to the target node's rule). Otherwise, the perturbation is substitutive (i.e. the regulation replaces the target node's rule). By default: True
+            If True, the perturbation is additive (i.e. the regulation is incorporated to the target node's rule). Otherwise, the perturbation is substitutive (i.e. the regulation replaces the target node's rule). By default: True.
 
         Returns:
         ********

@@ -18,9 +18,11 @@
         <script src="_static/documentation_options.js?v=01f34227"></script>
         <script src="_static/doctools.js?v=9bcbadda"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Installation" href="installation.html" />
     <link rel="prev" title="Contents" href="contents.html" /> 
 </head>
 
@@ -43,7 +45,7 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">API Reference</span></p>
+              <p class="caption" role="heading"><span class="caption-text">API</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">API Reference</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#loading-an-object-of-boolev-class">Loading an object of BooLEV class</a></li>
@@ -56,6 +58,15 @@
 <li class="toctree-l2"><a class="reference internal" href="#exporting-boolev-objects">Exporting BooLEV objects</a></li>
 </ul>
 </li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">User Guide</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial.html">Tutorial</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Citation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="citation.html">Citation and Contributors</a></li>
 </ul>
 
         </div>
@@ -84,7 +95,16 @@
              
   <section id="api-reference">
 <h1>API Reference<a class="headerlink" href="#api-reference" title="Link to this heading"></a></h1>
+<a class="reference external image-reference" href="https://pypi.org/project/boolevard/"><img alt="Version" src="https://img.shields.io/pypi/v/boolevard" />
+</a>
+<a class="reference external image-reference" href="https://github.com/farinasm/boolevard/blob/main/LICENSE/"><img alt="License" src="https://img.shields.io/badge/License-GPLv3-blue.svg" />
+</a>
+<a class="reference external image-reference" href="https://github.com/farinasm/boolevard/"><img alt="Documentation" src="https://img.shields.io/badge/docs-latest-brightgreen.svg" />
+</a>
 <p>This page contains the API reference for the Neko package. Boolevard can be imported as follows:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">boolevard</span> <span class="k">as</span> <span class="nn">blv</span>
+</pre></div>
+</div>
 <section id="loading-an-object-of-boolev-class">
 <h2>Loading an object of BooLEV class<a class="headerlink" href="#loading-an-object-of-boolev-class" title="Link to this heading"></a></h2>
 <p>BooLEVARD uses objects of <code class="docutils literal notranslate"><span class="pre">BooLEV</span></code> class, generated from Boolean models in <code class="docutils literal notranslate"><span class="pre">.bnet</span></code> format. A <code class="docutils literal notranslate"><span class="pre">BooLEV</span></code> object is generated using the <code class="docutils literal notranslate"><span class="pre">Load</span></code> function:</p>
@@ -225,16 +245,27 @@
 <dt class="sig sig-object py">
 <span class="sig-prename descclassname"><span class="pre">BooLEV.</span></span><span class="sig-name descname"><span class="pre">Export</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span></dt>
 <dd><p>Exports the model in .bnet format.</p>
+<section id="id10">
+<h3>Parameters<a class="headerlink" href="#id10" title="Link to this heading"></a></h3>
 <dl class="simple">
-<dt>Args:</dt><dd><ul class="simple">
-<li><p>file_path (str): Path to export the model.</p></li>
-</ul>
-</dd>
-<dt>Returns:</dt><dd><ul class="simple">
-<li><p>BooLEV: The updated BooLEV object.</p></li>
-</ul>
+<dt>file_path: str</dt><dd><p>Path to export the model.</p>
 </dd>
 </dl>
+</section>
+<section id="id11">
+<h3>Returns:<a class="headerlink" href="#id11" title="Link to this heading"></a></h3>
+<dl class="simple">
+<dt>BooLEV: object</dt><dd><p>The BooLEV object.</p>
+</dd>
+</dl>
+</section>
+<section id="id12">
+<h3>Example:<a class="headerlink" href="#id12" title="Link to this heading"></a></h3>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">model</span> <span class="o">=</span> <span class="n">blv</span><span class="o">.</span><span class="n">Load</span><span class="p">(</span><span class="s2">&quot;model.bnet&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">model</span><span class="o">.</span><span class="n">Export</span><span class="p">(</span><span class="s2">&quot;model.bnet&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
 </dd></dl>
 
 </section>
@@ -245,6 +276,7 @@
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="contents.html" class="btn btn-neutral float-left" title="Contents" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="installation.html" class="btn btn-neutral float-right" title="Installation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

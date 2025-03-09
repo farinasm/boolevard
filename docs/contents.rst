@@ -4,8 +4,21 @@ Contents
 
 .. toctree::
    :maxdepth: 2
-   :caption: API Reference
+   :caption: API
 
    api
+
+.. toctree::
+   :maxdepth: 2
+   :caption: User Guide
+
+   installation
+   tutorial
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Citation   
+
+   citation
 
 

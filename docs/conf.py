@@ -28,6 +28,7 @@ if readme.exists():
 # -- General configuration ---------------------------------------------------
 extensions = [
     'sphinx.ext.autodoc',
+    'nbsphinx'
 ]
 
 autosummary_generate = True

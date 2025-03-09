@@ -1,2 +1,2 @@
 from .utils import *
-from .io import *
+from .core import *
