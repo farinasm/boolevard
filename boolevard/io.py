@@ -64,6 +64,7 @@ class BooLEV:
 
                 else:
                     f.write(f"{target}, {factor}")
+        return self
     
     def Drivers(self, ss):
         return Drivers(self.Info, ss)
