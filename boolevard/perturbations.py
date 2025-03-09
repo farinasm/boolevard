@@ -55,7 +55,7 @@ def Pert(model, perturbation, additive = True):
     pert_model.DNFs = dict(zip(pert_model.Nodes, [expr(rule.replace(" ", "").replace("!", "~")).to_dnf() for rule in new_rules.values()]))
     pert_model.NDNFs = dict(zip(pert_model.Nodes, [ExprNot(expr(rule.replace(" ", "").replace("!", "~"))).to_dnf() for rule in new_rules.values()]))
     pert_model._IsPert = any(line.startswith("# Perturbation") for line in pert_model.bnet)
-    pert_model._Pert = [line.split(":")[1].strip() for line in pert_model.bnet if line.startswith("# Perturbation")]
+    pert_model._Pert = pert_model._Pert + [line.split(":")[1].strip() for line in pert_model.bnet if line.startswith("# Perturbation")]
     
     mpbn_model = mpbn.MPBooleanNetwork(new_rules)
     pert_model.SS = tabulate(list(mpbn_model.attractors()))
