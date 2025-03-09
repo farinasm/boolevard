@@ -50,7 +50,7 @@ def Pert(model, perturbation, additive = True):
     for idx, (target, factor) in enumerate(new_rules.items()):
         new_content.append(f"{target}, {factor}")
 
-    pert_model.bnet = "\n".join(new_content)
+    pert_model.bnet = "\n".join(new_content).splitlines()
     pert_model.Nodes = list(new_rules.keys())
     pert_model.DNFs = dict(zip(pert_model.Nodes, [expr(rule.replace(" ", "").replace("!", "~")).to_dnf() for rule in new_rules.values()]))
     pert_model.NDNFs = dict(zip(pert_model.Nodes, [ExprNot(expr(rule.replace(" ", "").replace("!", "~"))).to_dnf() for rule in new_rules.values()]))
