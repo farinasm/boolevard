@@ -19,7 +19,6 @@ class BooLEV:
         self.SS = self.Info.drop(["DNF", "NDNF"], axis = 1)
         self._IsPert = any(line.startswith("# Perturbed") for line in self.bnet)
         self._Pert = [line.split(":")[1].strip() for line in self.bnet if line.startswith("# Perturbed")]
-        self._PertType
 
     def __repr__(self):
         return f"<BooLEV object at {hex(id(self))}>"
