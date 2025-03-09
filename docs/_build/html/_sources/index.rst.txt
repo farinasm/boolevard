@@ -11,11 +11,8 @@ Add your content using ``reStructuredText`` syntax. See the
 documentation for details.
 
 
-.. toctree::
-   :maxdepth: 4
 
-   boolevard
-   modules
+
 
 
 
