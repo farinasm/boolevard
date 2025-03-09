@@ -7,6 +7,5 @@ Contents
    :caption: API Reference
 
    api
-   Load() a model <api#boolevard.io.Load>
 
 

@@ -100,18 +100,22 @@ class BooLEV:
         '''
         Calculates the signed path count leading to the local state of a node contained in a list. Positive if the local state is 1 and negative if 0.
         
-        Arguments
-        ---------
-        model_info (pd.DataFrame): Info attribute of the BooLEV object.
-        tNodes (list): list of target nodes to evaluate.
-        ss_wise (bool): if True, returns a list with the corresponding path counts leading to a target's local state for each stable state. Otherwise, it computes the average path count across all stable states contained in the Info attribute of the BooLEV object. By default: False.
-        ---------
+        Parameters:
+        **********
+        tNodes: list
+            list of target nodes to evaluate.
+        ss_wise: bool
+            if True, returns a list with the corresponding path counts leading to a target's local state for each stable state. Otherwise, it computes the average path count across all stable states contained in the Info attribute of the BooLEV object. By default: False.
 
         Returns
-        ---------
+        **********
         list
             Signed number of paths leading to the local states of the target nodes. Negative if the local state is 0, positive if 1.
-        ---------
+        
+        Example:
+        **********
+        >>> model = blv.Load("model.bnet")
+        >>> model.CountPaths(["Node1, "Node2"], ss_wise = False)
         '''
         return CountPaths(self.Info, tNodes, ss_wise)
     

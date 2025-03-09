@@ -47,6 +47,12 @@
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">API Reference</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#loading-an-object-of-boolev-class">Loading an object of BooLEV class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#using-boolev-objects">Using BooLEV objects</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#boolevard.io.BooLEV.CountPaths"><code class="docutils literal notranslate"><span class="pre">BooLEV.CountPaths()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#boolevard.io.BooLEV.Drivers"><code class="docutils literal notranslate"><span class="pre">BooLEV.Drivers()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id0"><code class="docutils literal notranslate"><span class="pre">BooLEV.CountPaths()</span></code></a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -77,17 +83,10 @@
              
   <section id="api-reference">
 <h1>API Reference<a class="headerlink" href="#api-reference" title="Link to this heading"></a></h1>
-<p>This page contains the API reference for the Neko package.</p>
+<p>This page contains the API reference for the Neko package. Boolevard can be imported as follows:</p>
 <section id="loading-an-object-of-boolev-class">
 <h2>Loading an object of BooLEV class<a class="headerlink" href="#loading-an-object-of-boolev-class" title="Link to this heading"></a></h2>
-<p>BooLEVARD uses objects of <code class="docutils literal notranslate"><span class="pre">BooLEV</span></code> class, generated from Boolean models in <code class="docutils literal notranslate"><span class="pre">.bnet</span></code> format. A <code class="docutils literal notranslate"><span class="pre">BooLEV</span></code> object is generated as follows:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">boolevard</span> <span class="k">as</span> <span class="nn">blv</span>
-
-<span class="n">model</span> <span class="o">=</span> <span class="n">blv</span><span class="o">.</span><span class="n">Load</span><span class="p">(</span><span class="s2">&quot;PATH STORING THE MODEL&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-<p><a href="#id1"><span class="problematic" id="id2">``</span></a>BooLEV``objects include the following attributes:</p>
-<p><code class="docutils literal notranslate"><span class="pre">BooLEV</span></code> objects integrate the following methods:</p>
+<p>BooLEVARD uses objects of <code class="docutils literal notranslate"><span class="pre">BooLEV</span></code> class, generated from Boolean models in <code class="docutils literal notranslate"><span class="pre">.bnet</span></code> format. A <code class="docutils literal notranslate"><span class="pre">BooLEV</span></code> object is generated using the <code class="docutils literal notranslate"><span class="pre">Load</span></code> function:</p>
 <dl class="py function">
 <dt class="sig sig-object py">
 <span class="sig-prename descclassname"><span class="pre">boolevard.io.</span></span><span class="sig-name descname"><span class="pre">Load</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span></dt>
@@ -115,6 +114,75 @@
 - <code class="docutils literal notranslate"><span class="pre">Info</span></code> (pd.DataFrame): DataFrame containing the stable states, cDNFs, and cNDNFs.</p>
 </dd>
 </dl>
+</section>
+<section id="example">
+<h3>Example:<a class="headerlink" href="#example" title="Link to this heading"></a></h3>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">model</span> <span class="o">=</span> <span class="n">blv</span><span class="o">.</span><span class="n">Load</span><span class="p">(</span><span class="s2">&quot;model.bnet&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</dd></dl>
+
+</section>
+<section id="using-boolev-objects">
+<h2>Using BooLEV objects<a class="headerlink" href="#using-boolev-objects" title="Link to this heading"></a></h2>
+<p>BooLEVARD’s main feature is to count the number of paths leading to the activation or inactivation of a given node within a given stable state or across the stable states reached by a Boolean model stored in an object of <code class="docutils literal notranslate"><span class="pre">BooLEV</span></code> class. This can be achieved by calling <code class="docutils literal notranslate"><span class="pre">CountPaths</span></code>, one of the methods integrated in <code class="docutils literal notranslate"><span class="pre">BooLEV</span></code> objects, which together with <code class="docutils literal notranslate"><span class="pre">Drivers</span></code> and <code class="docutils literal notranslate"><span class="pre">Pert</span></code> methods, will be introduced in the following sections.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="boolevard.io.BooLEV.CountPaths">
+<span class="sig-prename descclassname"><span class="pre">BooLEV.</span></span><span class="sig-name descname"><span class="pre">CountPaths</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tNodes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ss_wise</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#boolevard.io.BooLEV.CountPaths" title="Link to this definition"></a></dt>
+<dd><p>Calculates the signed path count leading to the local state of a node contained in a list. Positive if the local state is 1 and negative if 0.</p>
+<section id="arguments">
+<h3>Arguments<a class="headerlink" href="#arguments" title="Link to this heading"></a></h3>
+<p>model_info (pd.DataFrame): Info attribute of the BooLEV object.
+tNodes (list): list of target nodes to evaluate.
+ss_wise (bool): if True, returns a list with the corresponding path counts leading to a target’s local state for each stable state. Otherwise, it computes the average path count across all stable states contained in the Info attribute of the BooLEV object. By default: False.
+———</p>
+</section>
+<section id="id1">
+<h3>Returns<a class="headerlink" href="#id1" title="Link to this heading"></a></h3>
+<dl class="simple">
+<dt>list</dt><dd><p>Signed number of paths leading to the local states of the target nodes. Negative if the local state is 0, positive if 1.</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<hr class="docutils" />
+<dl class="py method">
+<dt class="sig sig-object py" id="boolevard.io.BooLEV.Drivers">
+<span class="sig-prename descclassname"><span class="pre">BooLEV.</span></span><span class="sig-name descname"><span class="pre">Drivers</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ss</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#boolevard.io.BooLEV.Drivers" title="Link to this definition"></a></dt>
+<dd><p>Extracts drivers from (N)DNFs based on the local state of the node within a given stable state.</p>
+<p>Args:</p>
+<ul class="simple">
+<li><p>model_info (pd.DataFrame): Info attribute of the BooLEV object.</p></li>
+<li><p>ss (int): Stable State to evaluate.</p></li>
+</ul>
+<dl class="simple">
+<dt>Returns</dt><dd><ul class="simple">
+<li><p>Dict: Dictionary containing de drivers of each node within the stable state.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="id0">
+<span class="sig-prename descclassname"><span class="pre">BooLEV.</span></span><span class="sig-name descname"><span class="pre">CountPaths</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tNodes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ss_wise</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#id0" title="Link to this definition"></a></dt>
+<dd><p>Calculates the signed path count leading to the local state of a node contained in a list. Positive if the local state is 1 and negative if 0.</p>
+<section id="id2">
+<h3>Arguments<a class="headerlink" href="#id2" title="Link to this heading"></a></h3>
+<p>model_info (pd.DataFrame): Info attribute of the BooLEV object.
+tNodes (list): list of target nodes to evaluate.
+ss_wise (bool): if True, returns a list with the corresponding path counts leading to a target’s local state for each stable state. Otherwise, it computes the average path count across all stable states contained in the Info attribute of the BooLEV object. By default: False.
+———</p>
+</section>
+<section id="id3">
+<h3>Returns<a class="headerlink" href="#id3" title="Link to this heading"></a></h3>
+<dl class="simple">
+<dt>list</dt><dd><p>Signed number of paths leading to the local states of the target nodes. Negative if the local state is 0, positive if 1.</p>
+</dd>
+</dl>
+<hr class="docutils" />
 </section>
 </dd></dl>
 
