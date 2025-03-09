@@ -137,26 +137,29 @@ class BooLEV:
 
 def Load(file_path:str):
     """
-    Loads a model in `b.net` format and returns a BooLEV-class object.
+    Loads a model in ``b.net`` format and returns a BooLEV-class object.
 
     This function loads a Boolean model from a `.bnet` file and returns a 
     `BooLEV` object containing the model's structure and associated data.
 
     Parameters
-    ----------
+    ---------
     file_path : str
-        Path to the `.bnet` file.
+        Path to the ``.bnet`` file.
 
     Returns
-    -------
+    ---------
     BooLEV
         A `BooLEV` object containing the model with the following attributes:
-        - `.Nodes` (list): List containing the nodes of the model.
-        - `.DNFs` (dict): Dictionary with the canonical Disjunctive Normal Form (cDNF) 
+        - `Nodes` (list): List containing the nodes of the model.
+
+        - `DNFs` (dict): Dictionary with the canonical Disjunctive Normal Form (cDNF) 
         of each node.
-        - `.NDNFs` (dict): Dictionary with the cDNF of the negated rule of each node.
-        - `.SS` (pd.DataFrame): DataFrame containing the stable states.
-        - `.Info` (pd.DataFrame): DataFrame containing the stable states, cDNFs, and cNDNFs.
-      - .Info (pd.DataFrame): DataFrame containing the stable states, cDNFs, and cNDNFs.
+
+        - `NDNFs` (dict): Dictionary with the cDNF of the negated rule of each node.
+
+        - `SS` (pd.DataFrame): DataFrame containing the stable states.
+        
+        - `Info` (pd.DataFrame): DataFrame containing the stable states, cDNFs, and cNDNFs.
     """
     return BooLEV(file_path)
