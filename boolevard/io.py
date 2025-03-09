@@ -132,8 +132,6 @@ class BooLEV:
         
         Parameters:
         ********
-        model: obj
-            BooLEV object.
         tNodes: list
             List of target nodes to evaluate.
         perturbation: str

@@ -105,7 +105,7 @@
 <section id="example">
 <h3>Example:<a class="headerlink" href="#example" title="Link to this heading"></a></h3>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">model</span> <span class="o">=</span> <span class="n">blv</span><span class="o">.</span><span class="n">Load</span><span class="p">(</span><span class="s2">&quot;model.bnet&quot;</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">model</span><span class="o">.</span><span class="n">CountPaths</span><span class="p">([</span><span class="s2">&quot;Node1, &quot;</span><span class="n">Node2</span><span class="s2">&quot;], ss_wise = False)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">model</span><span class="o">.</span><span class="n">CountPaths</span><span class="p">([</span><span class="s2">&quot;Node1&quot;</span><span class="p">,</span> <span class="s2">&quot;Node2&quot;</span><span class="p">],</span> <span class="n">ss_wise</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span>
 </pre></div>
 </div>
 </section>
@@ -125,7 +125,7 @@
 <section id="id2">
 <h3>Returns:<a class="headerlink" href="#id2" title="Link to this heading"></a></h3>
 <dl class="simple">
-<dt>Dict</dt><dd><p>Dictionary containing de drivers of each node within the stable state.</p>
+<dt>dict</dt><dd><p>Dictionary containing de drivers of each node within the stable state.</p>
 </dd>
 </dl>
 </section>
@@ -167,7 +167,7 @@
 </dd>
 <dt>perturbation: str</dt><dd><p>String containing the target node and the perturbation type separated by a percentage symbol. E.g. “Node%ACT”, “Node%INH”.</p>
 </dd>
-<dt>additive: bool</dt><dd><p>If True, the perturbation is additive (i.e. the regulation is incorporated to the target node’s rule). Otherwise, the perturbation is substitutive (i.e. the regulation replaces the target node’s rule). By default: True    ———</p>
+<dt>additive: bool</dt><dd><p>If True, the perturbation is additive (i.e. the regulation is incorporated to the target node’s rule). Otherwise, the perturbation is substitutive (i.e. the regulation replaces the target node’s rule). By default: True</p>
 </dd>
 </dl>
 </section>
@@ -217,16 +217,15 @@
 </section>
 <section id="id8">
 <h3>Returns:<a class="headerlink" href="#id8" title="Link to this heading"></a></h3>
-<dl>
-<dt>BooLEV object</dt><dd><p>A <code class="docutils literal notranslate"><span class="pre">BooLEV</span></code> object containing the model with the following attributes:</p>
+<dl class="simple">
+<dt>BooLEV: object</dt><dd><p>A <code class="docutils literal notranslate"><span class="pre">BooLEV</span></code> object containing the model with the following attributes:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">Nodes</span></code> (list): List containing the nodes of the model.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">DNFs</span></code> (dict): Dictionary with the canonical Disjunctive Normal Form (cDNF)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">DNFs</span></code> (dict): Dictionary with the canonical Disjunctive Normal Form (cDNF) of each node.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">NDNFs</span></code> (dict): Dictionary with the cDNF of the negated rule of each node.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SS</span></code> (pd.DataFrame): DataFrame containing the stable states.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Info</span></code> (pd.DataFrame): DataFrame containing the stable states, cDNFs, and cNDNFs.</p></li>
 </ul>
-<p>of each node.
-- <code class="docutils literal notranslate"><span class="pre">NDNFs</span></code> (dict): Dictionary with the cDNF of the negated rule of each node.
-- <code class="docutils literal notranslate"><span class="pre">SS</span></code> (pd.DataFrame): DataFrame containing the stable states.
-- <code class="docutils literal notranslate"><span class="pre">Info</span></code> (pd.DataFrame): DataFrame containing the stable states, cDNFs, and cNDNFs.</p>
 </dd>
 </dl>
 </section>
