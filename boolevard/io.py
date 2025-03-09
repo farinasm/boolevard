@@ -55,14 +55,22 @@ class BooLEV:
     # Methods
     def Export(self, file_path:str):
         """
-        
         Exports the model in .bnet format.
 
-        Args:
-            - file_path (str): Path to export the model.
+        Parameters
+        **********
+        file_path: str
+            Path to export the model.
 
         Returns:
-            - BooLEV: The updated BooLEV object.
+        ********
+        BooLEV: object
+            The BooLEV object.
+        
+        Example:
+        ********
+        >>> model = blv.Load("model.bnet")
+        >>> model.Export("model.bnet")
         """
 
         with open(file_path, "w") as f:

@@ -25,8 +25,14 @@ The disjunctive normal function (cDNF) of a Boolean expression can be seen as th
 
 .. automethod:: boolevard.io.BooLEV.Drivers
 
-BooLEVARD also allows to perform node perturbations, in which node inhibitions or activations are simulated. Simulations can be either additive or non-additive. In additive perturbations, the regulatory effects of the perturbation are incorporated to the target's Boolean equation. In non-additive perturbations, these regulatory effects substitute the Boolean equation of the target node. Perturbations must be writen with the following structure (case sensitive):
-- Inhibitions: `"Node%INH"`.
-- Activations: `"Node%ACT"`.
+BooLEVARD also allows to perform node perturbations, in which node inhibitions or activations are simulated. Simulations can be either additive or non-additive. In additive perturbations, the regulatory effects of the perturbation are incorporated to the target's Boolean equation. In non-additive perturbations, these regulatory effects substitute the Boolean equation of the target node. Perturbations must be writen with the following structure (case sensitive): `"Node%INH"` (inhibitions), `"Node%ACT"` (activations).
 
 .. automethod:: boolevard.io.BooLEV.Pert
+
+Exporting BooLEV objects
+-------------
+
+``BooLEV`` objects can be exported back to Boolean models calling the ``Export`` method.
+
+.. automethod:: boolevard.io.BooLEV.Export
+    :no-index:
