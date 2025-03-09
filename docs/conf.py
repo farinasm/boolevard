@@ -33,6 +33,7 @@ extensions = [
     'sphinx.ext.autosummary',
     'sphinx.ext.intersphinx',
     'sphinx.ext.autosectionlabel',
+    'numpydoc',
     'nbsphinx',
     'IPython.sphinxext.ipython_console_highlighting'
 ]
@@ -42,7 +43,7 @@ autodoc_member_order = 'groupwise'
 default_role = 'literal'
 
 # NumPy docstring conventions
-napoleon_google_docstring = True
+napoleon_google_docstring = False
 napoleon_numpy_docstring = True
 numpydoc_show_class_members = False  # don't show class members in both class and __init__ docstrings
 napoleon_include_init_with_doc = False
