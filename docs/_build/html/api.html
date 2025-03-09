@@ -50,9 +50,9 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">API Reference</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#loading-an-object-of-boolev-class">Loading an object of BooLEV class</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#using-boolev-objects">Using BooLEV objects</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#boolevard.io.BooLEV.CountPaths"><code class="docutils literal notranslate"><span class="pre">BooLEV.CountPaths()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#boolevard.io.BooLEV.Drivers"><code class="docutils literal notranslate"><span class="pre">BooLEV.Drivers()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#boolevard.io.BooLEV.Pert"><code class="docutils literal notranslate"><span class="pre">BooLEV.Pert()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#boolevard.core.BooLEV.CountPaths"><code class="docutils literal notranslate"><span class="pre">BooLEV.CountPaths()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#boolevard.core.BooLEV.Drivers"><code class="docutils literal notranslate"><span class="pre">BooLEV.Drivers()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#boolevard.core.BooLEV.Pert"><code class="docutils literal notranslate"><span class="pre">BooLEV.Pert()</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#exporting-boolev-objects">Exporting BooLEV objects</a></li>
@@ -110,7 +110,7 @@
 <p>BooLEVARD uses objects of <code class="docutils literal notranslate"><span class="pre">BooLEV</span></code> class, generated from Boolean models in <code class="docutils literal notranslate"><span class="pre">.bnet</span></code> format. A <code class="docutils literal notranslate"><span class="pre">BooLEV</span></code> object is generated using the <code class="docutils literal notranslate"><span class="pre">Load</span></code> function:</p>
 <dl class="py function">
 <dt class="sig sig-object py">
-<span class="sig-prename descclassname"><span class="pre">boolevard.io.</span></span><span class="sig-name descname"><span class="pre">Load</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span></dt>
+<span class="sig-prename descclassname"><span class="pre">boolevard.core.</span></span><span class="sig-name descname"><span class="pre">Load</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span></dt>
 <dd><p>Loads a model in <code class="docutils literal notranslate"><span class="pre">b.net</span></code> format and returns a BooLEV-class object.</p>
 <p>This function loads a Boolean model from a <code class="docutils literal notranslate"><span class="pre">.bnet</span></code> file and returns a 
 <code class="docutils literal notranslate"><span class="pre">BooLEV</span></code> object containing the model’s structure and associated data.</p>
@@ -148,8 +148,8 @@
 <h2>Using BooLEV objects<a class="headerlink" href="#using-boolev-objects" title="Link to this heading"></a></h2>
 <p>BooLEVARD’s main feature is to count the number of paths leading to the activation or inactivation of a given node within a given stable state or across the stable states reached by a Boolean model stored in an object of <code class="docutils literal notranslate"><span class="pre">BooLEV</span></code> class. This can be achieved by calling <code class="docutils literal notranslate"><span class="pre">CountPaths</span></code>, one of the methods integrated in <code class="docutils literal notranslate"><span class="pre">BooLEV</span></code> objects, which together with <code class="docutils literal notranslate"><span class="pre">Drivers</span></code> and <code class="docutils literal notranslate"><span class="pre">Pert</span></code> methods, will be introduced in the following sections.</p>
 <dl class="py method">
-<dt class="sig sig-object py" id="boolevard.io.BooLEV.CountPaths">
-<span class="sig-prename descclassname"><span class="pre">BooLEV.</span></span><span class="sig-name descname"><span class="pre">CountPaths</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tNodes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ss_wise</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#boolevard.io.BooLEV.CountPaths" title="Link to this definition"></a></dt>
+<dt class="sig sig-object py" id="boolevard.core.BooLEV.CountPaths">
+<span class="sig-prename descclassname"><span class="pre">BooLEV.</span></span><span class="sig-name descname"><span class="pre">CountPaths</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tNodes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ss_wise</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#boolevard.core.BooLEV.CountPaths" title="Link to this definition"></a></dt>
 <dd><p>Calculates the signed path count leading to the local state of a node contained in a list. Positive if the local state is 1 and negative if 0.</p>
 <section id="id1">
 <h3>Parameters:<a class="headerlink" href="#id1" title="Link to this heading"></a></h3>
@@ -178,8 +178,8 @@
 
 <p>The disjunctive normal function (cDNF) of a Boolean expression can be seen as the expression of the potential paths a node has get activated (cDNF) or inactivated (cNDNF). This is stable-state-specific and can be computed using the <code class="docutils literal notranslate"><span class="pre">Drivers</span></code> method.</p>
 <dl class="py method">
-<dt class="sig sig-object py" id="boolevard.io.BooLEV.Drivers">
-<span class="sig-prename descclassname"><span class="pre">BooLEV.</span></span><span class="sig-name descname"><span class="pre">Drivers</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ss</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#boolevard.io.BooLEV.Drivers" title="Link to this definition"></a></dt>
+<dt class="sig sig-object py" id="boolevard.core.BooLEV.Drivers">
+<span class="sig-prename descclassname"><span class="pre">BooLEV.</span></span><span class="sig-name descname"><span class="pre">Drivers</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ss</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#boolevard.core.BooLEV.Drivers" title="Link to this definition"></a></dt>
 <dd><p>Extracts drivers from (N)DNFs based on the local state of the node within a given stable state.</p>
 <section id="id4">
 <h3>Parameters:<a class="headerlink" href="#id4" title="Link to this heading"></a></h3>
@@ -206,17 +206,17 @@
 
 <p>BooLEVARD also allows to perform node perturbations, in which node inhibitions or activations are simulated. Simulations can be either additive or non-additive. In additive perturbations, the regulatory effects of the perturbation are incorporated to the target’s Boolean equation. In non-additive perturbations, these regulatory effects substitute the Boolean equation of the target node. Perturbations must be writen with the following structure (case sensitive): <code class="docutils literal notranslate"><span class="pre">&quot;Node%INH&quot;</span></code> (inhibitions), <code class="docutils literal notranslate"><span class="pre">&quot;Node%ACT&quot;</span></code> (activations).</p>
 <dl class="py method">
-<dt class="sig sig-object py" id="boolevard.io.BooLEV.Pert">
-<span class="sig-prename descclassname"><span class="pre">BooLEV.</span></span><span class="sig-name descname"><span class="pre">Pert</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">perturbation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">additive</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#boolevard.io.BooLEV.Pert" title="Link to this definition"></a></dt>
+<dt class="sig sig-object py" id="boolevard.core.BooLEV.Pert">
+<span class="sig-prename descclassname"><span class="pre">BooLEV.</span></span><span class="sig-name descname"><span class="pre">Pert</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">perturbation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">additive</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#boolevard.core.BooLEV.Pert" title="Link to this definition"></a></dt>
 <dd><p>Perturbs the model by creating a perturbation node that targets a specific node in the model, simulating a positive (ACT) or negative (INH) effect in the target.</p>
 <section id="id7">
 <h3>Parameters:<a class="headerlink" href="#id7" title="Link to this heading"></a></h3>
 <dl class="simple">
 <dt>tNodes: list</dt><dd><p>List of target nodes to evaluate.</p>
 </dd>
-<dt>perturbation: str</dt><dd><p>String containing the target node and the perturbation type separated by a percentage symbol. E.g. “Node%ACT”, “Node%INH”.</p>
+<dt>perturbation: str</dt><dd><p>String containing the target node and the perturbation type separated by a percentage symbol. E.g. <code class="docutils literal notranslate"><span class="pre">&quot;Node%ACT&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;Node%INH&quot;</span></code>.</p>
 </dd>
-<dt>additive: bool</dt><dd><p>If True, the perturbation is additive (i.e. the regulation is incorporated to the target node’s rule). Otherwise, the perturbation is substitutive (i.e. the regulation replaces the target node’s rule). By default: True</p>
+<dt>additive: bool</dt><dd><p>If True, the perturbation is additive (i.e. the regulation is incorporated to the target node’s rule). Otherwise, the perturbation is substitutive (i.e. the regulation replaces the target node’s rule). By default: True.</p>
 </dd>
 </dl>
 </section>
