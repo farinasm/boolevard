@@ -142,12 +142,12 @@ def Load(file_path:str):
     This function loads a Boolean model from a `.bnet` file and returns a 
     `BooLEV` object containing the model's structure and associated data.
 
-    Parameters
+    Parameters:
     ---------
     file_path : str
         Path to the ``.bnet`` file.
 
-    Returns
+    Returns:
     ---------
     BooLEV object
         A `BooLEV` object containing the model with the following attributes:
