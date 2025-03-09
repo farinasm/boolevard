@@ -58,4 +58,4 @@ A quick tutorial is available [here](https://github.com/farinasm/boolevard/tree/
 
 **Contributors:** Marco Fariñas, Eirini Tsirvouli, John Zobolas, Tero Aittokallio, Åsmund Flobak, Kaisa Lehti.
 
-**Contact:** Marco Fariñas - marco.farinas@gmail.com
+**Contact:** Marco Fariñas - farinasm.git@gmail.com
