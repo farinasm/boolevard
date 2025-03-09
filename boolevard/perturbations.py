@@ -8,12 +8,23 @@ from boolevard.utils import *
 
 def Pert(model, perturbation, additive = True):
     '''
-    Perturb the model by creating a perturbation node that
-    targets a specific node in the model, simulating a positive (ACT)
-    or negative (INH) effect in the target.
+    Perturb the model by creating a perturbation node that targets a specific node in the model, simulating a positive (ACT) or negative (INH) effect in the target.
+    
+    Arguments
+    ---------
+    model (obj): BooLEV object.
+    tNodes (list): list of target nodes to evaluate.
+    perturbation (str): string containing the target node and the perturbation type separated by a percentage symbol. E.g. "Node%ACT", "Node%INH".
+    additive (bool): if True, the perturbation is additive (i.e. the regulation is incorporated to the target node's rule). Otherwise, the perturbation is substitutive (i.e. the regulation replaces the target node's rule). By default: True    ---------
+
+    Returns
+    ---------
+    BooLEV object
+        Model (BooLEV object) updated with the perturbation.
+    ---------
     '''
     pert_model = copy.copy(model)
-    content = pert_model.bnet
+    content = pert_model._bnet
     rules = {}
 
     for line in content:
@@ -50,12 +61,12 @@ def Pert(model, perturbation, additive = True):
     for idx, (target, factor) in enumerate(new_rules.items()):
         new_content.append(f"{target}, {factor}")
 
-    pert_model.bnet = "\n".join(new_content).splitlines()
+    pert_model._bnet = "\n".join(new_content).splitlines()
     pert_model.Nodes = list(new_rules.keys())
     pert_model.DNFs = dict(zip(pert_model.Nodes, [expr(rule.replace(" ", "").replace("!", "~")).to_dnf() for rule in new_rules.values()]))
     pert_model.NDNFs = dict(zip(pert_model.Nodes, [ExprNot(expr(rule.replace(" ", "").replace("!", "~"))).to_dnf() for rule in new_rules.values()]))
-    pert_model._IsPert = any(line.startswith("# Perturbation") for line in pert_model.bnet)
-    pert_model._Pert = pert_model._Pert + [line.split(":")[1].strip() for line in pert_model.bnet if line.startswith("# Perturbation")]
+    pert_model._IsPert = any(line.startswith("# Perturbation") for line in pert_model._bnet)
+    pert_model._Pert = pert_model._Pert + [line.split(":")[1].strip() for line in pert_model._bnet if line.startswith("# Perturbation")]
     
     mpbn_model = mpbn.MPBooleanNetwork(new_rules)
     pert_model.SS = tabulate(list(mpbn_model.attractors()))

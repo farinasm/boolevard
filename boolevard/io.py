@@ -13,16 +13,15 @@ class BooLEV:
     def __init__(self, file_path:str):
         '''
         Initialites the BooLEV object by loading the model from a .bnet file.
-        @param file_path: path to the .bnet file.
         '''
-        self.bnet = open(file_path, "r").read().splitlines()   
+        self._bnet = open(file_path, "r").read().splitlines()   
         self.Info = self._ModelInfo(file_path)
         self.Nodes = list(self.Info.index)
         self.DNFs = dict(zip(self.Nodes, self.Info["DNF"]))
         self.NDNFs = dict(zip(self.Nodes, self.Info["NDNF"]))
         self.SS = self.Info.drop(["DNF", "NDNF"], axis = 1)
-        self._IsPert = any(line.startswith("# Perturbed") for line in self.bnet)
-        self._Pert = [line.split(":")[1].strip() for line in self.bnet if line.startswith("# Perturbed")]
+        self._IsPert = any(line.startswith("# Perturbed") for line in self._bnet)
+        self._Pert = [line.split(":")[1].strip() for line in self._bnet if line.startswith("# Perturbed")]
 
     def __repr__(self):
         '''
@@ -34,9 +33,8 @@ class BooLEV:
     def _ModelInfo(self, file_path:str):
         '''
         Retrieves the information of the model, including nodes, cDNFs and cNDNFs, and stable states.
-        @param file_path: path to the .bnet file.
         '''
-        content = self.bnet
+        content = self._bnet
         nodes = []
         DNFs = []
         NDNFs = []
@@ -57,8 +55,18 @@ class BooLEV:
     # Methods
     def Export(self, file_path:str):
         '''
-        Exports the model in .bnet format.
-        @param file_path: path to export the model in .bnet format.
+        Exports the model in .bnet format. 
+
+        Arguments
+        ---------
+        file_path (str): path to export the model in .bnet format..
+        ---------
+
+        Returns
+        ---------
+        BooLEV object
+            Model (BooLEV object) updated with the perturbation while saving it in the specified location.
+        ---------
         '''
 
         with open(file_path, "w") as f:
@@ -81,30 +89,80 @@ class BooLEV:
     def Drivers(self, ss: int):
         '''
         Extracts drivers from (N)DNFs based on the local state of the node within a given stable state.
-        @param ss: Stable State to evaluate.
+        
+        Arguments
+        ---------
+        model_info (pd.DataFrame): Info attribute of the BooLEV object.
+        ss (int): Stable State to evaluate.
+        ---------
+
+        Returns
+        ---------
+        dict
+            Dictionary containing de drivers of each node within the stable state.
+        ---------
         '''
         return Drivers(self.Info, ss)
 
     def CountPaths(self, tNodes:list, ss_wise = False):
         '''
         Calculates the signed path count leading to the local state of a node contained in a list. Positive if the local state is 1 and negative if 0.
-        @param: tNodes: list of target nodes to evaluate.
-        @param: ss_wise: if True, returns a list with the corresponding path counts leading to a target's local state for each stable state. Otherwise, it computes the average path count across all stable states contained in the Info attribute of the BooLEV object. By default: False.
+        
+        Arguments
+        ---------
+        model_info (pd.DataFrame): Info attribute of the BooLEV object.
+        tNodes (list): list of target nodes to evaluate.
+        ss_wise (bool): if True, returns a list with the corresponding path counts leading to a target's local state for each stable state. Otherwise, it computes the average path count across all stable states contained in the Info attribute of the BooLEV object. By default: False.
+        ---------
+
+        Returns
+        ---------
+        list
+            Signed number of paths leading to the local states of the target nodes. Negative if the local state is 0, positive if 1.
+        ---------
         '''
         return CountPaths(self.Info, tNodes, ss_wise)
     
     def Pert(self, perturbation:str, additive = True):
         '''
         Perturb the model by creating a perturbation node that targets a specific node in the model, simulating a positive (ACT) or negative (INH) effect in the target.
-        @param model: BooLEV object.
-        @param perturbation: string containing the target node and the perturbation type separated by a percentage symbol. E.g. "Node%ACT", "Node%INH".
-        @param additive: if True, the perturbation is additive (i.e. the regulation is incorporated to the target node's rule). Otherwise, the perturbation is substitutive (i.e. the regulation replaces the target node's rule). By default: True
-        '''
+        
+        Arguments
+        ---------
+        model (obj): BooLEV object.
+        tNodes (list): list of target nodes to evaluate.
+        perturbation (str): string containing the target node and the perturbation type separated by a percentage symbol. E.g. "Node%ACT", "Node%INH".
+        additive (bool): if True, the perturbation is additive (i.e. the regulation is incorporated to the target node's rule). Otherwise, the perturbation is substitutive (i.e. the regulation replaces the target node's rule). By default: True    ---------
+
+        Returns
+        ---------
+        BooLEV object
+            Model (BooLEV object) updated with the perturbation.
+        ---------
+            '''
         return Pert(self, perturbation, additive)
     
 
 def Load(file_path:str):
     '''
-    Loads the model and returns a BooLEV-class object
+    Loads a model in b.net format and returns a BooLEV-class object.
+    
+    Arguments
+    ---------
+    file_path (str): path to the .bnet file.
+    ---------
+
+    Returns
+    ---------
+    BooLEV object
+        Boolev object containing the model. A BooLEV object integrates the following attributes:
+
+        .Nodes (list) = list containing the nodes of the model.
+        .DNFs (dict) = dictionary containing the cDNF of each node.
+        .NDNFs (dict) = dictionary containing the cDNF of the negated rule of each node (cNDNF).
+        .SS (pd.DataFrame) = pandas dataframe containing the stable states reached by the model.
+        .Info (pd.DataFrame) = pandas dataframe containing the stable states, cDNFs and cNDNFs of the model.
+
+    ---------  
     '''
     return BooLEV(file_path)

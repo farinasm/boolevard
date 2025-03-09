@@ -13,15 +13,19 @@ drivers = {}
 
 def Drivers(model_info, ss):
     '''
-    Extracts drivers from (N)DNFs based on the local state of the node within a given stable state.aaaaaaaaaaaaaaaaaa
-    a
-    a
-    a
-    a
-    - Args:
-        - whatever
-    @param model_info: Info attribute of the BooLEV object.
-    @param ss: Stable State to evaluate.
+    Extracts drivers from (N)DNFs based on the local state of the node within a given stable state.
+    
+    Arguments
+    ---------
+    model_info (pd.DataFrame): Info attribute of the BooLEV object.
+    ss (int): Stable State to evaluate.
+    ---------
+
+    Returns
+    ---------
+    dict
+        Dictionary containing de drivers of each node within the stable state.
+    ---------
     '''
     print(f"Evaluating Stable State: {ss}")
 
@@ -47,9 +51,19 @@ def Drivers(model_info, ss):
 def CountPaths(model_info, tNodes, ss_wise = False):
     '''
     Calculates the signed path count leading to the local state of a node contained in a list. Positive if the local state is 1 and negative if 0.
-    @param: model_info: Info attribute of the BooLEV object.
-    @param: tNodes: list of target nodes to evaluate.
-    @param: ss_wise: if True, returns a list with the corresponding path counts leading to a target's local state for each stable state. Otherwise, it computes the average path count across all stable states contained in the Info attribute of the BooLEV object. By default: False.
+    
+    Arguments
+    ---------
+    model_info (pd.DataFrame): Info attribute of the BooLEV object.
+    tNodes (list): list of target nodes to evaluate.
+    ss_wise (bool): if True, returns a list with the corresponding path counts leading to a target's local state for each stable state. Otherwise, it computes the average path count across all stable states contained in the Info attribute of the BooLEV object. By default: False.
+    ---------
+
+    Returns
+    ---------
+    list
+        Signed number of paths leading to the local states of the target nodes. Negative if the local state is 0, positive if 1.
+    ---------
     '''
 
     # Functions:
