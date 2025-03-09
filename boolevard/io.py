@@ -52,7 +52,7 @@ class BooLEV:
         with open(file_path, "w") as f:
             
             if self._IsPert == True:
-                f.write(f"# Perturbed model with {self._Pert} perturbation\n")
+                f.write(f"# Perturbed model with {self._Pert} perturbation(s)\n")
             
             f.write("targets, factors\n")
 
