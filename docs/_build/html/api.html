@@ -131,23 +131,31 @@
 <dt class="sig sig-object py" id="boolevard.io.BooLEV.CountPaths">
 <span class="sig-prename descclassname"><span class="pre">BooLEV.</span></span><span class="sig-name descname"><span class="pre">CountPaths</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tNodes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ss_wise</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#boolevard.io.BooLEV.CountPaths" title="Link to this definition"></a></dt>
 <dd><p>Calculates the signed path count leading to the local state of a node contained in a list. Positive if the local state is 1 and negative if 0.</p>
-<section id="arguments">
-<h3>Arguments<a class="headerlink" href="#arguments" title="Link to this heading"></a></h3>
-<p>model_info (pd.DataFrame): Info attribute of the BooLEV object.
-tNodes (list): list of target nodes to evaluate.
-ss_wise (bool): if True, returns a list with the corresponding path counts leading to a target’s local state for each stable state. Otherwise, it computes the average path count across all stable states contained in the Info attribute of the BooLEV object. By default: False.
-———</p>
-</section>
 <section id="id1">
-<h3>Returns<a class="headerlink" href="#id1" title="Link to this heading"></a></h3>
+<h3>Parameters:<a class="headerlink" href="#id1" title="Link to this heading"></a></h3>
+<dl class="simple">
+<dt>tNodes: list</dt><dd><p>list of target nodes to evaluate.</p>
+</dd>
+<dt>ss_wise: bool</dt><dd><p>if True, returns a list with the corresponding path counts leading to a target’s local state for each stable state. Otherwise, it computes the average path count across all stable states contained in the Info attribute of the BooLEV object. By default: False.</p>
+</dd>
+</dl>
+</section>
+<section id="id2">
+<h3>Returns<a class="headerlink" href="#id2" title="Link to this heading"></a></h3>
 <dl class="simple">
 <dt>list</dt><dd><p>Signed number of paths leading to the local states of the target nodes. Negative if the local state is 0, positive if 1.</p>
 </dd>
 </dl>
 </section>
+<section id="id3">
+<h3>Example:<a class="headerlink" href="#id3" title="Link to this heading"></a></h3>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">model</span> <span class="o">=</span> <span class="n">blv</span><span class="o">.</span><span class="n">Load</span><span class="p">(</span><span class="s2">&quot;model.bnet&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">model</span><span class="o">.</span><span class="n">CountPaths</span><span class="p">([</span><span class="s2">&quot;Node1, &quot;</span><span class="n">Node2</span><span class="s2">&quot;], ss_wise = False)</span>
+</pre></div>
+</div>
+</section>
 </dd></dl>
 
-<hr class="docutils" />
 <dl class="py method">
 <dt class="sig sig-object py" id="boolevard.io.BooLEV.Drivers">
 <span class="sig-prename descclassname"><span class="pre">BooLEV.</span></span><span class="sig-name descname"><span class="pre">Drivers</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ss</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#boolevard.io.BooLEV.Drivers" title="Link to this definition"></a></dt>
@@ -169,20 +177,28 @@ ss_wise (bool): if True, returns a list with the corresponding path counts leadi
 <dt class="sig sig-object py" id="id0">
 <span class="sig-prename descclassname"><span class="pre">BooLEV.</span></span><span class="sig-name descname"><span class="pre">CountPaths</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tNodes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ss_wise</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#id0" title="Link to this definition"></a></dt>
 <dd><p>Calculates the signed path count leading to the local state of a node contained in a list. Positive if the local state is 1 and negative if 0.</p>
-<section id="id2">
-<h3>Arguments<a class="headerlink" href="#id2" title="Link to this heading"></a></h3>
-<p>model_info (pd.DataFrame): Info attribute of the BooLEV object.
-tNodes (list): list of target nodes to evaluate.
-ss_wise (bool): if True, returns a list with the corresponding path counts leading to a target’s local state for each stable state. Otherwise, it computes the average path count across all stable states contained in the Info attribute of the BooLEV object. By default: False.
-———</p>
+<section id="id4">
+<h3>Parameters:<a class="headerlink" href="#id4" title="Link to this heading"></a></h3>
+<dl class="simple">
+<dt>tNodes: list</dt><dd><p>list of target nodes to evaluate.</p>
+</dd>
+<dt>ss_wise: bool</dt><dd><p>if True, returns a list with the corresponding path counts leading to a target’s local state for each stable state. Otherwise, it computes the average path count across all stable states contained in the Info attribute of the BooLEV object. By default: False.</p>
+</dd>
+</dl>
 </section>
-<section id="id3">
-<h3>Returns<a class="headerlink" href="#id3" title="Link to this heading"></a></h3>
+<section id="id5">
+<h3>Returns<a class="headerlink" href="#id5" title="Link to this heading"></a></h3>
 <dl class="simple">
 <dt>list</dt><dd><p>Signed number of paths leading to the local states of the target nodes. Negative if the local state is 0, positive if 1.</p>
 </dd>
 </dl>
-<hr class="docutils" />
+</section>
+<section id="id6">
+<h3>Example:<a class="headerlink" href="#id6" title="Link to this heading"></a></h3>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">model</span> <span class="o">=</span> <span class="n">blv</span><span class="o">.</span><span class="n">Load</span><span class="p">(</span><span class="s2">&quot;model.bnet&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">model</span><span class="o">.</span><span class="n">CountPaths</span><span class="p">([</span><span class="s2">&quot;Node1, &quot;</span><span class="n">Node2</span><span class="s2">&quot;], ss_wise = False)</span>
+</pre></div>
+</div>
 </section>
 </dd></dl>
 
