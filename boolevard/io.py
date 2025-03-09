@@ -157,6 +157,6 @@ def Load(file_path:str):
         - `.NDNFs` (dict): Dictionary with the cDNF of the negated rule of each node.
         - `.SS` (pd.DataFrame): DataFrame containing the stable states.
         - `.Info` (pd.DataFrame): DataFrame containing the stable states, cDNFs, and cNDNFs.
-    """  - .Info (pd.DataFrame): DataFrame containing the stable states, cDNFs, and cNDNFs.
-
+      - .Info (pd.DataFrame): DataFrame containing the stable states, cDNFs, and cNDNFs.
+    """
     return BooLEV(file_path)

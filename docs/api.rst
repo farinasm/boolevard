@@ -21,4 +21,3 @@ BooLEVARD uses objects of ``BooLEV`` class, generated from Boolean models in ``.
 ``BooLEV`` objects integrate the following methods:
 
 .. autofunction:: boolevard.io.Load
-    :noindex:
