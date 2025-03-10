@@ -1,4 +1,0 @@
-Tutorial
-==========
-
-.. nbinclude:: tutorial.ipynb
