@@ -5,7 +5,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Tutorial &mdash; BooLEVARD 0.1.0 documentation</title>
-      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="_static/nbsphinx-code-cells.css?v=2aa19091" />
 
@@ -94,13 +94,14 @@
 <ul><li><p>Inputs: Security_Policies, User_Education, Network_Monitoring, and Security_Patches.</p>
 <li><p>Internal nodes: Backups, Malware, Firewall, Unauthorized_Access, Exploits, Antivirus, Strong_Password, TwoFactAut, and Phishing_Attack.</p>
 <li><p>Output nodes: Security_State.</p>
-</ul></p><div class="nbinput nblast docutils container">
+</ul></p><img alt="The Model" src="https://raw.githubusercontent.com/farinasm/boolevard/main/tutorial/security_model.png" />
+<div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">boolevard</span> <span class="k">as</span> <span class="nn">blv</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">from</span> <span class="nn">boolevard</span> <span class="kn">import</span> <span class="n">CountPaths</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">boolevard</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">blv</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">boolevard</span><span class="w"> </span><span class="kn">import</span> <span class="n">CountPaths</span>
 </pre></div>
 </div>
 </div>
@@ -108,7 +109,7 @@
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">model</span> <span class="o">=</span> <span class="n">blv</span><span class="o">.</span><span class="n">Load</span><span class="p">(</span><span class="s2">&quot;/mnt/Datos/Project_Method/boolevard/tutorial/security.bnet&quot;</span><span class="p">)</span> <span class="c1"># Load the model (BoolNet format)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">model</span> <span class="o">=</span> <span class="n">blv</span><span class="o">.</span><span class="n">Load</span><span class="p">(</span><span class="s2">&quot;security.bnet&quot;</span><span class="p">)</span> <span class="c1"># Load the model (BoolNet format)</span>
 <span class="n">check</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Security_State&quot;</span><span class="p">]</span> <span class="c1"># Set node(s) to check</span>
 </pre></div>
 </div>

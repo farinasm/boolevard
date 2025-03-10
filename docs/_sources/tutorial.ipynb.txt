@@ -39,7 +39,9 @@
     "            <code style=\"font-size: 14px; margin-bottom: 100px\">Security_State</code>.\n",
     "    </ul>\n",
     "\n",
-    "</p>"
+    "</p>\n",
+    "\n",
+    "![The Model](https://raw.githubusercontent.com/farinasm/boolevard/main/tutorial/security_model.png)"
    ]
   },
   {
@@ -59,7 +61,7 @@
    "metadata": {},
    "outputs": [],
    "source": [
-    "model = blv.Load(\"/mnt/Datos/Project_Method/boolevard/tutorial/security.bnet\") # Load the model (BoolNet format)\n",
+    "model = blv.Load(\"security.bnet\") # Load the model (BoolNet format)\n",
     "check = [\"Security_State\"] # Set node(s) to check"
    ]
   },
