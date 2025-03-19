@@ -1,7 +1,7 @@
 # BooLEVARD
 
 <div style="float: right; margin-left: 0px;">
-    <img src="/docs/Logo.svg" alt="BooLEVARD Logo" style="width: 500px; object-fit: cover;">
+    <img src="/docs/Logo.svg" alt="BooLEVARD Logo" style="width: 500px;">
 </div>
 
 [![PyPI version](https://img.shields.io/pypi/v/boolevard)](PYPIPACKAGE)
