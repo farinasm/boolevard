@@ -1,5 +1,5 @@
 # BooLEVARD
-.. figure:: /logo.svg
+.. figure:: /docs/logo.svg
    :align: right
    :figwidth: 50px
    :alt: BooLEVARD Logo
