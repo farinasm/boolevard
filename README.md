@@ -1,6 +1,6 @@
 # BooLEVARD
 
-<div style="float: right; margin-left: 0px;">
+<div style="float: left; margin-right: 20px;">
     <img src="/docs/Logo.svg" alt="BooLEVARD Logo" style="width: 500px;">
 </div>
 
