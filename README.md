@@ -2,7 +2,7 @@
 <a href="Logo">
     <img src="https://github.com/farinasm/boolevard/blob/main/docs/Logo.svg" alt="Logo" width="400">
 </a>
-<br>
+<br><br>
 
 [![PyPI version](https://img.shields.io/pypi/v/boolevard)](PYPIPACKAGE)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://github.com/farinasm/boolevard/blob/main/LICENSE/)
