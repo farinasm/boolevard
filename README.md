@@ -1,5 +1,7 @@
 # BooLEVARD
-<img src="/docs/logo.svg" alt="BooLEVARD Logo" width="50" align="right">
+
+<img src="/docs/Logo.svg" alt="BooLEVARD Logo" width="50" align="right">
+
 [![PyPI version](https://img.shields.io/pypi/v/boolevard)](PYPIPACKAGE)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://github.com/farinasm/boolevard/blob/main/LICENSE/)
 [![Documentation](https://img.shields.io/badge/docs-latest-brightgreen.svg)](https://github.com/farinasm/boolevard/)
