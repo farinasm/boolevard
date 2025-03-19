@@ -48,7 +48,7 @@ pip install -r requirements.txt
 ```
 
 ## Documentation
-For full BooLEVARD documentaiton visit our [GitHub Documentation](Pending) page.
+For full BooLEVARD documentaiton visit our [GitHub Documentation](https://farinasm.github.io/boolevard) page.
 
 A quick tutorial is available [here](https://github.com/farinasm/boolevard/tree/main/tutorial).
 
