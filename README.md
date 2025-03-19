@@ -1,7 +1,7 @@
 # BooLEVARD
 
 <a href="Logo">
-    <img src="https://github.com/farinasm/boolevard/blob/main/docs/Logo.svg" alt="Logo" width="250">
+    <img src="https://github.com/farinasm/boolevard/blob/main/docs/Logo.svg" alt="Logo" width="250">https://github.com/farinasm/boolevard/blob/main/docs/Logo.svg
 </a>
 <br><br>
 
