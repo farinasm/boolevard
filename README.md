@@ -41,6 +41,14 @@ pip install .
 pip install -r requirements.txt
 ```
 
+## Installation with conda
+
+To install BooLEVARD using conda, install the main package using conda:
+
+```bash
+conda install farinasm::boolevard
+```
+
 ## Documentation
 For full BooLEVARD documentaiton visit our [GitHub Documentation](https://farinasm.github.io/boolevard) page.
 
