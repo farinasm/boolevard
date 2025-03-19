@@ -1,6 +1,6 @@
 
 <a href="Logo">
-    <img src="https://github.com/farinasm/boolevard/blob/main/docs/Logo.svg" alt="Logo" width="400">
+    <img src="https://github.com/farinasm/boolevard/blob/main/docs/Logo.svg" alt="Logo" width="300">
 </a>
 <br><br>
 
