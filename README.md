@@ -1,5 +1,5 @@
 <a href="Logo">
-    <img src="https://github.com/farinasm/boolevard/blob/main/docs/Logo.svg" alt="Logo" width="150">
+    <img src="https://github.com/farinasm/boolevard/blob/main/docs/Logo.svg" alt="Logo" width="400">
 </a>
 <br>
 
