@@ -4,7 +4,7 @@
     <img src="https://github.com/farinasm/boolevard/blob/main/docs/Logo.svg" alt="Logo" width="250">
 </a>
 
-[![PyPI version](https://img.shields.io/pypi/v/boolevard)](PYPIPACKAGE)
+[![PyPI version](https://img.shields.io/pypi/v/boolevard)](https://pypi.org/project/boolevard/)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://github.com/farinasm/boolevard/blob/main/LICENSE/)
 [![Documentation](https://img.shields.io/badge/docs-latest-brightgreen.svg)](https://github.com/farinasm/boolevard/)
 
