@@ -30,14 +30,6 @@ The dependencies can be installed by running the following code:
 pip install -r https://raw.githubusercontent.com/farinasm/boolevard/main/requirements.txt
 ```
 
-## Installation with conda
-
-To install BooLEVARD using conda, install the main package using conda:
-
-```bash
-conda install farinasm::boolevard
-```
-
 ## Installation from source
 
 To install the latest development version, BooLEVARD can also be installed from the source:
