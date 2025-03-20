@@ -12,10 +12,10 @@ stored_nodes = {}
 drivers = {}
 
 def Drivers(model_info, ss):
-    '''
+    """
     Extracts drivers from (N)DNFs based on the local state of the node within a given stable state.
     
-    Arguments
+    Parameters:
     ---------
     model_info (pd.DataFrame): Info attribute of the BooLEV object.
     ss (int): Stable State to evaluate.
@@ -26,7 +26,7 @@ def Drivers(model_info, ss):
     dict
         Dictionary containing de drivers of each node within the stable state.
     ---------
-    '''
+    """
     print(f"Evaluating Stable State: {ss}")
 
     data = pd.concat([model_info[[ss]], model_info[["DNF"]], model_info[["NDNF"]]], axis = 1)
