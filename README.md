@@ -56,7 +56,7 @@ A quick tutorial is available [here](https://github.com/farinasm/boolevard/tree/
 
 ## Citing BooLEVARD and Contributors
 
-*Citation not available. BooLEVARD has not been published and is not available as pre-print yet.* 
+*Fariñas, M et al. (2025): BooLEVARD: Boolean Logical Evaluation of Activation and Repression in Directed pathways. [DOI: 10.1101/2025.03.24.644921](https://doi.org/10.1101/2025.03.24.644921)*
 
 **Contributors:** Marco Fariñas, Eirini Tsirvouli, John Zobolas, Tero Aittokallio, Åsmund Flobak, Kaisa Lehti.
 
