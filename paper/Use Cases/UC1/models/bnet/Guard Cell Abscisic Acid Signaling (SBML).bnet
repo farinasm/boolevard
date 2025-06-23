@@ -1,0 +1,48 @@
+# model in BoolNet format
+# the header targets, factors is mandatory to be importable in the R package BoolNet
+
+targets, factors
+ABA, ABA
+KEV, Ca2_c
+KAP, Depolar & !Ca2_c | Depolar & Ca2_c & !pH
+Closure, Actin & !KAP & AnionEM & !Malate & KOUT | Actin & KAP & AnionEM & !Malate
+NIA12, RCN1
+CaIM, !ABH1 & !Depolar | ABH1 & !ERA1 & !Depolar | ABH1 & ERA1 & !Depolar & ROS
+PLD, GPA1
+AnionEM, !ABI1 & !Ca2_c & pH | !ABI1 & Ca2_c | ABI1 & Ca2_c & pH
+ROP10, ERA1
+NO, NIA12 & NOS
+S1P, SphK
+ABH1, ABH1
+GPA1, !GCR1 & AGB1 | GCR1 & AGB1 & S1P
+ROP2, PA
+InsP3, PLC
+SphK, ABA
+NOS, Ca2_c
+Atrboh, ROP2 & OST1 & !ABI1 & pH
+Ca2_ATPase, Ca2_c
+OST1, ABA
+Malate, !ABA & !AnionEM & PEPC
+RAC1, !ABA & !ABI1
+cGMP, GC
+InsP6, InsPK
+ADPRc, NO
+ABI1, !ROS & !PA & pH
+ROS, Atrboh
+Ca2_c, !CaIM & !Ca2_ATPase & CIS | CaIM & !Ca2_ATPase
+InsPK, ABA
+PA, PLD
+GC, NO
+KOUT, Depolar & !NO | Depolar & NO & !ROS | Depolar & NO & ROS & pH
+PEPC, !ABA
+GCR1, GCR1
+HTPase, !ROS & !Ca2_c & !pH
+PLC, ABA & Ca2_c
+pH, ABA
+CIS, !cGMP & InsP3 & InsP6 | cGMP & !cADPR & InsP3 & InsP6 | cGMP & cADPR
+ERA1, ERA1
+RCN1, ABA
+AGB1, GPA1
+Actin, !RAC1 | RAC1 & Ca2_c
+cADPR, ADPRc
+Depolar, !KEV & !AnionEM & !Ca2_c & !KOUT | !KEV & !AnionEM & !Ca2_c & KOUT & !HTPase | !KEV & !AnionEM & Ca2_c | !KEV & AnionEM | KEV

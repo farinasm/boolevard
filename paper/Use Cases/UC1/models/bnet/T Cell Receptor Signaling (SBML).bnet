@@ -1,0 +1,105 @@
+# model in BoolNet format
+# the header targets, factors is mandatory to be importable in the R package BoolNet
+
+targets, factors
+pip3, !ship1 & !pten & pi3k
+pten, unknown_input2
+fos, erk
+fkhr, !pkb
+plcgb, lat
+p38, !gadd45 & zap70
+fyn, !lckp1 & tcrb & lckr | lckp1 & !cd45 & tcrb & lckr | lckp1 & cd45
+calpr1, unknown_input2
+bclxl, !bad
+ikkab, ikkg & camk2
+ccblr, unknown_input
+unknown_input3, unknown_input3
+ca, ip3
+bcat, !gsk3
+Dummy, plcgb & zap70 & slp76 & vav1 & itk & !ccblp2
+cre, creb
+hpk1, lat
+ip3, plcga
+ikkg, pkcth & card11a
+ap1, jun & fos
+bad, !pkb
+lckp1, cd4 & cd45 & !csk & lckr & !shp1
+camk2, cam
+shp2, gab2
+pdk1, pip3
+vav3, sh3bp2
+mek, raf
+sre, !rac1p2 & cdc42 | rac1p2
+p27k, !pkb
+jnk, !mekk1 & mkk4 | mekk1
+ras, rasgrp & sos & !gap
+gadd45, unknown_input
+pag, fyn & !tcrb
+rac1p2, vav3 & rac1r
+tcrlig_input, tcrlig_input
+ship1, unknown_input2
+calcin, !calpr1 & !cabin1 & !akap79 & cam
+mlk3, !hpk1 & rac1p1 | hpk1
+rlk, lckp1
+plcga, plcgb & zap70 & slp76 & vav1 & itk & !ccblp2
+mekk1, !hpk1 & !rac1p2 & cdc42 | !hpk1 & rac1p2 | hpk1
+p70s, pdk1
+cabin1, !camk4
+rasgrp, dag
+bcl10, unknown_input2
+cd45, unknown_input
+cyc1, !gsk3
+zap70, !ccblp1 & tcrp & abl
+sh3bp2, zap70 & lat
+tcrlig, tcrlig_input
+ccblp1, ccblr & zap70
+csk, pag
+cd4, cd4
+erk, mek
+jun, jnk
+xx, cd28
+mkk4, !mlk3 & mekk1 | mlk3
+gads, lat
+card11, unknown_input
+dgk, tcrb
+raf, ras
+pkcth, pdk1 & vav1 & dag
+cdc42, unknown_input2
+slp76, gads & zap70 & !gab2
+vav1, !zap70 & xx | zap70 & !sh3bp2 & xx | zap70 & sh3bp2
+card11a, bcl10 & card11 & malt1
+grb2, lat
+cblb, !cd28
+cd28_input, cd28_input
+dag, plcga & !dgk
+tcrb, tcrlig & !ccblp1
+rac1r, unknown_input
+tcrp, !fyn & lckp1 & tcrb | fyn & tcrb
+itk, pip3 & zap70 & slp76
+rsk, erk
+gsk3, !pkb
+pi3k, !lckp2 & xx & !cblb | lckp2 & !cblb
+malt1, unknown_input
+abl, !fyn & lckp1 | fyn
+unknown_input, unknown_input
+pkb, pdk1
+nfat, calcin
+ccblp2, fyn & ccblr
+cd28, cd28_input
+sos, grb2
+akap79, unknown_input2
+lat, zap70
+rac1p1, vav1 & rac1r
+lckr, lckr_input
+nfkb, !ikb
+lckp2, tcrb & lckr
+gap, unknown_input3
+p21c, !pkb
+lckr_input, lckr_input
+creb, rsk
+gab2, !gads & zap70 & grb2 & lat | gads & zap70 & lat
+unknown_input2, unknown_input2
+ikb, !ikkab
+shp1, lckp1 & !erk
+cam, ca
+camk4, cam

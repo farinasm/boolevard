@@ -9,6 +9,7 @@ pyeda.boolalg.expr.Complement = pyeda.boolalg.expr.ExprComplement
 pyeda.boolalg.expr.NotOp = pyeda.boolalg.expr.ExprNot
 pyeda.boolalg.expr.OrOp = pyeda.boolalg.expr.ExprOr
 pyeda.boolalg.expr.AndOp = pyeda.boolalg.expr.ExprAnd
+pyeda.boolalg.bdd._VARS = pyeda.boolalg.bdd._BDDVARIABLES
 
 re_ss = re.compile(r"^stablestate:\s*(.*)")
 re_equation = re.compile(r"^equation:\s+(.*?)\s*\*")
