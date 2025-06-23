@@ -40,7 +40,7 @@ class BooLEV:
         NDNFs = []
 
         for line in content:
-            if "#" not in line and "targets" not in line and "target" not in line: 
+            if line.strip() and "#" not in line and "targets" not in line and "target" not in line:
                 node, rule = line.split(",")
                 nodes.append(node)
                 DNFs.append(expr(rule.replace(" ", "").replace("!", "~")).to_dnf())

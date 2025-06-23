@@ -1,7 +1,3 @@
-# model in BoolNet format
-# the header targets, factors is mandatory to be importable in the R package BoolNet
-
-targets, factors
 pip3, !ship1 & !pten & pi3k
 pten, unknown_input2
 fos, erk
