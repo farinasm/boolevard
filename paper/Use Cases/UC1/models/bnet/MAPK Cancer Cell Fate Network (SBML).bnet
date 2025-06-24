@@ -1,0 +1,57 @@
+# model in BoolNet format
+# the header targets, factors is mandatory to be importable in the R package BoolNet
+
+targets, factors
+Growth_Arrest, p21
+SOS, !RSK & GRB2
+PPP2CA, p38
+PTEN, p53
+MSK, !p38 & ERK | p38
+BCL2, AKT & CREB
+DUSP1, CREB
+GAB1, !PI3K & GRB2 | PI3K
+ATF2, !p38 & JNK | p38
+ATM, DNA_damage
+AP1, !ATF2 & JUN & FOS | ATF2 & JUN
+AKT, PDK1 & !PTEN
+JUN, JNK
+GADD45, !p53 & SMAD | p53
+FRS2, !SPRY & !GRB2 & FGFR3
+RSK, ERK
+MAP3K1_3, RAS
+ERK, MEK1_2
+DNA_damage, DNA_damage
+EGFR, !EGFR_stimulus & SPRY & !PKC & !GRB2 | EGFR_stimulus & !PKC & !GRB2
+p53, !p38 & ATM & !MDM2 | p38 & !ATM & !MDM2 | p38 & ATM
+FOXO3, !AKT & JNK
+PI3K, !SOS & GAB1 | SOS & !GAB1 & RAS | SOS & GAB1
+TGFBR_stimulus, TGFBR_stimulus
+SMAD, TGFBR
+FGFR3_stimulus, FGFR3_stimulus
+p14, MYC
+MYC, !AKT & MSK & MAX | AKT & MSK
+GRB2, !FRS2 & !EGFR & TGFBR | !FRS2 & EGFR | FRS2
+FGFR3, FGFR3_stimulus & !PKC & !GRB2
+p70, PDK1 & ERK
+FOS, RSK & ERK & !ELK1 & CREB | RSK & ERK & ELK1
+Proliferation, MYC & p70 & !p21
+p38, !TAOK & !DUSP1 & !MAP3K1_3 & !MTK1 & TAK1 | !TAOK & !DUSP1 & !MAP3K1_3 & MTK1 | !TAOK & !DUSP1 & MAP3K1_3 | !TAOK & DUSP1 & !MAP3K1_3 & MTK1 & TAK1 | !TAOK & DUSP1 & MAP3K1_3 & !MTK1 & TAK1 | !TAOK & DUSP1 & MAP3K1_3 & MTK1 | TAOK & !DUSP1 | TAOK & DUSP1 & !MAP3K1_3 & !MTK1 & TAK1 | TAOK & DUSP1 & !MAP3K1_3 & MTK1 | TAOK & DUSP1 & MAP3K1_3
+TGFBR, TGFBR_stimulus
+PLCG, !EGFR & FGFR3 | EGFR
+ELK1, !p38 & !ERK & JNK | !p38 & ERK | p38
+MTK1, GADD45
+JNK, !TAOK & !DUSP1 & !MAP3K1_3 & !MTK1 & TAK1 | !TAOK & !DUSP1 & !MAP3K1_3 & MTK1 | !TAOK & !DUSP1 & MAP3K1_3 | !TAOK & DUSP1 & !MAP3K1_3 & MTK1 & TAK1 | !TAOK & DUSP1 & MAP3K1_3 & !MTK1 & TAK1 | !TAOK & DUSP1 & MAP3K1_3 & MTK1 | TAOK & !DUSP1 | TAOK & DUSP1 & !MAP3K1_3 & !MTK1 & TAK1 | TAOK & DUSP1 & !MAP3K1_3 & MTK1 | TAOK & DUSP1 & MAP3K1_3
+MDM2, !AKT & p53 & !p14 | AKT & !p14
+RAF, !AKT & !PKC & !ERK & RAS | !AKT & PKC & !ERK
+CREB, MSK
+MAX, p38
+Apoptosis, !BCL2 & !ERK & p53 & FOXO3
+SPRY, ERK
+MEK1_2, !PPP2CA & !AP1 & !MAP3K1_3 & RAF | !PPP2CA & !AP1 & MAP3K1_3
+p21, !AKT & p53
+TAK1, TGFBR
+RAS, !SOS & PLCG | SOS
+TAOK, ATM
+PDK1, PI3K
+PKC, PLCG
+EGFR_stimulus, EGFR_stimulus

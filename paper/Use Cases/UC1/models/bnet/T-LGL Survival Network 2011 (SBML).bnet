@@ -1,0 +1,64 @@
+# model in BoolNet format
+# the header targets, factors is mandatory to be importable in the R package BoolNet
+
+targets, factors
+A20, !Apoptosis & NFKB
+TNF, !Apoptosis & NFKB
+MEK, !Apoptosis & RAS
+GAP, !IL15 & !Apoptosis & !GAP & !IL2 & RAS | !IL15 & !Apoptosis & GAP & !IL2 & !RAS & PDGFR | !IL15 & !Apoptosis & GAP & !IL2 & RAS
+S1P, !Apoptosis & !Ceramide & SPHK1
+Ceramide, !Apoptosis & !S1P & Fas
+CD45, CD45
+SMAD, !Apoptosis & GPCR
+Fas, !Apoptosis & !sFas & FasL & FasT
+TCR, Stimuli & !Apoptosis & !CTLA4
+PLCG1, !Apoptosis & !GRB2 & PDGFR | !Apoptosis & GRB2
+TAX, TAX
+GRB2, !Apoptosis & !IL2RB & ZAP70 | !Apoptosis & IL2RB
+sFas, !Apoptosis & S1P & FasT
+IL2RB, !IL15 & !Apoptosis & IL2RBT & IL2 | IL15 & !Apoptosis & IL2RBT
+NFKB, !Apoptosis & !IAP & !PI3K & TPL2 | !Apoptosis & !IAP & PI3K | !Apoptosis & IAP & !PI3K & !FLIP & TPL2 | !Apoptosis & IAP & !PI3K & FLIP & !TPL2 & TRADD | !Apoptosis & IAP & !PI3K & FLIP & TPL2 | !Apoptosis & IAP & PI3K
+GPCR, !Apoptosis & S1P
+IFNG, !Stimuli & !IL15 & !Apoptosis & !SMAD & IFNGT & IL2 & !P2 | !Stimuli & IL15 & !Apoptosis & !SMAD & IFNGT & !P2 | Stimuli & !Apoptosis & !SMAD & IFNGT & !P2
+GZMB, !TBET & !Apoptosis & IFNG & CREB | TBET & !Apoptosis
+P27, !Apoptosis & STAT3
+ERK, !Apoptosis & MEK & PI3K
+BID, !Apoptosis & !MCL1 & !Caspase & GZMB & !BclxL | !Apoptosis & !MCL1 & Caspase & !BclxL
+TBET, !TBET & !Apoptosis & JAK | TBET & !Apoptosis
+RANTES, !Apoptosis & NFKB
+SPHK1, !Apoptosis & PDGFR
+IFNGT, !TBET & !Apoptosis & !STAT3 & NFAT | !TBET & !Apoptosis & STAT3 | TBET & !Apoptosis
+SOCS, !IL15 & !Apoptosis & !IL2 & JAK
+FasL, !Apoptosis & !STAT3 & !NFKB & !ERK & NFAT | !Apoptosis & !STAT3 & !NFKB & ERK | !Apoptosis & !STAT3 & NFKB | !Apoptosis & STAT3
+Stimuli, Stimuli
+IL2RBT, TBET & !Apoptosis & ERK
+FYN, !Apoptosis & !TCR & IL2RB | !Apoptosis & TCR
+ZAP70, !Apoptosis & !FYN & LCK
+IL2RA, !Apoptosis & !IL2RA & IL2 & IL2RAT
+Apoptosis, !Apoptosis & Caspase | Apoptosis
+IAP, !Apoptosis & NFKB & !BID
+IL2, !TBET & !Apoptosis & !STAT3 & !NFKB & NFAT | !TBET & !Apoptosis & !STAT3 & NFKB | !TBET & !Apoptosis & STAT3
+PDGF, PDGF
+PI3K, !Apoptosis & !RAS & PDGFR | !Apoptosis & RAS
+BclxL, !Apoptosis & !STAT3 & NFKB & !GZMB & !BID & !DISC | !Apoptosis & STAT3 & !GZMB & !BID & !DISC
+Cytoskeleton_signaling, !Apoptosis & FYN
+RAS, !Apoptosis & !GAP & !PLCG1 & GRB2 | !Apoptosis & !GAP & PLCG1
+FasT, !Apoptosis & NFKB
+NFAT, !Apoptosis & PI3K
+JAK, !CD45 & !Apoptosis & !IL2RB & !IFNG & !RANTES & !SOCS & IL2RA | !CD45 & !Apoptosis & !IL2RB & !IFNG & RANTES & !SOCS | !CD45 & !Apoptosis & !IL2RB & IFNG & !SOCS | !CD45 & !Apoptosis & IL2RB & !SOCS
+MCL1, !Apoptosis & STAT3 & IL2RB & NFKB & PI3K & !DISC
+LCK, !CD45 & !Apoptosis & !TCR & IL2RB & !ZAP70 | !CD45 & !Apoptosis & TCR & !ZAP70 | CD45 & !Apoptosis
+IL2RAT, !Apoptosis & !STAT3 & NFKB & IL2 | !Apoptosis & STAT3 & IL2
+P2, !Stimuli2 & !Apoptosis & !IFNG & P2 | !Stimuli2 & !Apoptosis & IFNG
+CREB, !Apoptosis & IFNG & ERK
+FLIP, !Apoptosis & !NFKB & IFNG & CREB & !DISC | !Apoptosis & NFKB & !DISC
+IL15, IL15
+Proliferation, !Apoptosis & STAT3 & !P27
+TPL2, !TAX & !Apoptosis & TNF & PI3K | TAX & !Apoptosis
+TRADD, !A20 & !Apoptosis & TNF & !IAP
+DISC, !Apoptosis & !Ceramide & Fas & !IL2 & FasT & !FLIP | !Apoptosis & !Ceramide & Fas & IL2 & FasT | !Apoptosis & Ceramide & FasT
+STAT3, !Apoptosis & JAK
+PDGFR, !PDGF & !Apoptosis & S1P | PDGF & !Apoptosis
+Stimuli2, Stimuli2
+Caspase, !Apoptosis & !GZMB & !BID & DISC | !Apoptosis & !GZMB & BID & !IAP & !TRADD & DISC | !Apoptosis & !GZMB & BID & !IAP & TRADD | !Apoptosis & !GZMB & BID & IAP & DISC | !Apoptosis & GZMB & !BID & DISC | !Apoptosis & GZMB & BID & !IAP | !Apoptosis & GZMB & BID & IAP & DISC
+CTLA4, !Apoptosis & TCR

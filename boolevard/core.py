@@ -7,15 +7,17 @@ from colomoto_jupyter import tabulate
 from boolevard.utils import *
 from boolevard.transduction import *
 from boolevard.perturbations import *
+from pyboolnet.file_exchange import bnet2primes
+from pyboolnet.attractors import compute_attractors
 
 class BooLEV:
 
-    def __init__(self, file_path:str):
+    def __init__(self, file_path:str, update: str = "most_permissive"):
         '''
         Initialites the BooLEV object by loading the model from a .bnet file.
         '''
         self._bnet = open(file_path, "r").read().splitlines()   
-        self.Info = self._ModelInfo(file_path)
+        self.Info = self._ModelInfo(file_path, update = update)
         self.Nodes = list(self.Info.index)
         self.DNFs = dict(zip(self.Nodes, self.Info["DNF"]))
         self.NDNFs = dict(zip(self.Nodes, self.Info["NDNF"]))
@@ -30,15 +32,15 @@ class BooLEV:
         return f"<BooLEV object at {hex(id(self))}>"
     
     # Internal functions
-    def _ModelInfo(self, file_path:str):
-        '''
-        Retrieves the information of the model, including nodes, cDNFs and cNDNFs, and stable states.
-        '''
+    def _ModelInfo(self, file_path:str, update: str = "most_permissive"):
+        """
+        Retrieves the information of the model, including nodes, cDNFs and cNDNFs, and stable stat.
+        """
         content = self._bnet
         nodes = []
         DNFs = []
         NDNFs = []
-
+        
         for line in content:
             if line.strip() and "#" not in line and "targets" not in line and "target" not in line:
                 node, rule = line.split(",")
@@ -46,8 +48,24 @@ class BooLEV:
                 DNFs.append(expr(rule.replace(" ", "").replace("!", "~")).to_dnf())
                 NDNFs.append(ExprNot(expr(rule.replace(" ", "").replace("!", "~"))).to_dnf())
         
-        model = mpbn.load(file_path)
-        SS = tabulate(list(model.attractors()))
+        if update == "most_permissive":
+            model = mpbn.load(file_path)
+            SS = tabulate(list(model.attractors()))
+
+        
+        elif update == "synchronous":
+            primes = bnet2primes(file_path)
+            attractors = compute_attractors(primes, update = "synchronous")["attractors"]
+            rows = []
+            for i, attr in enumerate(attractors, 1):
+                if attr["is_steady"] and not attr["is_cyclic"]:
+                    state = attr["state"]["dict"]
+                    rows.append({"attractor_id": i - 1, **state})
+            SS = pd.DataFrame(rows)
+            SS.set_index("attractor_id", inplace=True)
+            SS.index.name = None
+
+
         info = pd.concat([SS.transpose(), pd.DataFrame({"DNF": DNFs, "NDNF": NDNFs}, index = nodes)], axis = 1)
         info = info.loc[:, ~(info == "*").any()]
         return info

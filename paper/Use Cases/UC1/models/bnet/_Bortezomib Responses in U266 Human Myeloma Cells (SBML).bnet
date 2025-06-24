@@ -1,0 +1,71 @@
+# model in BoolNet format
+# the header targets, factors is mandatory to be importable in the R package BoolNet
+
+targets, factors
+ERK, MAPK
+MKK4, MEKK2
+BAD, !AKT
+STAT3, !Cas3
+CDK2, CYCE & !p21
+BID, !Fas & !STRESS & Cas8 & !Bclxl & !BCL2 | !Fas & STRESS & !Bclxl & !BCL2 | Fas & !Bclxl & !BCL2
+JAK1, gp130 & IL6
+Fas, !FasL & p53 | FasL
+BAX, !BID & !Bclxl & p53 & !BCL2 | BID & !Bclxl & !BCL2
+Cytc, MITO
+GROWTH, pRB
+CDK4, !p21 & CYCD & !p27
+Smac, MITO
+Prot, !Bort
+XIAP, !pSTAT3 & pNFKB & !Smac & !p53 | pSTAT3 & !Smac & !p53
+SHP1, SHP1
+JAK2, !SHP1 & gp130 & IL6
+CIAP, TNFAR
+STRESS, !Prot | Prot & DNAdam
+MYC, !ERK & !pSTAT3 & MEKK | !ERK & pSTAT3 | ERK
+CYCE, MYC
+MDM, !p53 & !ATM & AKT | p53 & !ATM
+RAC, STRESS
+p21, !CDK4 & !MYC & !MDM & p53 & !AKT
+RAS, !SHP1 & gp130 & IL6 | SHP1
+CYCD, !ERK & !MYC & AKT | !ERK & MYC | ERK
+DNAPK, ATM
+Cas8, FasL & !FLIP & Fas
+gp130, !Cas3
+JNK, MKK4 & !Prot
+MEKK, MEK1
+Bclxl, !pSTAT3 & pNFKB & !BAD & !BAX & !p53 | pSTAT3 & !BAD & !BAX & !p53
+PIP3, !PTEN & PIP3
+FasL, !Fas & cJun | Fas
+Apo, Cl_PARP
+MITO, BAX
+p27, !CDK4 & !MYC & p53 & !AKT
+p53, !Prot & !DNAPK & JNK | !Prot & DNAPK | Prot & !MDM & !DNAPK & JNK | Prot & !MDM & DNAPK
+TNFAR, TNFAR
+X, X
+Cas3, !XIAP & !Cas8 & Cas9 | !XIAP & Cas8
+TRAF3, !CIAP
+pIKB, IKK
+Cl_PARP, Cas3
+pSTAT3, STAT3 & JAK1 & JAK2
+ATM, !Cas3 & DNAdam | Cas3
+TNFA, TNFA
+IL6, pNFKB
+Bort, Bort
+Cas9, Cytc & !XIAP & !AKT
+IKK, !AKT & RIP & NIK | AKT
+MAPK, MEK1
+DNAdam, !STRESS & Cas3 | STRESS
+cJun, JNK
+AKT, PIP3
+pNFKB, !X & !pSTAT3 & pIKB | !X & pSTAT3 | X
+RIP, !TNFAR & Bort | TNFAR & !TNFA & Bort | TNFAR & TNFA
+BCL2, !pSTAT3 & pNFKB & !BAD & !p53 | pSTAT3 & !BAD & !p53
+CDK6, CYCD
+NIK, !TRAF3
+RAF, RAS
+MEK1, RAF
+pRB, CDK4 & CDK6
+MEKK2, RAC
+PI3K, gp130 & IL6
+FLIP, pNFKB
+PTEN, p53

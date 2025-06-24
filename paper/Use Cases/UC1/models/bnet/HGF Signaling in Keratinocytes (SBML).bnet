@@ -1,0 +1,72 @@
+# model in BoolNet format
+# the header targets, factors is mandatory to be importable in the R package BoolNet
+
+targets, factors
+Ca, IP3
+DUSP1, DUSP1
+HGF, HGF
+MLK3, Cdc42_Rac1
+p38, !DUSP1 & !Mkk3 & PAK1 | !DUSP1 & Mkk3 & !Mkk6 & PAK1 | !DUSP1 & Mkk3 & Mkk6 | DUSP1 & PAK1
+Mkk6, MLK3
+DOCK180, CRKL
+MET, HGF
+ATF2, p38 & JNK
+Plasmin, PAI__1 & uPA
+CCL20, Erk
+Mekk7, Mekk1
+uPA, uPAR
+Grb2, Shc
+ETS, Erk
+SOS, Grb2
+Raf, PKC & Ras & PAK3
+AP1, cFOS & cJUN
+DAG, PLC_g
+cFOS, Erk
+PKC, !AKAP12 & Ca & DAG
+CDK2, !CDKN1A & CyclinD | CDKN1A & !CDKN2A & CyclinD
+RSK, Erk
+PAK2, Cdc42_Rac1
+Mkk4, !MLK3 & !Mekk1 & Mekk4 | !MLK3 & Mekk1 | MLK3
+EGR1, Erk
+Ras, SOS
+C3G, CRKL
+cMYC, Erk
+CDKN1A, STAT3
+PAK1, Cdc42_Rac1
+Proliferation, CDK2 & CyclinD
+IL8, !p38 & Erk | p38
+EGFR, !EGF & HBEGF | EGF
+CDKN2A, !ETS & Elk1 | ETS
+CTGF, !p38 & Erk | p38
+PLC_g, !EGFR & MET | EGFR
+Fak, !PTEN & Rap1 & Integrins
+Rap1, C3G
+MMP1_10, Plasmin
+Elk1, !JNK & Erk | JNK
+IP3, PLC_g
+uPAR, AP1
+Mekk1, Cdc42_Rac1
+CellMigration, PTGS2 & CCL20 & IL8 & CTGF
+CRKL, Grb2
+PTEN, PTEN
+HBEGF, !p38 & Erk | p38
+CREB, RSK
+Cdc42_Rac1, DOCK180 & Ras & Akt
+cJUN, p38 & JNK
+Integrins, ECM
+PAI__1, PAI__1
+Mek, !Raf & Mekk1 | Raf
+CyclinD, !ATF2 & Elk1 | ATF2
+PTGS2, !ATF2 & cFOS & cJUN | ATF2
+Akt, !PTEN & PI3K
+ECM, MMP1_10
+Mekk4, Cdc42_Rac1
+PAK3, Cdc42_Rac1
+JNK, !Mekk7 & PAK2 | Mekk7 & !PAK2 & Mkk4 | Mekk7 & PAK2
+STAT3, Erk
+Erk, Mek
+PI3K, !EGFR & MET | EGFR & !MET & Fak | EGFR & MET
+AKAP12, AKAP12
+Shc, !EGFR & !MET & Fak | !EGFR & MET | EGFR
+EGF, EGF
+Mkk3, MLK3
