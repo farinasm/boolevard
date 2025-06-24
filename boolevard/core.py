@@ -208,4 +208,4 @@ def Load(file_path:str, update: str = "most_permissive"):
     **********
     >>> model = blv.Load("model.bnet")
     """
-    return BooLEV(file_path, update = "most_permissive")
+    return BooLEV(file_path, update = update)
