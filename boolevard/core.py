@@ -1,5 +1,7 @@
 import mpbn
 import os
+import sys
+import logging
 import pandas as pd
 from pyeda import *
 from pyeda.inter import *
@@ -9,7 +11,6 @@ from boolevard.transduction import *
 from boolevard.perturbations import *
 from pyboolnet.file_exchange import bnet2primes
 from pyboolnet.attractors import compute_attractors
-import logging
 
 class BooLEV:
 
@@ -56,10 +57,12 @@ class BooLEV:
         
         else:
             primes = bnet2primes(file_path) 
+            logging.disable(sys.maxsize)
             if update == "synchronous":
                 attractors = compute_attractors(primes, update = "synchronous")["attractors"]
             elif update == "asynchronous":
                 attractors = compute_attractors(primes, update = "asynchronous")["attractors"]
+            logging.disable(logging.NOTSET)
             rows = []
             for i, attr in enumerate(attractors, 1):
                 if attr["is_steady"] and not attr["is_cyclic"]:
