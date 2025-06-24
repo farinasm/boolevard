@@ -9,6 +9,7 @@ from boolevard.transduction import *
 from boolevard.perturbations import *
 from pyboolnet.file_exchange import bnet2primes
 from pyboolnet.attractors import compute_attractors
+import logging
 
 class BooLEV:
 
