@@ -53,9 +53,12 @@ class BooLEV:
             SS = tabulate(list(model.attractors()))
 
         
-        elif update == "synchronous":
-            primes = bnet2primes(file_path)
-            attractors = compute_attractors(primes, update = "synchronous")["attractors"]
+        else:
+            primes = bnet2primes(file_path) 
+            if update == "synchronous":
+                attractors = compute_attractors(primes, update = "synchronous")["attractors"]
+            elif update == "asynchronous":
+                attractors = compute_attractors(primes, update = "asynchronous")["attractors"]
             rows = []
             for i, attr in enumerate(attractors, 1):
                 if attr["is_steady"] and not attr["is_cyclic"]:
@@ -64,7 +67,6 @@ class BooLEV:
             SS = pd.DataFrame(rows)
             SS.set_index("attractor_id", inplace=True)
             SS.index.name = None
-
 
         info = pd.concat([SS.transpose(), pd.DataFrame({"DNF": DNFs, "NDNF": NDNFs}, index = nodes)], axis = 1)
         info = info.loc[:, ~(info == "*").any()]
