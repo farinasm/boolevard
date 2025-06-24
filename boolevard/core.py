@@ -179,7 +179,7 @@ class BooLEV:
         return Pert(self, perturbation, additive)
     
 
-def Load(file_path:str):
+def Load(file_path:str, update: str = "most_permissive"):
     """
     Loads a model in ``b.net`` format and returns a BooLEV-class object.
 
@@ -206,4 +206,4 @@ def Load(file_path:str):
     **********
     >>> model = blv.Load("model.bnet")
     """
-    return BooLEV(file_path)
+    return BooLEV(file_path, update: str = "most_permissive")
