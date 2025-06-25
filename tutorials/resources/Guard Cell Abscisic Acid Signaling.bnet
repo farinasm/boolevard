@@ -1,0 +1,44 @@
+cGMP, GC
+RCN1, ABA
+AGB1, GPA1
+Actin, (Ca2_c) | ~((RAC1) | (Ca2_c))
+cADPR, ADPRc
+Depolar, (((((Ca2_c) | ((KOUT) & ((((~(AnionEM)) & ~(Ca2_c)) & ~(KEV)) & ~(HTPase)))) | (KEV)) | ((HTPase) & ((((~(KOUT)) & ~(AnionEM)) & ~(Ca2_c)) & ~(KEV)))) | (AnionEM)) | ~(((((KOUT) | (AnionEM)) | (Ca2_c)) | (KEV)) | (HTPase))
+KEV, Ca2_c
+KAP, (Depolar) & ~((Ca2_c) & (pH))
+Closure, (((KOUT) & ((Actin) & (AnionEM))) & ~(Malate)) | (((KAP) & ((Actin) & (AnionEM))) & ~(Malate))
+NIA12, RCN1
+CaIM, (((((ABH1) & ~(ERA1)) & ~(Depolar)) | (((ERA1) & ~(ABH1)) & ~(Depolar))) | ((ROS) & ~(Depolar))) | ~((((Depolar) | (ABH1)) | (ROS)) | (ERA1))
+PLD, GPA1
+AnionEM, ((pH) & ((Ca2_c) | ~(ABI1))) | ((Ca2_c) & ((pH) | ~(ABI1)))
+ROP10, ERA1
+NO, (NOS) & (NIA12)
+S1P, SphK
+GPA1, ((AGB1) & ~(GCR1)) | ((S1P) & (AGB1))
+ROP2, PA
+InsP3, PLC
+SphK, ABA
+NOS, Ca2_c
+Atrboh, ((OST1) & ((pH) & (ROP2))) & ~(ABI1)
+Ca2_ATPase, Ca2_c
+OST1, ABA
+Malate, (PEPC) & ~((AnionEM) | (ABA))
+RAC1, ~((ABA) | (ABI1))
+InsP6, InsPK
+ADPRc, NO
+ABI1, (pH) & ~((PA) | (ROS))
+ROS, Atrboh
+Ca2_c, ((CIS) & ~(Ca2_ATPase)) | ((CaIM) & ~(Ca2_ATPase))
+InsPK, ABA
+PA, PLD
+GC, NO
+KOUT, ((pH) & (Depolar)) | ((Depolar) & ~((ROS) & (NO)))
+PEPC, ~(ABA)
+HTPase, ~(((Ca2_c) | (ROS)) | (pH))
+PLC, (ABA) & (Ca2_c)
+pH, ABA
+CIS, ((cGMP) & (cADPR)) | ((InsP3) & (InsP6))
+ABA, ABA
+ABH1, ABH1
+GCR1, GCR1
+ERA1, ERA1
