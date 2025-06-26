@@ -1,8 +1,9 @@
 <h1 style="margin-bottom: 50px;">BooLEVARD Tutorials</h1>
 In this section, you will find practical Jupyter notebooks designed to guide you through using BooLEVARD. These tutorials provide steb-by step instructions and examples to help you explore Boolevard's functionalities and apply them to diverse contexts.
 
-* **Quick Start:** In this tutorial, we will explore a small Boolean model designed to simulate different cybersecurity scenarios. The model consists of nodes represening key components of a cybersecurity system, and the goal of this tutorial is to evaluate how different conditions and guidelines affect the overall security state of the system.
-* **Guard Cell Abscisic Acid:**
-* **Tumor Cell Invasion and Migration:**
 
-Each tutorial notebook includes explanations and example code to facilitate hands-on learning and easy adaptation to your own models.
+* **[Quick Start](https://github.com/farinasm/boolevard/blob/main/tutorials/Quick_Start.ipynb):** In this tutorial, we will explore a small Boolean model designed to simulate different cybersecurity scenarios. The model consists of nodes represening key components of a cybersecurity system, and the goal of this tutorial is to evaluate how different conditions and guidelines affect the overall security state of the system.
+* **[Guard Cell Abscisic Acid](https://github.com/farinasm/boolevard/blob/main/tutorials/Guard_Cell_Abscisic_Acid.ipynb):** This tutorial uses a Boolean model that represents how the phytohormone abscisic acid (ABA) regulates stomatal opening in guard cells. It highlights how counting pathways with BooLEVARD can reveal important insights into the system, illustrated through differences in the intensity of stomatal closure inhibition.
+* **Activatory perturbations of p63, p53, and miR34 dampen cancer invasiveness: I**n this tutorial, we will use a Boolean model representing key molecular cascades in cancer metastasis. The tutorial showcases how activatory perturbations of two tumor suppressor (p53 and p63) and micro RNA 34 successfully dampen invasiveness and increases apoptotic cell-fate decisions.
+
+Each tutorial notebook includes explanations and example code to facilitathttps://github.com/farinasm/boolevard/blob/main/tutorials/Guard_Cell_Abscisic_Acid.ipynbe hands-on learning and easy adaptation to your own models.
