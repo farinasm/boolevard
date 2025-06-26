@@ -1,7 +1,7 @@
 # BooLEVARD
 
 <a href="[Logo](https://github.com/farinasm/boolevard/blob/main/docs/Logo.svg)">
-    <img src="https://github.com/farinasm/boolevard/blob/main/docs/Logo.svg" alt="Logo" width="250">
+    <img src="https://github.com/farinasm/boolevard/blob/main/src/Logo.svg" alt="Logo" width="250">
 </a>
 
 [![PyPI version](https://img.shields.io/pypi/v/boolevard)](https://pypi.org/project/boolevard/)
