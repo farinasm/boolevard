@@ -11,10 +11,11 @@
 BooLEVARD is a Python package designed to compute the number of paths leading to node activations or inactivations in Boolean models.
 
 ## Features
+
 - Import Boolean models in `.bnet` format.
 - Compute the number of paths leading to the local states of a list of nodes.
 - Perform model perturbations.
-- Export back models to `.bnet`format.
+- Export back models to `.bnet` format.
 
 ## Instalation from PyPI:
 
@@ -49,10 +50,11 @@ To install BooLEVARD using conda, install the main package using conda:
 conda install farinasm::boolevard
 ```
 
-## Documentation
+## Documentation and Tutorials
+
 For full BooLEVARD documentaiton visit our [GitHub Documentation](https://farinasm.github.io/boolevard) page.
 
-A quick tutorial is available [here](https://github.com/farinasm/boolevard/tree/main/tutorial).
+BooLEVARD tutorials can be found [here](https://github.com/farinasm/boolevard/tree/main/tutorials).
 
 ## Citing BooLEVARD and Contributors
 
