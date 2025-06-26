@@ -14,8 +14,8 @@ author = 'Marco Fariñas, Eirini Tsirvouli, John Zobolas, Tero Aittokallio, Åsm
 release = '0.1.0'
 version = '0.1.0'
 repository_url = 'https://github.com/farinasm/boolevard'
-html_logo = 'https://raw.githubusercontent.com/farinasm/boolevard/main/docs/Logo_white.png'
-html_favicon = 'https://raw.githubusercontent.com/farinasm/boolevard/main/docs/icon.png'
+html_logo = 'https://raw.githubusercontent.com/farinasm/boolevard/main/src/Logo_white.png'
+html_favicon = 'https://raw.githubusercontent.com/farinasm/boolevard/src/icon.png'
 html_theme_options = {
     "logo_only": True,
     "display_version": True,
