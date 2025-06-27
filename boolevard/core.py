@@ -196,7 +196,7 @@ def Load(file_path:str, update: str = "most_permissive"):
     **********
     file_path : str
         Path to the ``.bnet`` file.
-    update: str
+    update : str
         Update method for the model. Options are "most_permissive", "synchronous", or "asynchronous". By default, "most_permissive".
 
     Returns:
