@@ -1,0 +1,100 @@
+Gene1, (!Gene52 | Gene75)
+Gene2, Gene39
+Gene3, !Gene57
+Gene4, Gene75
+Gene5, (!Gene31 | !Gene41)
+Gene6, (Gene72 | Gene65)
+Gene7, (!Gene31 | Gene5)
+Gene8, (Gene46 | Gene35)
+Gene9, Gene22
+Gene10, Gene25
+Gene11, (!Gene47 | !Gene95)
+Gene12, Gene7
+Gene13, (!Gene53 | !Gene39)
+Gene14, (!Gene98 & !Gene97)
+Gene15, !Gene86
+Gene16, Gene14
+Gene17, !Gene10
+Gene18, (!Gene21 | Gene52)
+Gene19, !Gene1
+Gene20, !Gene49
+Gene21, !Gene13
+Gene22, (Gene23 | !Gene29)
+Gene23, !Gene33
+Gene24, (Gene29 & !Gene39)
+Gene25, (Gene77 & Gene22)
+Gene26, (!Gene22 & !Gene15)
+Gene27, !Gene7
+Gene28, (!Gene37 | !Gene3)
+Gene29, !Gene67
+Gene30, Gene60
+Gene31, !Gene93
+Gene32, !Gene72
+Gene33, Gene33
+Gene34, Gene86
+Gene35, Gene29
+Gene36, (Gene84 & Gene38)
+Gene37, !Gene15
+Gene38, !Gene70
+Gene39, (!Gene72 & !Gene12)
+Gene40, Gene40
+Gene41, Gene41
+Gene42, Gene85
+Gene43, Gene21
+Gene44, Gene30
+Gene45, (!Gene16 & Gene78)
+Gene46, Gene79
+Gene47, (Gene21 & Gene64)
+Gene48, !Gene79
+Gene49, !Gene94
+Gene50, !Gene95
+Gene51, Gene69
+Gene52, Gene84
+Gene53, Gene5
+Gene54, Gene30
+Gene55, (Gene54 & Gene53)
+Gene56, !Gene32
+Gene57, (!Gene86 | !Gene66)
+Gene58, (!Gene31 & !Gene28)
+Gene59, (!Gene9 & Gene39)
+Gene60, (!Gene6 | !Gene94)
+Gene61, !Gene59
+Gene62, !Gene77
+Gene63, Gene97
+Gene64, Gene87
+Gene65, !Gene39
+Gene66, (!Gene51 | !Gene16)
+Gene67, (!Gene69 | Gene22)
+Gene68, !Gene76
+Gene69, (!Gene75 & Gene77)
+Gene70, !Gene13
+Gene71, Gene97
+Gene72, Gene70
+Gene73, (Gene76 & !Gene28)
+Gene74, (Gene77 & Gene32)
+Gene75, Gene35
+Gene76, !Gene63
+Gene77, !Gene36
+Gene78, !Gene51
+Gene79, Gene39
+Gene80, Gene68
+Gene81, (!Gene37 & !Gene31)
+Gene82, (!Gene33 & Gene20)
+Gene83, (Gene50 & !Gene42)
+Gene84, !Gene47
+Gene85, (Gene61 & !Gene51)
+Gene86, !Gene100
+Gene87, Gene59
+Gene88, Gene5
+Gene89, Gene32
+Gene90, (!Gene21 | !Gene45)
+Gene91, Gene3
+Gene92, (!Gene77 | Gene23)
+Gene93, (!Gene75 & Gene20)
+Gene94, (Gene95 & Gene74)
+Gene95, !Gene34
+Gene96, !Gene17
+Gene97, (!Gene82 & Gene36)
+Gene98, (!Gene6 & !Gene45)
+Gene99, (!Gene35 | Gene29)
+Gene100, !Gene96

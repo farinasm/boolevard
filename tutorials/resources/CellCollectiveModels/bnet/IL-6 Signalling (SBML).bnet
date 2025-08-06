@@ -1,0 +1,90 @@
+# model in BoolNet format
+# the header targets, factors is mandatory to be importable in the R package BoolNet
+
+targets, factors
+ip3, plcg
+socs1, stat3_ta
+casp9, !akt
+erk12, mek1
+pip3, !pten & pi3k
+gp80m_a, il6
+cmyc, stat3_ta
+vav, !socs1 & dum_il6rc_p_or_grb2_vav
+pias1, pias1
+gsk3, !akt
+dum_gp80_a_il6rc, !gp80m_a & gp80s_a | gp80m_a
+irs1_py, !irs1_ps & !shp2_a & !shp2
+sirp1a, sirp1a
+mtorc1, mtor
+crp, !nfkb & stat3_ta & cfos
+tdum_socs3_shp2, socs3
+irs1_ps, !erk12 & pkcd | erk12
+shp2_a, !sirp1a & !ros & gab1_mem_p & shp2
+gab1_mem, !erk12 & grb2_sos | erk12 & !pip3 & grb2_sos | erk12 & pip3
+stat1_ta, !pias1 & !slim & dum_pkcd_camk24_stat1_ta & stat1_py
+ros, ros
+cebpd, stat3_ta
+mk2, p38
+pro_proliferative, !stat3_ta & !camk24 & !erk12 & !p70s6k & !cebpb & !fkhr | !stat3_ta & !camk24 & !erk12 & p70s6k | !stat3_ta & !camk24 & erk12 | !stat3_ta & camk24 | stat3_ta
+tdum_socs1_vav, socs1
+jak1, !socs1 & !shp2_a & !shp2 & !socs3
+mekk1, rac1
+gp130m, gp130m
+dum_cebp_saa, !cebpd & cebpb | cebpd
+mtorc2, mtor
+stat3_py, !cyt_ptpe & !shp2_a & jak1 & !shp2 & il6rc_p
+pkcd, mek4
+cam_ca, ca
+stat3_ta, !pias3 & !slim & stat3_py & dum_mtorc1_or_pkcd_stat3_ta
+il6, il6
+grb2_sos, !shp2 & il6rc_p | shp2
+junb, stat3_ta
+p38, mek6
+gab1_kin, gab1_kin
+pro_hgf, !cebpd & cebpb | cebpd
+rac1, vav
+ship, ship
+pdk1, pdk1
+pias3, pias3
+cyt_ptpe, cyt_ptpe
+dum_gab1_kin_or_jak1_gab1_mem_p, !gab1_kin & jak1 | gab1_kin
+phlpp, phlpp
+pi3k, !gab1_mem_p & ras | gab1_mem_p & !shp2_a | gab1_mem_p & shp2_a & ras
+shp2, !sirp1a & !ros & jak1 & !socs3 & il6rc_p
+ras_gap, gab1_mem_p & !shp2_a
+dum_pkcd_camk24_stat1_ta, !camk24 & pkcd | camk24
+socs3, !nfkb & !stat3_ta & !erk12 & p38 | !nfkb & !stat3_ta & erk12 | !nfkb & stat3_ta | nfkb
+pten, pten
+p70s6k, !erk12 & !mtorc1 & akt | !erk12 & mtorc1 | erk12
+tdum_shp2_il6rc_p, !shp2_a & shp2 | shp2_a
+mek6, il6rc_p
+cfos, stat3_ta
+dum_il6rc_p_or_grb2_vav, !grb2_sos & il6rc_p | grb2_sos
+plcg, gab1_mem_p
+saa, nfkb & stat3_ta & dum_cebp_saa
+ca, ip3
+mtor, mtor
+mek1, raf1
+gp130s, !mk2 & !camk24
+ras, grb2_sos & !ras_gap
+stat1_py, !cyt_ptpe & !shp2_a & jak1 & !shp2 & il6rc_p
+camk24, cam_ca
+anti_apoptotic, stat3_ta & !casp9 & !gsk3 & !bad
+il6rc_p, !shp2_a & jak1 & !shp2 & il6rc
+tdum_shp2_stat1_py, !shp2_a & shp2 | shp2_a
+nfkb, nfkb
+dum_mtorc1_or_pkcd_stat3_ta, !mtorc1 & pkcd | mtorc1
+cebpb, !stat3_ta & p38 | stat3_ta
+slim, slim
+akt, !ship & pdk1 & !phlpp & pip3 & mtorc2
+ir, !socs1 & !socs3
+mek4, mekk1
+a2m_gfbg, !nfkb & stat3_ta
+bad, !akt
+var_app, !cebpd & cebpb | cebpd
+raf1, ras
+tdum_shp2_stat3_py, !shp2_a & shp2 | shp2_a
+fkhr, !akt
+gp80s_a, il6 & !gp130s
+il6rc, gp130m & dum_gp80_a_il6rc
+gab1_mem_p, gab1_mem & dum_gab1_kin_or_jak1_gab1_mem_p

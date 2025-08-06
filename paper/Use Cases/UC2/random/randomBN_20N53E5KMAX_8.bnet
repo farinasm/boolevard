@@ -1,0 +1,20 @@
+Gene1, !Gene8
+Gene2, (Gene1 | (Gene6 & !Gene14))
+Gene3, (((!Gene16 & !Gene1) | Gene15) & !Gene5)
+Gene4, !Gene3
+Gene5, (((Gene4 & !Gene7) | Gene20) & Gene8)
+Gene6, (Gene9 & ((!Gene16 | !Gene15) & (!Gene11 & !Gene4)))
+Gene7, (!Gene1 & ((Gene12 | !Gene6) | (!Gene20 & Gene3)))
+Gene8, ((Gene20 & Gene14) | Gene18)
+Gene9, Gene5
+Gene10, (!Gene20 | (((Gene9 & Gene16) & !Gene1) & !Gene19))
+Gene11, Gene4
+Gene12, (Gene14 & !Gene3)
+Gene13, Gene13
+Gene14, Gene14
+Gene15, Gene15
+Gene16, ((Gene2 | !Gene19) & Gene5)
+Gene17, (((!Gene6 | !Gene15) | Gene14) | Gene18)
+Gene18, (!Gene15 | (!Gene16 & Gene8))
+Gene19, (((Gene16 & (Gene5 | !Gene7)) & Gene3) & Gene14)
+Gene20, (!Gene15 | (!Gene6 | !Gene10))

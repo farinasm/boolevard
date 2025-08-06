@@ -1,0 +1,122 @@
+# model in BoolNet format
+# the header targets, factors is mandatory to be importable in the R package BoolNet
+
+targets, factors
+cebpd, ck2 & jnk & nfkb
+mek7, !tak1_tab & mekk3 | tak1_tab
+dum_mek3_or_4_or_6_nuc_p38, !mek3 & !mek4 & mek6 | !mek3 & mek4 | mek3
+tdum_a20_traf6_ub, a20
+mk2, nuc_p38
+il1a, sil1r12
+jnk, dum_mek4_or_7_jnk & !mkp1
+nfkb, p50 & p65 & !ikba
+ap1, !cfos & !cjun & atf2 | !cfos & cjun | cfos
+pellino, !irak4 & irak1 | irak4
+ikba, !ikba_degr & !ikba_diss | !ikba_degr & ikba_diss & nfkb | ikba_degr & nfkb
+mekk3, !traf6_ub & traf6 | traf6_ub
+dum_mek4_or_7_jnk, !mek7 & mek4 | mek7
+nuc_p38, !mkp1 & dum_mek3_or_4_or_6_nuc_p38
+trika1, trika1
+tdum_il1ra_ilr12, il1ra
+cox2, !dum_cebp_cox2 & !cjun & !nfkb & ap1 | !dum_cebp_cox2 & !cjun & nfkb | !dum_cebp_cox2 & cjun | dum_cebp_cox2
+abin2, abin2
+lbp, cebpb & ap1
+nemo, !a20
+ikkaa_nemo, ikka & nemo
+myd88, il1rc
+sil1r_ap, sil1r12
+hgf, upa & pro_hgf
+tak1_tab, trika1 & traf6_ub & !cyt_p38 & mekk3
+irak4, !smyd88 & myd88
+mek3, !tak1_tab & mekk3 | tak1_tab
+dum_sap1_or_elk_cfos, !sap1 & elk1 | sap1
+msk1, !erk12 & nuc_p38 | erk12
+sil1r12, sil1r12
+irs1_ps, !ikkb_a & !erk12 & jnk | !ikkb_a & erk12 | ikkb_a
+dum_ikkab_nemo_akt_or_ck2_p65, !ck2 & ikkab_nemo & akt | ck2
+tpl2, src & abin2 & !tpl2_degr & !p105
+dum_cebp_saa, !cebpd & cebpb | cebpd
+tdum_cyt_p38_tak1_tab, cyt_p38
+tpl2_degr, tpl2
+ksrp, !cyt_p38
+traf6_ub, !socs3 & trika1 & !hsp27_ps & !a20 & dum_irak1_or_2_traf6_ub
+irak1c, tollip & myd88
+irak2, tollip & irak4 & !irak1c & myd88
+pro_il1b, ck2 & dum_cebp_pro_il1b & cjun & nfkb
+mek1, tpl2
+p50, p105_degr
+cfos, dum_sap1_or_elk_cfos & msk1
+ikkaa, ikka
+dum_il1_r2, !il1b & il1a | il1b
+upa, atf2 & ap1
+mek4, !tak1_tab & mekk3 | tak1_tab
+p105_degr, ikkb_a
+il8, !ksrp & cfos & !ttp & nfkb & ap1
+irak1_ub, trika1 & pellino
+mkp1, ap1
+pdk1, pdk1
+ros, !inos & !nfkb
+ikka_a, mekk3 & ikkaa_nemo
+ikkbb_nemo, ikkb & nemo
+ttp, !mk2
+tdum_irak1c_irak12, irak1c
+nik, tak1_tab
+tdum_hsp27_ps_traf6_ub, hsp27_ps
+ikkb, ikkb
+mek6, !tak1_tab & mekk3 | tak1_tab
+irakm, irakm
+tdum_mkp1_p38_jnk_erk12, mkp1
+pten, pten
+smyd88, smyd88
+hsp27_ps, mk2
+cebpb, !erk12 & nuc_p38 | erk12
+a20, abin2
+ikkb_a, dum_tak1_tab_or_mekk3_ikkb_a & dum_ikkab_or_ikkbb_nemo_ikkb_a
+p65, !socs1 & dum_ikkab_nemo_akt_or_ck2_p65
+il1r2, dum_il1_r2 & !il1ra
+cjun_gene, msk1
+p105, !p105_degr
+sap1, !erk12 & !jnk & nuc_p38 | !erk12 & jnk | erk12
+pi3k, !il1rc & myd88 | il1rc
+traf6, irak1
+akt, pdk1 & mtorc2 & pip3
+dum_irak1_or_2_traf6_ub, !irak2 & irak1 | irak2
+ikba_degr, !ck2 & !ikkaa & ikkb_a | !ck2 & ikkaa & !nik & ikkb_a | !ck2 & ikkaa & nik | ck2
+il1r1, !il1ra & dum_il1_r1
+cyt_p38, mk2 & nuc_p38
+socs3, socs3
+pip3, !pten & pi3k
+ck2, ck2
+elk1, !erk12 & !jnk & nuc_p38 | !erk12 & jnk | erk12
+il6, !ksrp & !ttp & cebpb & gsk3 & nfkb & ap1
+dum_cebp_pro_il1b, !cebpd & cebpb | cebpd
+ikka, ikka
+ccl2, gsk3 & cjun & nfkb & ap1
+erk12, mek1 & !mkp1
+dum_cebp_il1ra, !cebpd & cebpb | cebpd
+dum_cebp_cox2, !cebpd & cebpb | cebpd
+dum_tak1_tab_or_mekk3_ikkb_a, !tak1_tab & mekk3 | tak1_tab & !irak1_ub & mekk3 | tak1_tab & irak1_ub
+il1ra, !sil1r12 & dum_cebp_il1ra & nfkb | sil1r12
+irak1, !irakm & tollip & irak4 & !irak1c & myd88
+tollip, il1rc
+tdum_il1r2_il1rc, il1r2
+gsk3, !akt
+ikba_diss, ikka_a
+dum_il1_r1, !il1b & il1a | il1b
+pro_hgf, !cebpd & cebpb | cebpd
+nc_nfkb_pathway, ikkaa & nik
+src, src
+il1b_new, pro_il1b & nalp_infl
+il1rc, !sil1r12 & !il1r2 & il1r1
+socs1, socs1
+ikkab_nemo, ikkb & ikka & nemo
+cjun, !cjun_gene & jnk | cjun_gene
+dum_ikkab_or_ikkbb_nemo_ikkb_a, !ikkab_nemo & ikkbb_nemo | ikkab_nemo
+il1b, sil1r12
+hnf4a, ros & nuc_p38
+saa, dum_cebp_saa & nfkb
+nalp_infl, !erk12
+tdum_tpl2_degr_tp2, tpl2_degr
+inos, !hnf4a & nfkb | hnf4a
+mtorc2, mtorc2
+atf2, !erk12 & !jnk & nuc_p38 | !erk12 & jnk | erk12

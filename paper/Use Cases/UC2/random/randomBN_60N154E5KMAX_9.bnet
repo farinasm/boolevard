@@ -1,0 +1,60 @@
+Gene1, ((!Gene10 | Gene5) | !Gene14)
+Gene2, ((Gene29 & Gene9) & Gene10)
+Gene3, (!Gene47 & ((!Gene38 & Gene50) & (Gene6 & !Gene18)))
+Gene4, Gene11
+Gene5, (!Gene18 & (Gene58 | !Gene2))
+Gene6, ((!Gene35 & !Gene17) & Gene19)
+Gene7, !Gene17
+Gene8, (Gene20 & (Gene18 | !Gene33))
+Gene9, (!Gene13 & !Gene17)
+Gene10, Gene40
+Gene11, (Gene42 | ((!Gene60 | Gene37) | Gene18))
+Gene12, (!Gene14 & !Gene1)
+Gene13, !Gene51
+Gene14, ((!Gene34 | !Gene27) | (!Gene29 | Gene40))
+Gene15, (Gene30 & (Gene28 & (Gene39 & !Gene38)))
+Gene16, ((Gene31 | Gene21) | Gene23)
+Gene17, !Gene13
+Gene18, ((!Gene46 | !Gene57) | !Gene52)
+Gene19, !Gene7
+Gene20, (!Gene47 | !Gene36)
+Gene21, ((Gene6 | Gene27) & Gene51)
+Gene22, (Gene54 & !Gene2)
+Gene23, ((Gene18 | Gene55) & !Gene40)
+Gene24, (!Gene13 & ((Gene9 | Gene26) & (Gene20 & !Gene15)))
+Gene25, ((!Gene59 | !Gene33) | Gene48)
+Gene26, (!Gene4 & ((!Gene50 & Gene9) & Gene14))
+Gene27, ((!Gene26 | !Gene37) | (Gene46 & !Gene42))
+Gene28, ((Gene38 | !Gene36) & (Gene39 & (Gene9 | Gene58)))
+Gene29, (!Gene11 | Gene45)
+Gene30, ((!Gene9 & (!Gene36 & !Gene56)) | !Gene32)
+Gene31, (Gene54 | (!Gene27 & (!Gene19 & !Gene51)))
+Gene32, (((Gene43 & !Gene7) & (Gene39 & !Gene21)) | Gene41)
+Gene33, Gene51
+Gene34, Gene34
+Gene35, (!Gene30 | (!Gene55 & (!Gene7 | Gene42)))
+Gene36, Gene36
+Gene37, Gene58
+Gene38, ((!Gene16 | !Gene17) & !Gene55)
+Gene39, (Gene9 | (Gene21 | !Gene48))
+Gene40, (!Gene55 | !Gene5)
+Gene41, !Gene31
+Gene42, ((!Gene7 & (Gene2 & !Gene18)) | (Gene21 | !Gene25))
+Gene43, (Gene45 | (Gene50 | (Gene3 | Gene49)))
+Gene44, ((Gene48 & !Gene11) & !Gene53)
+Gene45, (!Gene48 & !Gene5)
+Gene46, !Gene40
+Gene47, (Gene3 & !Gene29)
+Gene48, Gene48
+Gene49, ((Gene25 | !Gene59) & (!Gene33 & Gene1))
+Gene50, ((((!Gene32 | !Gene24) | !Gene23) | !Gene22) | !Gene11)
+Gene51, (Gene2 | Gene5)
+Gene52, !Gene1
+Gene53, (!Gene50 | !Gene2)
+Gene54, ((!Gene13 | Gene42) & (!Gene50 | Gene29))
+Gene55, ((Gene38 & Gene48) | Gene47)
+Gene56, Gene30
+Gene57, Gene46
+Gene58, !Gene4
+Gene59, ((Gene48 | !Gene27) & Gene56)
+Gene60, !Gene37

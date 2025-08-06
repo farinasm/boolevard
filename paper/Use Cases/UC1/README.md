@@ -13,5 +13,5 @@
 </p>
 <h4 style="margin-top: 0px; margin-bottom: 2px; font-size: 1.5em"><b>Figure and Supplementary Figure source code</b></h4>
 <p>
-The following section includes a Jupyter Notebook containing the source code to generate the figures and supplementary figures included in BooLEVARD: Boolean Logical Evaluation of Activation and Repression in Directed Pathways (doi not available yet).
+The following section includes a Jupyter Notebook containing the source code to generate the figures and supplementary figures included in the first use case of BooLEVARD: Boolean Logical Evaluation of Activation and Repression in Directed Pathways.
 </p>

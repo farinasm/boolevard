@@ -1,0 +1,60 @@
+Gene1, Gene14
+Gene2, (Gene60 | (Gene33 & (!Gene59 | !Gene41)))
+Gene3, ((!Gene24 & Gene23) | !Gene60)
+Gene4, (!Gene3 & Gene32)
+Gene5, ((Gene37 | Gene51) | !Gene30)
+Gene6, Gene35
+Gene7, (!Gene37 & (!Gene28 & (!Gene47 | !Gene33)))
+Gene8, (!Gene13 & Gene21)
+Gene9, ((Gene39 | (Gene33 | !Gene16)) & !Gene32)
+Gene10, (!Gene1 & Gene35)
+Gene11, (Gene44 & !Gene47)
+Gene12, ((Gene26 & !Gene11) | Gene54)
+Gene13, (!Gene52 & (Gene35 & (!Gene5 | !Gene30)))
+Gene14, ((!Gene35 | (Gene10 & Gene41)) & Gene8)
+Gene15, (!Gene28 | (!Gene53 & (!Gene3 & !Gene7)))
+Gene16, (Gene29 | (Gene48 & (Gene10 | !Gene40)))
+Gene17, Gene17
+Gene18, (!Gene21 | !Gene51)
+Gene19, Gene49
+Gene20, (Gene29 | Gene59)
+Gene21, (Gene60 & !Gene22)
+Gene22, !Gene43
+Gene23, ((!Gene47 | (Gene52 | !Gene58)) | Gene36)
+Gene24, (!Gene33 & (!Gene3 | !Gene13))
+Gene25, ((!Gene27 & (Gene14 & Gene55)) | !Gene8)
+Gene26, (Gene43 | (!Gene50 & Gene12))
+Gene27, (!Gene16 & Gene7)
+Gene28, ((!Gene36 & !Gene39) & !Gene29)
+Gene29, !Gene42
+Gene30, Gene36
+Gene31, (((!Gene11 & Gene4) & !Gene2) | Gene37)
+Gene32, (Gene31 | (Gene7 & Gene36))
+Gene33, (!Gene7 | !Gene41)
+Gene34, Gene34
+Gene35, !Gene53
+Gene36, ((!Gene42 | Gene60) | !Gene39)
+Gene37, ((!Gene38 | (!Gene13 | !Gene2)) & !Gene7)
+Gene38, !Gene23
+Gene39, ((!Gene12 | Gene1) | Gene40)
+Gene40, (Gene58 & (!Gene26 & (!Gene32 & Gene52)))
+Gene41, (!Gene38 & Gene12)
+Gene42, ((Gene11 | Gene15) | !Gene19)
+Gene43, (Gene39 | (Gene16 & !Gene36))
+Gene44, ((!Gene2 & (!Gene42 | !Gene25)) | !Gene45)
+Gene45, !Gene19
+Gene46, (!Gene15 & (!Gene37 | (Gene17 & !Gene22)))
+Gene47, ((!Gene42 | Gene37) | !Gene58)
+Gene48, (!Gene13 & (Gene32 | Gene25))
+Gene49, (!Gene60 & (!Gene52 & !Gene44))
+Gene50, (Gene57 & (Gene17 | !Gene55))
+Gene51, Gene51
+Gene52, (Gene5 & !Gene23)
+Gene53, (Gene20 | ((Gene10 | !Gene58) | !Gene6))
+Gene54, (!Gene20 | Gene19)
+Gene55, (Gene19 & !Gene26)
+Gene56, (Gene21 & (!Gene42 | Gene48))
+Gene57, (!Gene11 | Gene54)
+Gene58, Gene37
+Gene59, ((!Gene35 | !Gene42) | Gene14)
+Gene60, (Gene3 | (!Gene10 | Gene54))

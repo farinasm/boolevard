@@ -1,0 +1,60 @@
+Gene1, ((!Gene5 | Gene31) & (Gene48 | !Gene22))
+Gene2, (((Gene17 | Gene11) | !Gene4) | Gene26)
+Gene3, Gene3
+Gene4, (Gene45 | !Gene27)
+Gene5, (((Gene54 & !Gene17) & !Gene24) & !Gene45)
+Gene6, (!Gene59 & (Gene7 | !Gene29))
+Gene7, ((Gene4 & Gene8) | (Gene10 & Gene42))
+Gene8, ((!Gene3 | Gene15) | Gene43)
+Gene9, (((!Gene55 & Gene2) & !Gene39) & !Gene56)
+Gene10, Gene54
+Gene11, (Gene33 & (Gene12 & !Gene56))
+Gene12, ((!Gene49 & Gene36) & (Gene17 & !Gene14))
+Gene13, ((Gene36 & Gene5) | (!Gene45 | !Gene37))
+Gene14, ((!Gene45 & Gene40) | Gene20)
+Gene15, (!Gene29 & !Gene60)
+Gene16, (!Gene14 | !Gene5)
+Gene17, ((Gene7 | Gene38) & (Gene47 | Gene50))
+Gene18, (!Gene14 | (!Gene44 & Gene37))
+Gene19, (!Gene11 | Gene48)
+Gene20, (Gene11 & ((!Gene30 & Gene13) | !Gene15))
+Gene21, (Gene56 | ((!Gene28 | !Gene33) & Gene29))
+Gene22, ((!Gene34 | Gene53) & Gene3)
+Gene23, (Gene14 & (!Gene24 | Gene60))
+Gene24, (!Gene55 & !Gene31)
+Gene25, (!Gene38 & !Gene50)
+Gene26, !Gene23
+Gene27, (Gene10 | (!Gene14 | !Gene51))
+Gene28, !Gene46
+Gene29, (Gene47 & !Gene44)
+Gene30, (Gene33 & (Gene49 | Gene8))
+Gene31, ((!Gene9 | Gene21) | Gene40)
+Gene32, (!Gene23 & !Gene4)
+Gene33, Gene33
+Gene34, ((Gene5 & Gene51) | (!Gene50 & !Gene49))
+Gene35, (!Gene29 & (!Gene12 & Gene33))
+Gene36, !Gene15
+Gene37, Gene44
+Gene38, (!Gene5 | !Gene34)
+Gene39, (!Gene53 & Gene28)
+Gene40, ((Gene34 & (!Gene22 & !Gene27)) | !Gene47)
+Gene41, (Gene46 | !Gene49)
+Gene42, (Gene52 | (!Gene27 | !Gene6))
+Gene43, Gene9
+Gene44, ((Gene56 | !Gene57) | (Gene11 | !Gene22))
+Gene45, (Gene13 | (!Gene59 & !Gene58))
+Gene46, (!Gene57 | !Gene60)
+Gene47, (Gene43 & (Gene14 | (!Gene56 | !Gene45)))
+Gene48, (Gene1 & !Gene33)
+Gene49, !Gene7
+Gene50, (Gene14 & Gene20)
+Gene51, (!Gene38 & !Gene50)
+Gene52, ((Gene51 & !Gene19) | (!Gene5 & Gene16))
+Gene53, !Gene14
+Gene54, ((!Gene51 & !Gene43) & !Gene55)
+Gene55, !Gene13
+Gene56, (!Gene33 & !Gene17)
+Gene57, Gene57
+Gene58, ((Gene59 | Gene12) | (Gene31 | !Gene50))
+Gene59, ((!Gene41 | !Gene21) | !Gene37)
+Gene60, (Gene30 & (Gene3 & !Gene42))

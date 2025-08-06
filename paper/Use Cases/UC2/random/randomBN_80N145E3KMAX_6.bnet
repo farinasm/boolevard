@@ -1,0 +1,80 @@
+Gene1, (!Gene17 & !Gene49)
+Gene2, Gene15
+Gene3, Gene74
+Gene4, Gene4
+Gene5, Gene5
+Gene6, Gene18
+Gene7, Gene6
+Gene8, ((Gene12 & !Gene33) & !Gene77)
+Gene9, Gene11
+Gene10, (Gene35 | !Gene20)
+Gene11, !Gene74
+Gene12, (Gene40 & !Gene8)
+Gene13, (!Gene7 | Gene41)
+Gene14, (!Gene6 | Gene8)
+Gene15, (Gene38 | (!Gene3 & Gene68))
+Gene16, Gene10
+Gene17, Gene45
+Gene18, (Gene1 & Gene2)
+Gene19, (Gene13 & (Gene21 | Gene23))
+Gene20, (!Gene56 & !Gene62)
+Gene21, !Gene31
+Gene22, (!Gene36 & !Gene14)
+Gene23, (!Gene65 & !Gene13)
+Gene24, ((!Gene14 | !Gene75) & !Gene1)
+Gene25, (Gene63 | Gene70)
+Gene26, ((Gene20 | !Gene79) | Gene41)
+Gene27, Gene45
+Gene28, !Gene13
+Gene29, (!Gene9 | !Gene73)
+Gene30, (Gene14 & (!Gene45 | !Gene4))
+Gene31, (Gene13 | Gene10)
+Gene32, Gene46
+Gene33, !Gene61
+Gene34, !Gene80
+Gene35, Gene3
+Gene36, Gene12
+Gene37, (Gene67 | Gene22)
+Gene38, (!Gene71 | (!Gene36 & !Gene60))
+Gene39, !Gene45
+Gene40, Gene45
+Gene41, (!Gene48 | Gene59)
+Gene42, Gene60
+Gene43, !Gene7
+Gene44, Gene63
+Gene45, !Gene63
+Gene46, ((Gene13 & Gene17) | Gene20)
+Gene47, (Gene5 | Gene44)
+Gene48, Gene18
+Gene49, (!Gene2 | (Gene21 | !Gene25))
+Gene50, !Gene27
+Gene51, Gene51
+Gene52, (Gene53 & !Gene45)
+Gene53, Gene79
+Gene54, !Gene61
+Gene55, (Gene39 & (!Gene5 | Gene31))
+Gene56, (Gene5 | !Gene42)
+Gene57, ((Gene29 & !Gene34) | !Gene17)
+Gene58, (Gene22 | !Gene39)
+Gene59, (!Gene60 | (Gene70 & Gene47))
+Gene60, !Gene67
+Gene61, !Gene71
+Gene62, ((!Gene68 & Gene44) | !Gene18)
+Gene63, (Gene55 | Gene60)
+Gene64, (!Gene16 & !Gene76)
+Gene65, (Gene27 & Gene18)
+Gene66, (Gene11 & Gene59)
+Gene67, (!Gene8 & Gene18)
+Gene68, (Gene44 | Gene15)
+Gene69, (Gene36 & !Gene62)
+Gene70, (Gene20 | (Gene38 & !Gene29))
+Gene71, (Gene61 | !Gene77)
+Gene72, (Gene3 | (!Gene79 | Gene57))
+Gene73, (Gene29 | Gene61)
+Gene74, ((!Gene14 | Gene57) & !Gene30)
+Gene75, Gene77
+Gene76, (!Gene18 & (!Gene51 & !Gene33))
+Gene77, ((!Gene55 & Gene56) & !Gene19)
+Gene78, (Gene35 | Gene40)
+Gene79, (!Gene67 | (!Gene24 | Gene33))
+Gene80, (!Gene20 | (Gene41 & !Gene24))

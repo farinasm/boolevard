@@ -1,0 +1,80 @@
+Gene1, (Gene35 | !Gene40)
+Gene2, Gene58
+Gene3, !Gene10
+Gene4, Gene7
+Gene5, !Gene18
+Gene6, (Gene47 | !Gene51)
+Gene7, (Gene18 & Gene28)
+Gene8, (!Gene50 | Gene80)
+Gene9, Gene26
+Gene10, Gene79
+Gene11, Gene71
+Gene12, !Gene55
+Gene13, (!Gene41 | !Gene12)
+Gene14, (Gene65 & Gene24)
+Gene15, (!Gene5 | !Gene74)
+Gene16, (Gene50 | !Gene30)
+Gene17, (Gene21 & !Gene35)
+Gene18, (Gene61 & !Gene53)
+Gene19, (!Gene70 & Gene58)
+Gene20, (Gene44 | !Gene19)
+Gene21, !Gene9
+Gene22, (!Gene35 & !Gene34)
+Gene23, !Gene8
+Gene24, (Gene39 & !Gene2)
+Gene25, Gene60
+Gene26, (!Gene65 & Gene66)
+Gene27, (Gene32 & !Gene55)
+Gene28, !Gene68
+Gene29, Gene65
+Gene30, Gene78
+Gene31, Gene69
+Gene32, (!Gene12 | Gene61)
+Gene33, Gene13
+Gene34, (Gene18 | Gene44)
+Gene35, (Gene25 & !Gene57)
+Gene36, !Gene16
+Gene37, (Gene45 | !Gene65)
+Gene38, !Gene28
+Gene39, Gene77
+Gene40, (Gene24 & Gene25)
+Gene41, (!Gene77 & !Gene15)
+Gene42, Gene25
+Gene43, !Gene31
+Gene44, !Gene5
+Gene45, (Gene35 & !Gene3)
+Gene46, (Gene10 & Gene33)
+Gene47, Gene47
+Gene48, !Gene15
+Gene49, Gene39
+Gene50, !Gene62
+Gene51, (!Gene16 & !Gene28)
+Gene52, (Gene1 & Gene9)
+Gene53, (Gene46 & !Gene65)
+Gene54, Gene35
+Gene55, Gene72
+Gene56, (Gene9 & !Gene35)
+Gene57, !Gene40
+Gene58, (!Gene77 & Gene45)
+Gene59, (!Gene18 & Gene76)
+Gene60, !Gene56
+Gene61, (!Gene70 & Gene32)
+Gene62, Gene62
+Gene63, Gene71
+Gene64, (!Gene28 & Gene58)
+Gene65, !Gene58
+Gene66, (Gene50 | !Gene8)
+Gene67, Gene1
+Gene68, (Gene35 & !Gene28)
+Gene69, !Gene80
+Gene70, !Gene40
+Gene71, Gene71
+Gene72, (Gene76 | Gene17)
+Gene73, Gene25
+Gene74, !Gene59
+Gene75, !Gene77
+Gene76, Gene34
+Gene77, !Gene10
+Gene78, !Gene20
+Gene79, !Gene27
+Gene80, (Gene75 & !Gene25)

@@ -1,0 +1,100 @@
+Gene1, Gene1
+Gene2, Gene81
+Gene3, (!Gene29 | !Gene92)
+Gene4, !Gene34
+Gene5, (!Gene61 | !Gene92)
+Gene6, !Gene72
+Gene7, (!Gene62 & !Gene23)
+Gene8, (!Gene66 | !Gene69)
+Gene9, Gene25
+Gene10, (Gene38 & Gene8)
+Gene11, Gene35
+Gene12, Gene51
+Gene13, (!Gene73 | Gene64)
+Gene14, !Gene63
+Gene15, !Gene1
+Gene16, !Gene4
+Gene17, Gene79
+Gene18, (!Gene99 | !Gene75)
+Gene19, (Gene79 | !Gene82)
+Gene20, (Gene71 | Gene84)
+Gene21, Gene86
+Gene22, !Gene18
+Gene23, Gene86
+Gene24, Gene1
+Gene25, Gene25
+Gene26, (Gene67 | !Gene50)
+Gene27, Gene6
+Gene28, !Gene62
+Gene29, (Gene12 | !Gene7)
+Gene30, Gene58
+Gene31, (!Gene27 & !Gene49)
+Gene32, (Gene81 & Gene7)
+Gene33, (Gene65 & !Gene84)
+Gene34, !Gene66
+Gene35, !Gene88
+Gene36, (Gene78 & !Gene18)
+Gene37, !Gene32
+Gene38, Gene2
+Gene39, (!Gene100 & !Gene93)
+Gene40, Gene16
+Gene41, (Gene24 | !Gene75)
+Gene42, Gene36
+Gene43, (!Gene54 & !Gene51)
+Gene44, Gene53
+Gene45, (!Gene22 | Gene87)
+Gene46, (Gene99 & Gene87)
+Gene47, Gene47
+Gene48, (!Gene60 & !Gene34)
+Gene49, (!Gene29 & !Gene57)
+Gene50, (!Gene59 & !Gene99)
+Gene51, (Gene72 | !Gene46)
+Gene52, (!Gene56 | Gene57)
+Gene53, (!Gene21 & !Gene30)
+Gene54, Gene14
+Gene55, (Gene19 & !Gene43)
+Gene56, (Gene3 & !Gene82)
+Gene57, (Gene83 | !Gene68)
+Gene58, (!Gene48 | Gene14)
+Gene59, (Gene85 & Gene38)
+Gene60, (Gene34 | Gene45)
+Gene61, Gene14
+Gene62, !Gene88
+Gene63, (!Gene81 | Gene12)
+Gene64, !Gene36
+Gene65, Gene12
+Gene66, (!Gene7 | !Gene89)
+Gene67, (Gene37 & Gene19)
+Gene68, !Gene9
+Gene69, Gene34
+Gene70, (!Gene95 & !Gene45)
+Gene71, Gene48
+Gene72, (!Gene68 & Gene43)
+Gene73, !Gene81
+Gene74, !Gene12
+Gene75, !Gene49
+Gene76, !Gene2
+Gene77, !Gene8
+Gene78, Gene20
+Gene79, !Gene65
+Gene80, Gene41
+Gene81, (!Gene87 & Gene68)
+Gene82, (Gene73 | Gene25)
+Gene83, (!Gene33 & !Gene11)
+Gene84, (Gene10 & Gene76)
+Gene85, !Gene96
+Gene86, Gene93
+Gene87, Gene83
+Gene88, !Gene19
+Gene89, !Gene58
+Gene90, (!Gene23 | !Gene88)
+Gene91, Gene18
+Gene92, Gene82
+Gene93, Gene54
+Gene94, (Gene41 | Gene90)
+Gene95, (!Gene73 | Gene29)
+Gene96, (Gene12 | !Gene26)
+Gene97, (Gene49 & Gene25)
+Gene98, Gene60
+Gene99, (!Gene10 & !Gene26)
+Gene100, !Gene10

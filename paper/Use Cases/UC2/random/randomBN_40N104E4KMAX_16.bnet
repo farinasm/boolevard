@@ -1,0 +1,40 @@
+Gene1, (((Gene31 | Gene23) | !Gene40) & Gene24)
+Gene2, ((!Gene6 | !Gene1) & Gene37)
+Gene3, (!Gene40 & ((!Gene26 | Gene19) | !Gene35))
+Gene4, (!Gene35 | ((!Gene33 & Gene21) | Gene2))
+Gene5, (!Gene27 & (!Gene16 & (Gene33 & !Gene31)))
+Gene6, (Gene30 | Gene20)
+Gene7, (!Gene8 & (!Gene31 | (!Gene24 | Gene39)))
+Gene8, (Gene34 | (!Gene28 & !Gene38))
+Gene9, Gene9
+Gene10, (Gene22 & !Gene21)
+Gene11, (Gene23 | Gene4)
+Gene12, !Gene31
+Gene13, ((!Gene7 | Gene14) | (!Gene8 | Gene5))
+Gene14, ((!Gene10 | Gene16) & !Gene19)
+Gene15, ((!Gene13 & Gene38) | (!Gene14 | !Gene32))
+Gene16, ((!Gene21 | Gene27) | Gene13)
+Gene17, Gene17
+Gene18, ((!Gene8 & !Gene28) | !Gene19)
+Gene19, !Gene15
+Gene20, Gene36
+Gene21, (Gene15 | Gene2)
+Gene22, (Gene7 | Gene1)
+Gene23, (!Gene21 | (!Gene22 | Gene37))
+Gene24, (((Gene10 | !Gene23) & Gene39) & !Gene14)
+Gene25, (!Gene16 | !Gene12)
+Gene26, ((!Gene39 & !Gene22) & (!Gene2 & Gene29))
+Gene27, ((Gene39 & Gene13) | !Gene31)
+Gene28, (!Gene6 | (Gene26 & (!Gene12 & !Gene23)))
+Gene29, (!Gene36 & (Gene30 | !Gene37))
+Gene30, (!Gene14 & Gene21)
+Gene31, (!Gene7 & !Gene39)
+Gene32, Gene32
+Gene33, (!Gene9 | (!Gene14 & Gene22))
+Gene34, ((Gene21 | (Gene27 | Gene19)) & !Gene1)
+Gene35, (!Gene39 & (!Gene30 & Gene32))
+Gene36, (!Gene20 & !Gene11)
+Gene37, ((!Gene22 | Gene38) & !Gene25)
+Gene38, (!Gene34 | !Gene31)
+Gene39, ((Gene5 | Gene17) | !Gene30)
+Gene40, !Gene10
