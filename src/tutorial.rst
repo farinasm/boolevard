@@ -12,10 +12,14 @@ This section contains interactive tutorials demonstrating how BooLEVARD can be a
 * :doc:`Cancer Metastasis <tutorials/Cancer_Metastasis>`   
   This tutorial uses a Boolean model representing key molecular cascades in cancer metastasis. It showcases how activatory perturbations of two tumor suppressors (p53 and p63) and microRNA-34 reduce invasiveness and increase apoptotic cell-fate decisions.
 
+* :doc:`Processing Boolean Models from Cell Collective <tutorials/Processing_Boolean_Models_from_Cell_Collective>`   
+  In this tutorial, we present a workflow for processing Boolean models available in Cell Collective using BooLEVARD.
+
 .. toctree::
    :maxdepth: 1
 
    tutorials/Quick_Start
    tutorials/Guard_Cell_Abscisic_Acid
    tutorials/Cancer_Metastasis
+   tutorials/Processing_Boolean_Models_from_Cell_Collective
 
