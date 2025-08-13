@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Processing Boolean Models from Cell Collective &mdash; BooLEVARD 0.1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/nbsphinx-code-cells.css?v=2aa19091" />
+
+  
+    <link rel="shortcut icon" href="https://raw.githubusercontent.com/farinasm/boolevard/main/src/icon.png"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=01f34227"></script>
+        <script src="../_static/doctools.js?v=9bcbadda"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+        <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Citation" href="../citation.html" />
+    <link rel="prev" title="Cancer Metastasis" href="Cancer_Metastasis.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html">
+            
+              <img src="https://raw.githubusercontent.com/farinasm/boolevard/main/src/Logo_white.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                0.1.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api.html">API Reference</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">User Guide</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../tutorial.html">Tutorials</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Quick_Start.html">Quick Start</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Guard_Cell_Abscisic_Acid.html">Guard Cell Abscinic Acid</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Cancer_Metastasis.html">Cancer Metastasis</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Processing Boolean Models from Cell Collective</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Citation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../citation.html">Citation</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">BooLEVARD</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../tutorial.html">Tutorials</a></li>
+      <li class="breadcrumb-item active">Processing Boolean Models from Cell Collective</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/tutorials/Processing_Boolean_Models_from_Cell_Collective.ipynb.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="Processing-Boolean-Models-from-Cell-Collective">
+<h1>Processing Boolean Models from Cell Collective<a class="headerlink" href="#Processing-Boolean-Models-from-Cell-Collective" title="Link to this heading"></a></h1>
+<h1 style="margin-bottom: 50px;" id="section-0"><p>BooLEVARD Tutorials</p>
+</h1><h5 style="margin-bottom: 2px; margin-top: 0px;" id="section-0.1"><p>[Tutorial 4] Processing Boolean Models from Cell Collective</p>
+</h5><p><p>In this tutorial, we present a workflow for processing Boolean models available in Cell Collective using BooLEVARD. The pipeline involves the following steps:</p>
+<ol class="arabic simple">
+<li><p><strong>Importing</strong> a model in <em>SBML-qual</em> format (Cell Collective default).</p></li>
+<li><p><strong>Converting</strong> the model to <em>BoolNet</em> format (BooLEVARD’s input).</p></li>
+<li><p><strong>Loading</strong> the model into <strong>BooLEVARD</strong> to compute path-count-based transduction scores toward every non-input node within the model.</p></li>
+<li><p><strong>Extracting</strong> stable state analysis results to determine the binary activation state (0 or 1) of the non-input nodes within the model.</p></li>
+</ol>
+<p>In addition to the transduction scores and stable states, we provide metadata for each example, including:</p>
+<ul class="simple">
+<li><p>Total numbber of nodes,</p></li>
+<li><p>Number of computed <em>stable states</em>,</p></li>
+<li><p>Total count of <em>activating and inhibitory paths</em>.</p></li>
+<li><p>And the <em>runtime</em> required for each computation step.</p></li>
+</ul>
+<p>We apply this workflow to six publicly available Boolean models from Cell Collective:</p>
+<ul class="simple">
+<li><p><strong>T Cell Receptor Signaling</strong> [visit]</p></li>
+<li><p><strong>Guard Cell Abscisic Acid Signaling</strong> [visit]</p></li>
+<li><p><strong>T-LGL Survival Network</strong> [visit]</p></li>
+<li><p><strong>HGF Signaling in Keratinocytes</strong> [visit]</p></li>
+<li><p><strong>Bortezomib Responses in U266 Human Myeloma Cells</strong> [visit]</p></li>
+<li><p><strong>MAPK Cancer Cell Fate Network</strong> [visit]</p></li>
+<li><p><strong>IL-1 Signaling</strong> [visit]</p></li>
+<li><p><strong>IL-6 Signaling</strong> [visit]</p></li>
+<li><p><strong>Tumor Cell Invasion</strong> [visit]</p></li>
+</ul>
+<p>This use case illustrates how mechanistic information encoded in the Boolean equations (captured by transduction path counts) can be systematically compared with the emergent behavior of the system derived from its stable states.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[158]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">biolqm</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">tempfile</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">re</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">mpbn</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">contextlib</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">io</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">xml.etree.ElementTree</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">ET</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">boolevard</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">blv</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">seaborn</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sb</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">PyComplexHeatmap</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">matplotlib.colors</span><span class="w"> </span><span class="kn">import</span> <span class="n">ListedColormap</span><span class="p">,</span> <span class="n">LinearSegmentedColormap</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">scipy.cluster.hierarchy</span><span class="w"> </span><span class="kn">import</span> <span class="n">linkage</span><span class="p">,</span> <span class="n">leaves_list</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.metrics</span><span class="w"> </span><span class="kn">import</span> <span class="n">r2_score</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.linear_model</span><span class="w"> </span><span class="kn">import</span> <span class="n">LinearRegression</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">matplotlib.ticker</span><span class="w"> </span><span class="kn">import</span> <span class="n">LogLocator</span><span class="p">,</span> <span class="n">NullFormatter</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area rendered_html docutils container">
+<script type="text/javascript" id="colomoto-setup-9628083" class="to-be-removed">
+        if (typeof Jupyter != 'undefined') {
+
+    var biolqm_jsapi = { action_upload_model: function() {
+        var cell = Jupyter.notebook.get_selected_cell();
+        cell.set_text('lqm = '+biolqm_jsapi.module_alias+'.upload()');
+        cell.focus_editor();
+    } };
+    colomoto_extension(Jupyter, "colomoto-setup-9628083", "biolqm", {"name": "bioLQM", "sub-menu": [{"name": "Upload model", "snippet": ["lqm = biolqm.upload()"]}, {"name": "Load model", "snippet": ["lqm = biolqm.load(\"model.sbml\")"]}, "---", {"name": "Export to file", "sub-menu": [{"name": "SBML-qual v1.0 (.sbml)", "snippet": ["biolqm.save(lqm, \"mymodel.sbml\", \"sbml\")"]}, "Functions formats", {"name": "BoolNet (.bnet)", "snippet": ["biolqm.save(lqm, \"mymodel.bnet\", \"bnet\")"]}, {"name": "BooleanNet (.booleannet)", "snippet": ["biolqm.save(lqm, \"mymodel.booleannet\", \"booleannet\")"]}, {"name": "BoolSim (.boolsim)", "snippet": ["biolqm.save(lqm, \"mymodel.boolsim\", \"boolsim\")"]}, {"name": "Raw Boolean functions (.boolfunctions)", "snippet": ["biolqm.save(lqm, \"mymodel.boolfunctions\", \"boolfunctions\")"]}, {"name": "Truth table (.tt)", "snippet": ["biolqm.save(lqm, \"mymodel.tt\", \"tt\")"]}, "Petri net formats", {"name": "APNN (.apnn)", "snippet": ["biolqm.save(lqm, \"mymodel.apnn\", \"apnn\")"]}, {"name": "INA (.ina)", "snippet": ["biolqm.save(lqm, \"mymodel.ina\", \"ina\")"]}, {"name": "PNML (.pnml)", "snippet": ["biolqm.save(lqm, \"mymodel.pnml\", \"pnml\")"]}, "Dedicated formats", {"name": "GINML (.ginml)", "snippet": ["biolqm.save(lqm, \"mymodel.ginml\", \"ginml\")"]}, {"name": "GNA non-xml (.gna)", "snippet": ["biolqm.save(lqm, \"mymodel.gna\", \"gna\")"]}, {"name": "MaBoSS (.bnd)", "snippet": ["biolqm.save(lqm, \"mymodel.bnd\", \"bnd\")"]}, {"name": "Pint (.an)", "snippet": ["biolqm.save(lqm, \"mymodel.an\", \"an\")"]}]}, {"name": "Convert to tool", "sub-menu": [{"name": "GINsim", "snippet": ["lrg = biolqm.to_ginsim(lqm)"]}, {"name": "MaBoSS", "snippet": ["masim = biolqm.to_maboss(lqm)"]}, {"name": "Pint", "snippet": ["an = biolqm.to_pint(lqm)"]}]}, "---", {"name": "Compute fixpoints", "snippet": ["fps = biolqm.fixpoints(lqm)"]}, {"name": "Compute trap spaces", "snippet": ["traps = biolqm.trapspace(lqm)"]}, "---", {"name": "Model modifications", "sub-menu": [{"name": "Perturbation", "snippet": ["lqm_mod = biolqm.perturbation(lqm, \"node%0\")"]}, {"name": "Booleanization", "snippet": ["lqm_bool = biolqm.booleanize(lqm)"]}, {"name": "Reduction", "snippet": ["lqm_red = biolqm.reduce(lqm, \"fixed,output,duplicate\")"]}, {"name": "Reversal", "snippet": ["lqm_rev = biolqm.reverse(lqm)"]}, {"name": "Sanitize", "snippet": ["lqm_san = biolqm.sanitize(lqm)"]}]}, "---", {"name": "Documentation", "external-link": "http://ginsim.naldi.info/biolqm/site/doc/index.html"}]}, [{"name": "upload", "setup": {"icon": "fa-upload", "help": "Upload model", "handler": "action_upload_model"}}], biolqm_jsapi);
+     }</script><style type="text/css">
+    #biolqm_menu {
+        color: #00007f;
+        background-color: white;
+    }
+
+    div#biolqm-toolbar:before {
+        content: "bioLQM";
+        float: left;
+        margin-left: 1em;
+        margin-right: 1em;
+        margin-top: 0.2em;
+    }
+    div#biolqm-toolbar,
+    div#biolqm-toolbar button {
+        color: #00007f;
+    }
+    </style></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area rendered_html docutils container">
+<script type="text/javascript" id="colomoto-setup-5145783" class="to-be-removed">
+        if (typeof Jupyter != 'undefined') {
+
+    var ginsim_jsapi = { action_upload_model: function() {
+        var cell = Jupyter.notebook.get_selected_cell();
+        cell.set_text('lrg = '+ginsim_jsapi.module_alias+'.upload()');
+        cell.focus_editor();
+    } };
+    colomoto_extension(Jupyter, "colomoto-setup-5145783", "ginsim", {"name": "GINsim", "sub-menu": [{"name": "Upload model", "snippet": ["lrg = ginsim.upload()"]}, {"name": "Load model", "snippet": ["lrg = ginsim.load(\"model.zginml\")"]}, "---", {"name": "Export to file", "sub-menu": [{"name": "MaBoSS (.bnd, .cfg)", "snippet": ["ginsim.service(\"maboss\").export(lrg, \"mymodel.bnd\")"]}]}, {"name": "Convert to tool", "sub-menu": [{"name": "bioLQM", "snippet": ["lqm = ginsim.to_biolqm(lrg)"]}, {"name": "MaBoSS", "snippet": ["masim = ginsim.to_maboss(lrg)"]}, {"name": "NuSMV", "snippet": ["smv = ginsim.to_nusmv(lrg)"]}, {"name": "Pint", "snippet": ["an = ginsim.to_pint(lrg)"]}]}, "---", {"name": " Display regulatory graph", "snippet": ["ginsim.show(lrg)"]}]}, [{"name": "upload", "setup": {"icon": "fa-upload", "help": "Upload model", "handler": "action_upload_model"}}], ginsim_jsapi);
+     }</script><style type="text/css">
+    #ginsim_menu {
+        color: blue;
+        background-color: white;
+    }
+
+    div#ginsim-toolbar:before {
+        content: "GINsim";
+        float: left;
+        margin-left: 1em;
+        margin-right: 1em;
+        margin-top: 0.2em;
+    }
+    div#ginsim-toolbar,
+    div#ginsim-toolbar button {
+        color: blue;
+    }
+    </style></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area stderr docutils container">
+<div class="highlight"><pre>
+/home/marco/.local/lib/python3.11/site-packages/matplotlib/projections/__init__.py:63: UserWarning: Unable to import Axes3D. This may be due to multiple versions of Matplotlib being installed (e.g. as a system package and as a pip package). As a result, the 3D projection is not available.
+  warnings.warn(&#34;Unable to import Axes3D. This may be due to multiple versions of &#34;
+</pre></div></div>
+</div>
+<p>Below we define the functions that will be used to convert the SBML models from Cell Collective into BoolNet format, generate a heatmap that compares stable state results with BooLEVARD’s output (path counts), and a dataframe storing some metadata, including simulation times, number of stable states, and number of counted paths.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[159]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Extract qualitative species IDs and names from SBML-qual file</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">extract_qualids</span><span class="p">(</span><span class="n">sbml_file</span><span class="p">):</span>
+    <span class="n">ns</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;qual&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.sbml.org/sbml/level3/version1/qual/version1&quot;</span><span class="p">}</span>
+    <span class="n">tree</span> <span class="o">=</span> <span class="n">ET</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">sbml_file</span><span class="p">)</span>
+    <span class="n">root</span> <span class="o">=</span> <span class="n">tree</span><span class="o">.</span><span class="n">getroot</span><span class="p">()</span>
+    <span class="n">id2name</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">q</span> <span class="ow">in</span> <span class="n">root</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="s2">&quot;.//qual:qualitativeSpecies&quot;</span><span class="p">,</span> <span class="n">ns</span><span class="p">):</span>
+        <span class="n">qid</span> <span class="o">=</span> <span class="n">q</span><span class="o">.</span><span class="n">attrib</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;{http://www.sbml.org/sbml/level3/version1/qual/version1}id&quot;</span><span class="p">)</span>
+        <span class="n">name</span> <span class="o">=</span> <span class="n">q</span><span class="o">.</span><span class="n">attrib</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;{http://www.sbml.org/sbml/level3/version1/qual/version1}name&quot;</span><span class="p">,</span> <span class="n">qid</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">qid</span> <span class="ow">and</span> <span class="n">name</span><span class="p">:</span>
+            <span class="n">id2name</span><span class="p">[</span><span class="n">qid</span><span class="p">]</span> <span class="o">=</span> <span class="n">name</span>
+    <span class="k">return</span> <span class="n">id2name</span>
+
+<span class="c1"># Convert SBML-qual model to bnet format</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">sbml2bnet</span><span class="p">(</span><span class="n">sbml_file</span><span class="p">,</span> <span class="n">output_file</span><span class="p">):</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">model</span> <span class="o">=</span> <span class="n">biolqm</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">sbml_file</span><span class="p">)</span>
+        <span class="n">id2name</span> <span class="o">=</span> <span class="n">extract_qualids</span><span class="p">(</span><span class="n">sbml_file</span><span class="p">)</span>
+        <span class="k">with</span> <span class="n">tempfile</span><span class="o">.</span><span class="n">NamedTemporaryFile</span><span class="p">(</span><span class="s2">&quot;w+&quot;</span><span class="p">,</span> <span class="n">delete</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">suffix</span><span class="o">=</span><span class="s2">&quot;.bnet&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+            <span class="n">biolqm</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">f</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="s2">&quot;bnet&quot;</span><span class="p">)</span>
+            <span class="n">f</span><span class="o">.</span><span class="n">seek</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+            <span class="n">lines</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
+        <span class="n">new_lines</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">id_pattern</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\b(</span><span class="si">{}</span><span class="s1">)\b&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">&#39;|&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="n">re</span><span class="o">.</span><span class="n">escape</span><span class="p">,</span> <span class="n">id2name</span><span class="o">.</span><span class="n">keys</span><span class="p">()))))</span>
+        <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">lines</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">line</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;#&quot;</span><span class="p">)</span> <span class="ow">or</span> <span class="s2">&quot;,&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">line</span><span class="p">:</span>
+                <span class="n">new_lines</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+                <span class="k">continue</span>
+            <span class="n">target</span><span class="p">,</span> <span class="n">expr</span> <span class="o">=</span> <span class="nb">map</span><span class="p">(</span><span class="nb">str</span><span class="o">.</span><span class="n">strip</span><span class="p">,</span> <span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;,&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+            <span class="n">target</span> <span class="o">=</span> <span class="n">id2name</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">target</span><span class="p">,</span> <span class="n">target</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;,&quot;</span><span class="p">,</span> <span class="s2">&quot;_&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">,</span> <span class="s2">&quot;_&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;+&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;-&quot;</span><span class="p">,</span> <span class="s2">&quot;__&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;(&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;)&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+            <span class="n">expr</span> <span class="o">=</span> <span class="n">id_pattern</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="k">lambda</span> <span class="n">m</span><span class="p">:</span> <span class="n">id2name</span><span class="p">[</span><span class="n">m</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">0</span><span class="p">)],</span> <span class="n">expr</span><span class="p">)</span>
+            <span class="n">expr</span> <span class="o">=</span> <span class="n">expr</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;&amp;&quot;</span><span class="p">,</span> <span class="s2">&quot; &amp; &quot;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">,</span> <span class="s2">&quot;_&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;,&quot;</span><span class="p">,</span> <span class="s2">&quot;_&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;+&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;-&quot;</span><span class="p">,</span> <span class="s2">&quot;__&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;(&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;)&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+            <span class="n">new_lines</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">target</span><span class="si">}</span><span class="s2">, </span><span class="si">{</span><span class="n">expr</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">output_file</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">out</span><span class="p">:</span>
+            <span class="n">out</span><span class="o">.</span><span class="n">writelines</span><span class="p">(</span><span class="n">new_lines</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;✅ SBML-qual model successfully converted to bnet: </span><span class="si">{</span><span class="n">output_file</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;❌ Error: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># Get simulation times</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">simmulation_summary</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">pc</span><span class="p">):</span>
+    <span class="n">n_paths</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">pc</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+    <span class="n">n_nodes</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">Nodes</span><span class="p">)</span>
+    <span class="n">n_inputs</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">Info</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="n">model</span><span class="o">.</span><span class="n">Info</span><span class="o">.</span><span class="n">index</span> <span class="o">==</span> <span class="n">model</span><span class="o">.</span><span class="n">Info</span><span class="p">[</span><span class="s2">&quot;DNF&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="nb">str</span><span class="p">)])</span>
+    <span class="n">n_stable_states</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">pc</span><span class="p">)</span>
+    <span class="n">avg_stime_ss</span> <span class="o">=</span> <span class="n">sim_time</span> <span class="o">/</span> <span class="n">n_stable_states</span>
+    <span class="n">avg_stime_node</span> <span class="o">=</span> <span class="n">sim_time</span> <span class="o">/</span> <span class="n">n_stable_states</span> <span class="o">/</span> <span class="n">n_nodes</span>
+    <span class="n">avg_stime_path</span> <span class="o">=</span> <span class="n">sim_time</span> <span class="o">/</span> <span class="n">n_paths</span>
+    <span class="nb">sum</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([{</span>
+        <span class="s2">&quot;Simulation time (s)&quot;</span><span class="p">:</span> <span class="n">sim_time</span><span class="p">,</span>
+        <span class="s2">&quot;Stable states&quot;</span><span class="p">:</span> <span class="n">n_stable_states</span><span class="p">,</span>
+        <span class="s2">&quot;Nodes&quot;</span><span class="p">:</span> <span class="n">n_nodes</span><span class="p">,</span>
+        <span class="s2">&quot;Edges&quot;</span><span class="p">:</span> <span class="n">edges</span><span class="p">,</span>
+        <span class="s2">&quot;Inputs&quot;</span><span class="p">:</span> <span class="n">n_inputs</span><span class="p">,</span>
+        <span class="s2">&quot;Paths&quot;</span><span class="p">:</span> <span class="n">n_paths</span><span class="p">,</span>
+        <span class="s2">&quot;Avg time / state (s)&quot;</span><span class="p">:</span> <span class="n">avg_stime_ss</span><span class="p">,</span>
+        <span class="s2">&quot;Avg time / node (s)&quot;</span><span class="p">:</span> <span class="n">avg_stime_node</span><span class="p">,</span>
+        <span class="s2">&quot;Avg time / path (s)&quot;</span><span class="p">:</span> <span class="n">avg_stime_path</span>
+    <span class="p">}])</span>
+    <span class="k">return</span> <span class="nb">sum</span>
+
+<span class="c1"># Perform analysis using BooLEVARD</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">Report</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">paths</span><span class="p">,</span> <span class="n">base</span> <span class="o">=</span> <span class="mi">4</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">log_signed</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">base</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">sign</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">log1p</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">x</span><span class="p">))</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">base</span><span class="p">)</span>
+    <span class="n">inputs</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">Info</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="n">model</span><span class="o">.</span><span class="n">Info</span><span class="o">.</span><span class="n">index</span> <span class="o">==</span> <span class="n">model</span><span class="o">.</span><span class="n">Info</span><span class="p">[</span><span class="s2">&quot;DNF&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="nb">str</span><span class="p">)]</span>
+    <span class="c1"># Transduction:</span>
+    <span class="n">paths_sum</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">paths</span><span class="p">)</span>
+    <span class="n">paths_sum</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="n">nodes</span>
+    <span class="n">paths_sum</span> <span class="o">=</span> <span class="n">paths_sum</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span> <span class="o">~</span><span class="n">paths_sum</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">inputs</span><span class="p">)]</span>
+    <span class="n">paths_sum</span> <span class="o">=</span> <span class="n">log_signed</span><span class="p">(</span><span class="n">paths_sum</span><span class="p">,</span> <span class="n">base</span><span class="p">)</span>
+    <span class="c1"># Local states:</span>
+    <span class="n">ls_info</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">Info</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">nodes</span><span class="p">,</span> <span class="n">model</span><span class="o">.</span><span class="n">Info</span><span class="o">.</span><span class="n">columns</span><span class="p">[:</span><span class="o">-</span><span class="mi">2</span><span class="p">]]</span><span class="o">.</span><span class="n">transpose</span><span class="p">()</span>
+    <span class="n">ls_info</span> <span class="o">=</span> <span class="n">ls_info</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span> <span class="o">~</span><span class="n">ls_info</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">inputs</span><span class="p">)]</span>
+    <span class="n">ls_info</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">paths_sum</span><span class="o">.</span><span class="n">index</span>
+    <span class="c1">### Plot heatmap ###</span>
+    <span class="n">row_linkage</span> <span class="o">=</span> <span class="n">linkage</span><span class="p">(</span><span class="n">paths_sum</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s2">&quot;average&quot;</span><span class="p">,</span> <span class="n">metric</span><span class="o">=</span><span class="s2">&quot;euclidean&quot;</span><span class="p">)</span>
+    <span class="n">col_linkage</span> <span class="o">=</span> <span class="n">linkage</span><span class="p">(</span><span class="n">paths_sum</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">T</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s2">&quot;average&quot;</span><span class="p">,</span> <span class="n">metric</span><span class="o">=</span><span class="s2">&quot;euclidean&quot;</span><span class="p">)</span>
+    <span class="n">row_order</span> <span class="o">=</span> <span class="n">leaves_list</span><span class="p">(</span><span class="n">row_linkage</span><span class="p">)</span>
+    <span class="n">col_order</span> <span class="o">=</span> <span class="n">leaves_list</span><span class="p">(</span><span class="n">col_linkage</span><span class="p">)</span>
+    <span class="n">row_labels</span> <span class="o">=</span> <span class="n">paths_sum</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="n">row_order</span><span class="p">]</span>
+    <span class="n">col_labels</span> <span class="o">=</span> <span class="n">paths_sum</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="n">col_order</span><span class="p">]</span>
+    <span class="n">paths_sum</span> <span class="o">=</span> <span class="n">paths_sum</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">row_labels</span><span class="p">,</span> <span class="n">col_labels</span><span class="p">]</span>
+    <span class="n">ls_info</span> <span class="o">=</span> <span class="n">ls_info</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">row_labels</span><span class="p">,</span> <span class="n">col_labels</span><span class="p">]</span>
+
+    <span class="n">colors_row_ha</span> <span class="o">=</span> <span class="p">{</span><span class="n">input_name</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;0&quot;</span><span class="p">:</span> <span class="s2">&quot;#eeeeee&quot;</span><span class="p">,</span> <span class="s2">&quot;1&quot;</span><span class="p">:</span> <span class="s2">&quot;#212121&quot;</span><span class="p">}</span> <span class="k">for</span> <span class="n">input_name</span> <span class="ow">in</span> <span class="n">inputs</span><span class="p">}</span>
+    <span class="c1"># Annotations</span>
+    <span class="n">annot_ls</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([</span><span class="s2">&quot;Local State&quot;</span><span class="p">]</span><span class="o">*</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">nodes</span><span class="p">)</span><span class="o">-</span><span class="nb">len</span><span class="p">(</span><span class="n">inputs</span><span class="p">)),</span> <span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Score&quot;</span><span class="p">])</span>
+    <span class="n">annot_paths</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([</span><span class="s2">&quot;Path Count&quot;</span><span class="p">]</span><span class="o">*</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">nodes</span><span class="p">)</span><span class="o">-</span><span class="nb">len</span><span class="p">(</span><span class="n">inputs</span><span class="p">)),</span> <span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Score&quot;</span><span class="p">])</span>
+    <span class="n">annot_inputs</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">Info</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">inputs</span><span class="p">,</span> <span class="n">model</span><span class="o">.</span><span class="n">Info</span><span class="o">.</span><span class="n">columns</span><span class="p">[:</span><span class="o">-</span><span class="mi">2</span><span class="p">]]</span><span class="o">.</span><span class="n">transpose</span><span class="p">()</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span>
+    <span class="n">annot_inputs</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">paths_sum</span><span class="o">.</span><span class="n">index</span>
+    <span class="n">row_ha_inputs</span> <span class="o">=</span> <span class="n">HeatmapAnnotation</span><span class="p">(</span><span class="n">df</span> <span class="o">=</span> <span class="n">annot_inputs</span><span class="p">,</span> <span class="n">colors</span> <span class="o">=</span> <span class="n">colors_row_ha</span><span class="p">,</span> <span class="n">plot</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="n">legend</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">label_kws</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">size</span> <span class="o">=</span> <span class="mi">9</span><span class="p">),</span> <span class="n">label_side</span> <span class="o">=</span> <span class="s2">&quot;bottom&quot;</span><span class="p">,</span> <span class="n">wgap</span> <span class="o">=</span> <span class="mf">0.01</span><span class="p">,</span> <span class="n">plot_kws</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">linewidth</span> <span class="o">=</span> <span class="mf">0.001</span><span class="p">,</span> <span class="n">linecolor</span> <span class="o">=</span> <span class="s2">&quot;white&quot;</span><span class="p">,</span> <span class="n">linestyle</span> <span class="o">=</span> <span class="s2">&quot;:&quot;</span><span class="p">),</span> <span class="n">legend_width</span><span class="o">=</span><span class="mi">90</span><span class="p">)</span> <span class="c1"># Annotation for inputs</span>
+    <span class="c1"># - Subheatmap 1: Local States</span>
+    <span class="n">cmap_ls</span> <span class="o">=</span> <span class="n">ListedColormap</span><span class="p">([</span><span class="s2">&quot;#eeeeee&quot;</span><span class="p">,</span> <span class="s2">&quot;#212121&quot;</span><span class="p">])</span>
+    <span class="n">hmap_ls</span> <span class="o">=</span> <span class="n">ClusterMapPlotter</span><span class="p">(</span>
+        <span class="n">ls_info</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">),</span>
+        <span class="n">row_cluster</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="n">col_cluster</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="n">show_rownames</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">show_colnames</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="n">cmap</span> <span class="o">=</span> <span class="n">cmap_ls</span><span class="p">,</span> <span class="n">linewidths</span> <span class="o">=</span> <span class="mf">0.001</span><span class="p">,</span> <span class="n">linecolor</span> <span class="o">=</span> <span class="s2">&quot;white&quot;</span><span class="p">,</span>
+        <span class="n">plot</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="n">plot_legend</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Local States&quot;</span><span class="p">,</span>
+        <span class="n">left_annotation</span> <span class="o">=</span> <span class="n">row_ha_inputs</span><span class="p">,</span>
+        <span class="n">xlabel</span> <span class="o">=</span> <span class="s2">&quot;Local States&quot;</span><span class="p">,</span>
+        <span class="n">xlabel_kws</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span><span class="n">fontsize</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span><span class="n">labelpad</span><span class="o">=</span><span class="mi">7</span><span class="p">,</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">ha</span> <span class="o">=</span> <span class="s2">&quot;center&quot;</span><span class="p">),</span>
+        <span class="n">xticklabels_kws</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mi">1</span><span class="p">),</span>
+        <span class="n">xlabel_side</span><span class="o">=</span><span class="s1">&#39;top&#39;</span>
+    <span class="p">)</span>
+    <span class="c1"># - Subheatmap 2: Path Count</span>
+    <span class="n">cmap_paths</span> <span class="o">=</span> <span class="n">LinearSegmentedColormap</span><span class="o">.</span><span class="n">from_list</span><span class="p">(</span><span class="s2">&quot;custom_diverging&quot;</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;#696bd4&quot;</span><span class="p">,</span> <span class="s2">&quot;#FFFFFF&quot;</span><span class="p">,</span> <span class="s2">&quot;#e55451&quot;</span><span class="p">],</span> <span class="n">N</span> <span class="o">=</span> <span class="mi">256</span><span class="p">)</span>
+    <span class="n">vmax_paths</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">paths_sum</span><span class="o">.</span><span class="n">values</span><span class="p">))</span>
+    <span class="n">hmap_paths</span> <span class="o">=</span> <span class="n">ClusterMapPlotter</span><span class="p">(</span>
+        <span class="n">paths_sum</span><span class="p">,</span>
+        <span class="n">row_cluster</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="n">col_cluster</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="n">show_rownames</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">show_colnames</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="n">left_annotation</span> <span class="o">=</span> <span class="n">row_ha_inputs</span><span class="p">,</span>
+        <span class="n">cmap</span> <span class="o">=</span> <span class="n">cmap_paths</span><span class="p">,</span> <span class="n">vmin</span> <span class="o">=</span> <span class="o">-</span><span class="n">vmax_paths</span><span class="p">,</span> <span class="n">vmax</span> <span class="o">=</span> <span class="n">vmax_paths</span><span class="p">,</span>
+        <span class="n">linewidths</span> <span class="o">=</span> <span class="mf">0.001</span><span class="p">,</span> <span class="n">linecolor</span> <span class="o">=</span> <span class="s2">&quot;white&quot;</span><span class="p">,</span>
+        <span class="n">plot</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="n">plot_legend</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Log4PC&quot;</span><span class="p">,</span>
+        <span class="n">xlabel</span> <span class="o">=</span> <span class="s2">&quot;Log4-PathCounts&quot;</span><span class="p">,</span>
+        <span class="n">xlabel_kws</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span><span class="n">labelpad</span><span class="o">=</span><span class="mi">7</span><span class="p">,</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">ha</span> <span class="o">=</span> <span class="s2">&quot;center&quot;</span><span class="p">),</span>
+        <span class="n">xlabel_side</span><span class="o">=</span><span class="s1">&#39;top&#39;</span>
+    <span class="p">)</span>
+    <span class="k">return</span><span class="p">[</span><span class="n">hmap_ls</span><span class="p">,</span> <span class="n">hmap_paths</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<p>We set the environment to run the analysis across the models:</p>
+<ul class="simple">
+<li><p>sbml_dir holding the models from Cell Collective.</p></li>
+<li><p>bnet_dir storing the models in bnet format.</p></li>
+<li><p>models_repo including the model names</p></li>
+</ul>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[160]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Conversion from SBML to BoolNet</span>
+
+<span class="c1"># BoolNet and SBML directories</span>
+<span class="n">sbml_dir</span> <span class="o">=</span> <span class="s2">&quot;models/sbml/&quot;</span>
+<span class="n">bnet_dir</span> <span class="o">=</span> <span class="s2">&quot;models/bnet/&quot;</span>
+
+<span class="c1"># Models #</span>
+<span class="n">models_repo</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">&quot;T Cell Receptor Signaling (SBML)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Guard Cell Abscisic Acid Signaling (SBML)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;T-LGL Survival Network 2011 (SBML)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;HGF Signaling in Keratinocytes (SBML)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;_Bortezomib Responses in U266 Human Myeloma Cells (SBML)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;MAPK Cancer Cell Fate Network (SBML)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;IL-1 Signaling (SBML)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;IL-6 Signalling (SBML)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Tumour Cell Invasion and Migration (SBML)&quot;</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<h4 style="margin-top: 0px; margin-bottom: 2px;"><p>Generate reports</p>
+</h4><h5 style="margin-top: 20px; margin-bottom: 2px;" id="section-1"><p>1.- T Cell Receptor Signaling [back]</p>
+</h5><p><p>This model represents the activation of primary T lymphocytes, key regulators of the adaptive immune response. Unlike many existing models, which are often based on data from transformed T cell lines, this network was constructed integrating experimental findings specifically from non-transformed, primary T cells. The model captures key signaling events triggered by the engagement of the T Cell Receptor (TCR), CD4/CD8 co-receptors, and the co-stimulatory molecule CD28. Therefore, it enables the
+in silico exploration of T cell activation pathways and was used to uncover non-obvious signaling routes, such asthose involving CD28 and the kinase Fyn.</p>
+</p><p style="font-size:90%; color:gray;"><p>Saez-Rodriguez J, Simeoni L, Lindquist JA, Hemenway R, Bommhardt U, et al. (2007).
+A Logical Model Provides Insights into T Cell Receptor Signaling.
+PLOS Computational Biology 3(8): e163.
+<a class="reference external" href="https://doi.org/10.1371/journal.pcbi.0030163">https://doi.org/10.1371/journal.pcbi.0030163</a></p>
+</p><div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Run analysis</span>
+<span class="c1"># Select model and convert SBML to BoolNet format</span>
+<span class="n">model_name</span> <span class="o">=</span> <span class="n">models_repo</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">model_path</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">bnet_dir</span><span class="si">}{</span><span class="n">model_name</span><span class="si">}</span><span class="s2">.bnet&quot;</span>
+<span class="n">sbml2bnet</span><span class="p">((</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">sbml_dir</span><span class="si">}{</span><span class="n">model_name</span><span class="si">}</span><span class="s2">.sbml&quot;</span><span class="p">),</span> <span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">bnet_dir</span><span class="si">}{</span><span class="n">model_name</span><span class="si">}</span><span class="s2">.bnet&quot;</span><span class="p">))</span>
+<span class="c1"># Load the BoolNet model, extract nodes and count paths</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">blv</span><span class="o">.</span><span class="n">Load</span><span class="p">(</span><span class="n">model_path</span><span class="p">)</span>
+<span class="n">nodes</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">Nodes</span>
+<span class="n">edges</span> <span class="o">=</span> <span class="mi">158</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">stdout</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">devnull</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span>
+<span class="n">start_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+<span class="n">pc</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">CountPaths</span><span class="p">(</span><span class="n">nodes</span><span class="p">,</span> <span class="n">ss_wise</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+<span class="n">end_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">stdout</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">__stdout__</span>
+<span class="n">sim_time</span> <span class="o">=</span> <span class="n">end_time</span> <span class="o">-</span> <span class="n">start_time</span>
+<span class="n">ls</span><span class="p">,</span> <span class="n">paths</span> <span class="o">=</span> <span class="n">Report</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">pc</span><span class="p">)</span> <span class="c1"># ls will contain stable state analysis results and paths will contain BooLEVARD&#39;s results</span>
+<br/></pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Plot Report</span>
+<span class="n">sim_sum1</span> <span class="o">=</span> <span class="n">simmulation_summary</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">pc</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">sim_sum1</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">hide</span><span class="p">(</span><span class="n">axis</span> <span class="o">=</span> <span class="s2">&quot;index&quot;</span><span class="p">))</span>
+<span class="k">with</span> <span class="n">contextlib</span><span class="o">.</span><span class="n">redirect_stdout</span><span class="p">(</span><span class="n">io</span><span class="o">.</span><span class="n">StringIO</span><span class="p">()):</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">4</span><span class="p">));</span> <span class="n">ls</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">4</span><span class="p">));</span> <span class="n">paths</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">1</span><span class="p">));</span> <span class="n">ls</span><span class="o">.</span><span class="n">plot_legends</span><span class="p">()</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">1</span><span class="p">));</span> <span class="n">paths</span><span class="o">.</span><span class="n">plot_legends</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div style="font-size:90%;"><p><strong>Figure 1.</strong> Heatmaps showing the Boolean states (top) and the corresponding transduction path counts (bottom), calculated using BooLEVARD, for the stable states reached by the T Cell Receptor Signaling Boolean model. The Boolean activation states of the input nodes (<em>unknown_input3</em>, <em>tcrlig_input</em>, <em>cd28_input</em>, <em>unknown_input</em>, <em>lckr_input</em>, and <em>unknown_input</em>) that drive each stable state are shown to the left of both heatmaps (black = ON, white = OFF). Path counts are shown on a signed
+logarithmic scale (Log₄ of the number of activating or inhibitory paths). Red indicates a high number of activating paths toward a node; blue indicates inhibitory paths. Rows (stable states) and columns (nodes) have been clustered using Euclidean distance to highlight patterns across conditions and model components.</p>
+</div><p>In the present and following examples, this visualization highlights the additional layer of information provided by <strong>BooLEVARD</strong> beyond the binary output of stable state analysis. Within each individual state, we can observe differences in the number of activating and inhibitory paths converging onto each node. These differences reflect both the topological positioning of each node (i.e. how upstream or downstream it is within the network) and the structural redundancy of the signaling routes
+that lead to its activation or repression. Moreover, by comparing across stable states, we can identify cases where different input combinations lead to identical binary states for certain nodes, yet exhibit marked differences in their transduction path profiles. Such cases may indicate nodes that are <strong>functionally stable but topologically variable</strong>, revealing hidden dependencies or alternative pathways that are not apparent from Boolean outputs alone. This enables a richer understanding of
+signal integration and robustness within the network.</p>
+<h5 style="margin-top: 00px; margin-bottom: 2px;" id="section-2"><p>2.- Guard Cell Abscisic Acid [back]</p>
+</h5><p><p>This model describes the signaling network underlying <strong>ABA-induced stomatal closure</strong> in plant guard cells. Stomata are microscopic pores on th leaf surface that regulate gas exchange, and their aperture is tightly controlled by a pair of guard cells. In response to drought, the hormone abscisic acid (ABA) promotes stomatal closure to minimize water loss. This complex physiological response involves a broad aarray of molecular components, including ion channels, secondary messengers, and
+cytoskeletal regulators. The model integrates more than 40 experimetally characterized components into a unified <strong>signal transduction network</strong> that captures the main regulatory interactions driving guard cell shrinkage and stomatal closure. It successfully reproduces known physiological and pathway-level respones to ABA.</p>
+</p><p style="font-size:90%; color:gray;"><p>Li S, Assmann SM, Albert R (2006).
+Predicting Essential Components of Signal Transduction Networks: A Dynamic Model of Guard Cell Abscisic Acid Signaling.
+PLOS Biology 4(10): e312.
+<a class="reference external" href="https://doi.org/10.1371/journal.pbio.0040312">https://doi.org/10.1371/journal.pbio.0040312</a></p>
+</p><div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Run analysis</span>
+<span class="c1"># Select model and convert SBML to BoolNet format</span>
+<span class="n">model_name</span> <span class="o">=</span> <span class="n">models_repo</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">model_path</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">bnet_dir</span><span class="si">}{</span><span class="n">model_name</span><span class="si">}</span><span class="s2">.bnet&quot;</span>
+<span class="n">sbml2bnet</span><span class="p">((</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">sbml_dir</span><span class="si">}{</span><span class="n">model_name</span><span class="si">}</span><span class="s2">.sbml&quot;</span><span class="p">),</span> <span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">bnet_dir</span><span class="si">}{</span><span class="n">model_name</span><span class="si">}</span><span class="s2">.bnet&quot;</span><span class="p">))</span>
+<span class="c1"># Load the BoolNet model, extract nodes and count paths</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">blv</span><span class="o">.</span><span class="n">Load</span><span class="p">(</span><span class="n">model_path</span><span class="p">)</span>
+<span class="n">nodes</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">Nodes</span><span class="p">;</span> <span class="n">edges</span> <span class="o">=</span> <span class="mi">78</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">stdout</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">devnull</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span>
+<span class="n">start_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+<span class="n">pc</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">CountPaths</span><span class="p">(</span><span class="n">nodes</span><span class="p">,</span> <span class="n">ss_wise</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+<span class="n">end_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">stdout</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">__stdout__</span>
+<span class="n">sim_time</span> <span class="o">=</span> <span class="n">end_time</span> <span class="o">-</span> <span class="n">start_time</span>
+<span class="n">ls</span><span class="p">,</span> <span class="n">paths</span> <span class="o">=</span> <span class="n">Report</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">pc</span><span class="p">)</span> <span class="c1"># ls will contain stable state analysis results and paths will contain BooLEVARD&#39;s results</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Plot Report</span>
+<span class="n">sim_sum2</span> <span class="o">=</span> <span class="n">simmulation_summary</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">pc</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">sim_sum2</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">hide</span><span class="p">(</span><span class="n">axis</span> <span class="o">=</span> <span class="s2">&quot;index&quot;</span><span class="p">))</span>
+<span class="k">with</span> <span class="n">contextlib</span><span class="o">.</span><span class="n">redirect_stdout</span><span class="p">(</span><span class="n">io</span><span class="o">.</span><span class="n">StringIO</span><span class="p">()):</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">2</span><span class="p">));</span> <span class="n">ls</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">2</span><span class="p">));</span> <span class="n">paths</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">1</span><span class="p">));</span> <span class="n">ls</span><span class="o">.</span><span class="n">plot_legends</span><span class="p">()</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">1</span><span class="p">));</span> <span class="n">paths</span><span class="o">.</span><span class="n">plot_legends</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div style="font-size:90%;"><p><strong>Figure 2.</strong> Heatmaps showing the Boolean states (top) and the corresponding transduction path counts (bottom), calculated using BooLEVARD, for the stable states reached by the Guard Cell Ascibic Acid Boolean model. The Boolean activation states of the input nodes (<em>ABA</em>, <em>ABH1</em>, <em>GCR1</em> and <em>ERA1</em>) that drive each stable state are shown to the left of both heatmaps (black = ON, white = OFF). Path counts are shown on a signed logarithmic scale (Log₄ of the number of activating or inhibitory
+paths). Red indicates a high number of activating paths toward a node; blue indicates inhibitory paths. Rows (stable states) and columns (nodes) have been clustered using Euclidean distance to highlight patterns across conditions and model components.</p>
+</div><h5 style="margin-top: 00px; margin-bottom: 2px;" id="section-3"><p>3.- T-LGL Survival Network [back]</p>
+</h5><p><p>This model represents the survival signaling network of <strong>T cell large granular lymphocyte (T-LGL) leukemia</strong>, a disease characterized by the clonal expansion of antigen-primed, cytotoxic T lymphocytes (CTL). The model integrates key signaling pathways involved in normal CTL activation and dysregulated survival signals observed in leukemic T-LGL cells. It includes not only molecular components like proteins, mRNAs, and small molecules, but also summary nodes that represent high-level cellular
+processes such as <em>Proliferation</em>, <em>Apoptosis</em>, and <em>Cytoskeleton signaling</em>. Thediscrete dynamic model provides a framework for identifying potential therapeutic targets in T-LGL leukemia and for exploring mechanisms of long-term CTL survival in both pathological and immunotherapeutic contexts.</p>
+<p style="font-size:90%; color:gray;"><p>Zhang R, Shah MV, Yang J, Nyland SB, Liu X, Yun JK, Albert R, Loughran TP (2008).
+Network Model of Survival Signaling in Large Granular Lymphocyte Leukemia.
+Proceedings of the National Academy of Sciences 105(42): 16308–16313.
+<a class="reference external" href="https://doi.org/10.1073/pnas.0806447105">https://doi.org/10.1073/pnas.0806447105</a></p>
+</p><div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Run analysis</span>
+<span class="c1"># Select model and convert SBML to BoolNet format</span>
+<span class="n">model_name</span> <span class="o">=</span> <span class="n">models_repo</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+<span class="n">model_path</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">bnet_dir</span><span class="si">}{</span><span class="n">model_name</span><span class="si">}</span><span class="s2">.bnet&quot;</span>
+<span class="n">sbml2bnet</span><span class="p">((</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">sbml_dir</span><span class="si">}{</span><span class="n">model_name</span><span class="si">}</span><span class="s2">.sbml&quot;</span><span class="p">),</span> <span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">bnet_dir</span><span class="si">}{</span><span class="n">model_name</span><span class="si">}</span><span class="s2">.bnet&quot;</span><span class="p">))</span>
+<span class="c1"># Load the BoolNet model, extract nodes and count paths</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">blv</span><span class="o">.</span><span class="n">Load</span><span class="p">(</span><span class="n">model_path</span><span class="p">)</span>
+<span class="n">nodes</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">Nodes</span><span class="p">;</span> <span class="n">edges</span> <span class="o">=</span> <span class="mi">195</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">stdout</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">devnull</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span>
+<span class="n">start_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+<span class="n">pc</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">CountPaths</span><span class="p">(</span><span class="n">nodes</span><span class="p">,</span> <span class="n">ss_wise</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+<span class="n">end_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">stdout</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">__stdout__</span>
+<span class="n">sim_time</span> <span class="o">=</span> <span class="n">end_time</span> <span class="o">-</span> <span class="n">start_time</span>
+<span class="n">ls</span><span class="p">,</span> <span class="n">paths</span> <span class="o">=</span> <span class="n">Report</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">pc</span><span class="p">)</span> <span class="c1"># ls will contain stable state analysis results and paths will contain BooLEVARD&#39;s results</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Plot Report</span>
+<span class="n">sim_sum3</span> <span class="o">=</span> <span class="n">simmulation_summary</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">pc</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">sim_sum3</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">hide</span><span class="p">(</span><span class="n">axis</span> <span class="o">=</span> <span class="s2">&quot;index&quot;</span><span class="p">))</span>
+<span class="k">with</span> <span class="n">contextlib</span><span class="o">.</span><span class="n">redirect_stdout</span><span class="p">(</span><span class="n">io</span><span class="o">.</span><span class="n">StringIO</span><span class="p">()):</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">));</span> <span class="n">ls</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">));</span> <span class="n">paths</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">1</span><span class="p">));</span> <span class="n">ls</span><span class="o">.</span><span class="n">plot_legends</span><span class="p">()</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">1</span><span class="p">));</span> <span class="n">paths</span><span class="o">.</span><span class="n">plot_legends</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div style="font-size:90%;"><p><strong>Figure 3.</strong> Heatmaps showing the Boolean states (top) and the corresponding transduction path counts (bottom), calculated using BooLEVARD, for the stable states reached by the T-LGL Survival Network Boolean model. The Boolean activation states of the input nodes (<em>CD45</em>, <em>TAX</em>, <em>Stimuli</em>, <em>PDGF</em>, <em>IL15</em>, <em>Stimuli2</em>) that drive each stable state are shown to the left of both heatmaps (black = ON, white = OFF). Path counts are shown on a signed logarithmic scale (Log₄ of the number of activating
+or inhibitory paths). Red indicates a high number of activating paths toward a node; blue indicates inhibitory paths. Rows (stable states) and columns (nodes) have been clustered using Euclidean distance to highlight patterns across conditions and model components.</p>
+</div><h5 style="margin-top: 00px; margin-bottom: 2px;" id="section-4"><p>4.- HGF Signaling in Keratinocytes [back]</p>
+</h5><p><p>This model describes the molecular signaling events that govern <strong>HGF-induced migration of human keratinocytes (NHK)</strong>, a key process in wound healing and tissue regeneration. The model integrates multiple layers of regulation, including protein signaling, gene expression, and autocrine feedback loops, to capture the full progression from initial stimulation by hepatocyte growth factor (HGF) to the execution of the migratory phenotype. The networks focuses on the dynamics of MET receptor
+activation, followed by downstream MAPK/ERK and p38/JNK pathway activation, and later sustained by autocrine signals involving EGF receptor and urokinase-type plasminogen activator receptor. This layered activation captures the time-dependent orchestration of early signaling and late transcriptial responses necessary for sustained migration. To reproduce this dynamic behavior, the model incorporates two distinct time scales:</p>
+<ul class="simple">
+<li><p>A <strong>rapid phase</strong> (0-1h) covering immediate protein phosphorylation events.</p></li>
+<li><p>A <strong>delayed phase</strong> (1-3h) encompassing transcriptional regulation and autocrine signaling.</p></li>
+</ul>
+<p>This hybrid Boolean framework bridges transcriptomic data with mechanistic signaling, offering a powerful tool to explore the temporal logic of wound healing and keratinocyte migration.</p>
+<p style="font-size:90%; color:gray;"><p>Singh A, Nascimento JM, Kowar S, Busch H, Boerries M (2012).
+Boolean Approach to Signalling Pathway Modelling in HGF-Induced Keratinocyte Migration.
+Bioinformatics, 28(18): i495–i501.
+<a class="reference external" href="https://doi.org/10.1093/bioinformatics/bts410">https://doi.org/10.1093/bioinformatics/bts410</a></p>
+</p><div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Run analysis</span>
+<span class="c1"># Select model and convert SBML to BoolNet format</span>
+<span class="n">model_name</span> <span class="o">=</span> <span class="n">models_repo</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+<span class="n">model_path</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">bnet_dir</span><span class="si">}{</span><span class="n">model_name</span><span class="si">}</span><span class="s2">.bnet&quot;</span>
+<span class="n">sbml2bnet</span><span class="p">((</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">sbml_dir</span><span class="si">}{</span><span class="n">model_name</span><span class="si">}</span><span class="s2">.sbml&quot;</span><span class="p">),</span> <span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">bnet_dir</span><span class="si">}{</span><span class="n">model_name</span><span class="si">}</span><span class="s2">.bnet&quot;</span><span class="p">))</span>
+<span class="c1"># Load the BoolNet model, extract nodes and count paths</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">blv</span><span class="o">.</span><span class="n">Load</span><span class="p">(</span><span class="n">model_path</span><span class="p">)</span>
+<span class="n">nodes</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">Nodes</span><span class="p">;</span> <span class="n">edges</span> <span class="o">=</span> <span class="mi">103</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">stdout</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">devnull</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span>
+<span class="n">start_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+<span class="n">pc</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">CountPaths</span><span class="p">(</span><span class="n">nodes</span><span class="p">,</span> <span class="n">ss_wise</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+<span class="n">end_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">stdout</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">__stdout__</span>
+<span class="n">sim_time</span> <span class="o">=</span> <span class="n">end_time</span> <span class="o">-</span> <span class="n">start_time</span>
+<span class="n">ls</span><span class="p">,</span> <span class="n">paths</span> <span class="o">=</span> <span class="n">Report</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">pc</span><span class="p">)</span> <span class="c1"># ls will contain stable state analysis results and paths will contain BooLEVARD&#39;s results</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Plot Report</span>
+<span class="n">sim_sum4</span> <span class="o">=</span> <span class="n">simmulation_summary</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">pc</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">sim_sum4</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">hide</span><span class="p">(</span><span class="n">axis</span> <span class="o">=</span> <span class="s2">&quot;index&quot;</span><span class="p">))</span>
+<span class="k">with</span> <span class="n">contextlib</span><span class="o">.</span><span class="n">redirect_stdout</span><span class="p">(</span><span class="n">io</span><span class="o">.</span><span class="n">StringIO</span><span class="p">()):</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">));</span> <span class="n">ls</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">));</span> <span class="n">paths</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">1</span><span class="p">));</span> <span class="n">ls</span><span class="o">.</span><span class="n">plot_legends</span><span class="p">()</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">1</span><span class="p">));</span> <span class="n">paths</span><span class="o">.</span><span class="n">plot_legends</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div style="font-size:90%;"><p><strong>Figure 4.</strong> Heatmaps showing the Boolean states (top) and the corresponding transduction path counts (bottom), calculated using BooLEVARD, for the stable states reached by the HGF Signaling in Kertinocytes Boolean model. The Boolean activation states of the input nodes (<em>DUSP1</em>, <em>HGF</em>, <em>PTEN</em>, <em>PAI_1</em>, <em>AKAP12</em>, <em>EGF</em>) that drive each stable state are shown to the left of both heatmaps (black = ON, white = OFF). Path counts are shown on a signed logarithmic scale (Log₄ of the number of
+activating or inhibitory paths). Red indicates a high number of activating paths toward a node; blue indicates inhibitory paths. Rows (stable states) and columns (nodes) have been clustered using Euclidean distance to highlight patterns across conditions and model components.</p>
+</div><h5 style="margin-top: 00px; margin-bottom: 2px;" id="section-5"><p>5.- Bortezomib Responses in U266 Human Myeloma Cells [back]</p>
+</h5><p><p>This model represents the signaling pathways regulating <strong>cell survival and apoptosis in U266 multiple myeloma (MM) cells</strong>, with a focus on understanding the cytotoxic effects of bortezomib, a proteasome inhibitor used as first-line therapy in MM. The network integrates major signaling axes such as NFkB, JAK/STAT, and Bcl-2 family proteins. The model illustrate how discrete logic-based models can be coupled with drug response dynamics to explore therapeutic mechanisms and rationale
+discrepancies between expected and observed outcomes.</p>
+<p style="font-size:90%; color:gray;"><p>Chudasama VL, Ovacik MA, Abernethy DR, Mager DE (2015).
+Logic-Based and Cellular Pharmacodynamic Modeling of Bortezomib Responses in U266 Human Myeloma Cells.
+The Journal of Pharmacology and Experimental Therapeutics, 354(3): 448–458.
+<a class="reference external" href="https://doi.org/10.1124/jpet.115.224766">https://doi.org/10.1124/jpet.115.224766</a></p>
+</p><div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Run analysis</span>
+<span class="c1"># Select model and convert SBML to BoolNet format</span>
+<span class="n">model_name</span> <span class="o">=</span> <span class="n">models_repo</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span>
+<span class="n">model_path</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">bnet_dir</span><span class="si">}{</span><span class="n">model_name</span><span class="si">}</span><span class="s2">.bnet&quot;</span>
+<span class="n">sbml2bnet</span><span class="p">((</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">sbml_dir</span><span class="si">}{</span><span class="n">model_name</span><span class="si">}</span><span class="s2">.sbml&quot;</span><span class="p">),</span> <span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">bnet_dir</span><span class="si">}{</span><span class="n">model_name</span><span class="si">}</span><span class="s2">.bnet&quot;</span><span class="p">))</span>
+<span class="c1"># Load the BoolNet model, extract nodes and count paths</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">blv</span><span class="o">.</span><span class="n">Load</span><span class="p">(</span><span class="n">model_path</span><span class="p">)</span>
+<span class="n">nodes</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">Nodes</span><span class="p">;</span> <span class="n">edges</span> <span class="o">=</span> <span class="mi">131</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">stdout</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">devnull</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span>
+<span class="n">start_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+<span class="n">pc</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">CountPaths</span><span class="p">(</span><span class="n">nodes</span><span class="p">,</span> <span class="n">ss_wise</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+<span class="n">end_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">stdout</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">__stdout__</span>
+<span class="n">sim_time</span> <span class="o">=</span> <span class="n">end_time</span> <span class="o">-</span> <span class="n">start_time</span>
+<span class="n">ls</span><span class="p">,</span> <span class="n">paths</span> <span class="o">=</span> <span class="n">Report</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">pc</span><span class="p">)</span> <span class="c1"># ls will contain stable state analysis results and paths will contain BooLEVARD&#39;s results</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Plot Report</span>
+<span class="n">sim_sum5</span> <span class="o">=</span> <span class="n">simmulation_summary</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">pc</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">sim_sum5</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">hide</span><span class="p">(</span><span class="n">axis</span> <span class="o">=</span> <span class="s2">&quot;index&quot;</span><span class="p">))</span>
+<span class="k">with</span> <span class="n">contextlib</span><span class="o">.</span><span class="n">redirect_stdout</span><span class="p">(</span><span class="n">io</span><span class="o">.</span><span class="n">StringIO</span><span class="p">()):</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">5</span><span class="p">));</span> <span class="n">ls</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">5</span><span class="p">));</span> <span class="n">paths</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">1</span><span class="p">));</span> <span class="n">ls</span><span class="o">.</span><span class="n">plot_legends</span><span class="p">()</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">1</span><span class="p">));</span> <span class="n">paths</span><span class="o">.</span><span class="n">plot_legends</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div style="font-size:90%;"><p><strong>Figure 5.</strong> Heatmaps showing the Boolean states (top) and the corresponding transduction path counts (bottom), calculated using BooLEVARD, for the stable states reached by the Bortezomib Responses in U266 Human Myeloma Cells Boolean Model. The Boolean activation states of the input nodes (<em>SHP1</em>, <em>TNFAR</em>, <em>X</em>, <em>TNFA</em>, <em>Bort</em>) that drive each stable state are shown to the left of both heatmaps (black = ON, white = OFF). Path counts are shown on a signed logarithmic scale (Log₄ of the number of
+activating or inhibitory paths). Red indicates a high number of activating paths toward a node; blue indicates inhibitory paths. Rows (stable states) and columns (nodes) have been clustered using Euclidean distance to highlight patterns across conditions and model components.</p>
+</div><h5 style="margin-top: 00px; margin-bottom: 2px;" id="section-6"><p>6.- MAPK Cancer Cell Fate Network [back]</p>
+</h5><p><p>This model captures the complex dynamics of the <strong>MAPK signaling network</strong>, which regulates crucial cellular processes such as proliferation, differentiation, survival, and apoptosis. The network integrates multiple signaling branches relevant in cancer biology, where its desregulation is associated with tumor progression and therapy resistance. Focusing on urinary bladder cancer, the model incorporates key components and interactions derived from extensive literature curation, and was developed
+to explore how combinations of stimuli and perturbations influence cell fate decisions, providing mechanistic hypotheses to explain divergent cellular behaviors in response to oncogenic signals.</p>
+<p style="font-size:90%; color:gray;"><p>Grieco L, Calzone L, Bernard-Pierrot I, Radvanyi F, Kahn-Perlès B, et al. (2013).
+Integrative Modelling of the Influence of MAPK Network on Cancer Cell Fate Decision.
+PLOS Computational Biology 9(10): e1003286.
+<a class="reference external" href="https://doi.org/10.1371/journal.pcbi.1003286">https://doi.org/10.1371/journal.pcbi.1003286</a></p>
+</p><div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Run analysis</span>
+<span class="c1"># Select model and convert SBML to BoolNet format</span>
+<span class="n">model_name</span> <span class="o">=</span> <span class="n">models_repo</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span>
+<span class="n">model_path</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">bnet_dir</span><span class="si">}{</span><span class="n">model_name</span><span class="si">}</span><span class="s2">.bnet&quot;</span>
+<span class="n">sbml2bnet</span><span class="p">((</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">sbml_dir</span><span class="si">}{</span><span class="n">model_name</span><span class="si">}</span><span class="s2">.sbml&quot;</span><span class="p">),</span> <span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">bnet_dir</span><span class="si">}{</span><span class="n">model_name</span><span class="si">}</span><span class="s2">.bnet&quot;</span><span class="p">))</span>
+<span class="c1"># Load the BoolNet model, extract nodes and count paths</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">blv</span><span class="o">.</span><span class="n">Load</span><span class="p">(</span><span class="n">model_path</span><span class="p">)</span>
+<span class="n">nodes</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">Nodes</span><span class="p">;</span> <span class="n">edges</span> <span class="o">=</span> <span class="mi">104</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">stdout</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">devnull</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span>
+<span class="n">start_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+<span class="n">pc</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">CountPaths</span><span class="p">(</span><span class="n">nodes</span><span class="p">,</span> <span class="n">ss_wise</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+<span class="n">end_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">stdout</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">__stdout__</span>
+<span class="n">sim_time</span> <span class="o">=</span> <span class="n">end_time</span> <span class="o">-</span> <span class="n">start_time</span>
+<span class="n">ls</span><span class="p">,</span> <span class="n">paths</span> <span class="o">=</span> <span class="n">Report</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">pc</span><span class="p">)</span> <span class="c1"># ls will contain stable state analysis results and paths will contain BooLEVARD&#39;s results</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Plot Report</span>
+<span class="n">sim_sum6</span> <span class="o">=</span> <span class="n">simmulation_summary</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">pc</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">sim_sum6</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">hide</span><span class="p">(</span><span class="n">axis</span> <span class="o">=</span> <span class="s2">&quot;index&quot;</span><span class="p">))</span>
+<span class="k">with</span> <span class="n">contextlib</span><span class="o">.</span><span class="n">redirect_stdout</span><span class="p">(</span><span class="n">io</span><span class="o">.</span><span class="n">StringIO</span><span class="p">()):</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">3</span><span class="p">));</span> <span class="n">ls</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">3</span><span class="p">));</span> <span class="n">paths</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">1</span><span class="p">));</span> <span class="n">ls</span><span class="o">.</span><span class="n">plot_legends</span><span class="p">()</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">1</span><span class="p">));</span> <span class="n">paths</span><span class="o">.</span><span class="n">plot_legends</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div style="font-size:90%;"><p><strong>Figure 6.</strong> Heatmaps showing the Boolean states (top) and the corresponding transduction path counts (bottom), calculated using BooLEVARD, for the stable states reached by the MAPK Cancer Cell Fate Network Boolean Model. The Boolean activation states of the input nodes (<em>DNA_damage</em>, <em>TGFBR_stimulus</em>, <em>FGFR3_stimulus</em>, <em>EGFR_stimulus</em>) that drive each stable state are shown to the left of both heatmaps (black = ON, white = OFF). Path counts are shown on a signed logarithmic scale (Log₄ of the
+number of activating or inhibitory paths). Red indicates a high number of activating paths toward a node; blue indicates inhibitory paths. Rows (stable states) and columns (nodes) have been clustered using Euclidean distance to highlight patterns across conditions and model components.</p>
+</div><h5 style="margin-top: 00px; margin-bottom: 2px;" id="section-7"><p>7.- IL-1 Signaling [back]</p>
+</h5><p><p>This model captures the complex dynamics of the IL-1 signaling mechanisms, which regulate crucial cellular processes such as immune coordination upon infection or injury, mitogenic and pro-proliferative signaling, apoptosis, inhibition, chemotaxis, and angiogenesis, thereby balancing tissue regeneration against invasive growth, tumorigenesis, and metastasis. The network integrates multiple stimulus-response branches, including feedback and feed-forward loops, whose dysregulation is implicated
+not only in cancer progression, but also in insulin ressitance. The model incorporates extensive literature-curated components and is optimized with high-throughput phosphoproteomic data.</p>
+<p style="font-size:90%; color:gray;"><p>Ryll A, Samaga R, Schaper F, Alexopoulos LG, Klamt S, et al. (2011).
+Large-scale network models of IL-1 and IL-6 signalling and their hepatocellular specification.
+Mol Biosyst. 7(12):3253–70.
+<a class="reference external" href="https://doi.org/10.1039/c1mb05261f">https://doi.org/10.1039/c1mb05261f</a></p>
+</p><div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Run analysis</span>
+<span class="c1"># Select model and convert SBML to BoolNet format</span>
+<span class="n">model_name</span> <span class="o">=</span> <span class="n">models_repo</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span>
+<span class="n">model_path</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">bnet_dir</span><span class="si">}{</span><span class="n">model_name</span><span class="si">}</span><span class="s2">.bnet&quot;</span>
+<span class="n">sbml2bnet</span><span class="p">((</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">sbml_dir</span><span class="si">}{</span><span class="n">model_name</span><span class="si">}</span><span class="s2">.sbml&quot;</span><span class="p">),</span> <span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">bnet_dir</span><span class="si">}{</span><span class="n">model_name</span><span class="si">}</span><span class="s2">.bnet&quot;</span><span class="p">))</span>
+<span class="c1"># Load the BoolNet model, extract nodes and count paths</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">blv</span><span class="o">.</span><span class="n">Load</span><span class="p">(</span><span class="n">model_path</span><span class="p">)</span>
+<span class="n">nodes</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">Nodes</span><span class="p">;</span> <span class="n">edges</span> <span class="o">=</span> <span class="mi">218</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">stdout</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">devnull</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span>
+<span class="n">start_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+<span class="n">pc</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">CountPaths</span><span class="p">(</span><span class="n">nodes</span><span class="p">,</span> <span class="n">ss_wise</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+<span class="n">end_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">stdout</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">__stdout__</span>
+<span class="n">sim_time</span> <span class="o">=</span> <span class="n">end_time</span> <span class="o">-</span> <span class="n">start_time</span>
+<span class="n">ls</span><span class="p">,</span> <span class="n">paths</span> <span class="o">=</span> <span class="n">Report</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">pc</span><span class="p">)</span> <span class="c1"># ls will contain stable state analysis results and paths will contain BooLEVARD&#39;s results</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Plot Report</span>
+<span class="n">sim_sum7</span> <span class="o">=</span> <span class="n">simmulation_summary</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">pc</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">sim_sum7</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">hide</span><span class="p">(</span><span class="n">axis</span> <span class="o">=</span> <span class="s2">&quot;index&quot;</span><span class="p">))</span>
+<span class="k">with</span> <span class="n">contextlib</span><span class="o">.</span><span class="n">redirect_stdout</span><span class="p">(</span><span class="n">io</span><span class="o">.</span><span class="n">StringIO</span><span class="p">()):</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">3</span><span class="p">));</span> <span class="n">ls</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">3</span><span class="p">));</span> <span class="n">paths</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">1</span><span class="p">));</span> <span class="n">ls</span><span class="o">.</span><span class="n">plot_legends</span><span class="p">()</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">1</span><span class="p">));</span> <span class="n">paths</span><span class="o">.</span><span class="n">plot_legends</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<h5 style="margin-top: 00px; margin-bottom: 2px;" id="section-8"><p>8.- IL-6 Signaling [back]</p>
+</h5><p><p>This model captures the complex dynamics of the IL-6 signaling mechanisms, which regulate crucial cellular processes such as immune coordination upon infection or injury, mitogenic and pro-proliferative signaling, apoptosis, inhibition, chemotaxis, and angiogenesis, thereby balancing tissue regeneration against invasive growth, tumorigenesis, and metastasis. The network integrates multiple stimulus-response branches, including feedback and feed-forward loops, whose dysregulation is implicated
+not only in cancer progression, but also in insulin ressitance. The model incorporates extensive literature-curated components and is optimized with high-throughput phosphoproteomic data.</p>
+<p style="font-size:90%; color:gray;"><p>Ryll A, Samaga R, Schaper F, Alexopoulos LG, Klamt S, et al. (2011).
+Large-scale network models of IL-1 and IL-6 signalling and their hepatocellular specification.
+Mol Biosyst. 7(12):3253–70.
+<a class="reference external" href="https://doi.org/10.1039/c1mb05261f">https://doi.org/10.1039/c1mb05261f</a></p>
+</p><div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Run analysis</span>
+<span class="c1"># Select model and convert SBML to BoolNet format</span>
+<span class="n">model_name</span> <span class="o">=</span> <span class="n">models_repo</span><span class="p">[</span><span class="mi">7</span><span class="p">]</span>
+<span class="n">model_path</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">bnet_dir</span><span class="si">}{</span><span class="n">model_name</span><span class="si">}</span><span class="s2">.bnet&quot;</span>
+<span class="n">sbml2bnet</span><span class="p">((</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">sbml_dir</span><span class="si">}{</span><span class="n">model_name</span><span class="si">}</span><span class="s2">.sbml&quot;</span><span class="p">),</span> <span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">bnet_dir</span><span class="si">}{</span><span class="n">model_name</span><span class="si">}</span><span class="s2">.bnet&quot;</span><span class="p">))</span>
+<span class="c1"># Load the BoolNet model, extract nodes and count paths</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">blv</span><span class="o">.</span><span class="n">Load</span><span class="p">(</span><span class="n">model_path</span><span class="p">)</span>
+<span class="n">nodes</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">Nodes</span><span class="p">;</span> <span class="n">edges</span> <span class="o">=</span> <span class="mi">149</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">stdout</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">devnull</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span>
+<span class="n">start_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+<span class="n">pc</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">CountPaths</span><span class="p">(</span><span class="n">nodes</span><span class="p">,</span> <span class="n">ss_wise</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+<span class="n">end_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">stdout</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">__stdout__</span>
+<span class="n">sim_time</span> <span class="o">=</span> <span class="n">end_time</span> <span class="o">-</span> <span class="n">start_time</span>
+<span class="n">ls</span><span class="p">,</span> <span class="n">paths</span> <span class="o">=</span> <span class="n">Report</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">pc</span><span class="p">)</span> <span class="c1"># ls will contain stable state analysis results and paths will contain BooLEVARD&#39;s results</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Plot Report</span>
+<span class="n">sim_sum8</span> <span class="o">=</span> <span class="n">simmulation_summary</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">pc</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">sim_sum8</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">hide</span><span class="p">(</span><span class="n">axis</span> <span class="o">=</span> <span class="s2">&quot;index&quot;</span><span class="p">))</span>
+<span class="k">with</span> <span class="n">contextlib</span><span class="o">.</span><span class="n">redirect_stdout</span><span class="p">(</span><span class="n">io</span><span class="o">.</span><span class="n">StringIO</span><span class="p">()):</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">3</span><span class="p">));</span> <span class="n">ls</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">3</span><span class="p">));</span> <span class="n">paths</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">1</span><span class="p">));</span> <span class="n">ls</span><span class="o">.</span><span class="n">plot_legends</span><span class="p">()</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">1</span><span class="p">));</span> <span class="n">paths</span><span class="o">.</span><span class="n">plot_legends</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<h5 style="margin-top: 00px; margin-bottom: 2px;" id="section-9"><p>9.- Tumor Cell Invasion [back]</p>
+</h5><p><p>This model captures the complex dynamics of the <strong>early metastatic cascade</strong>, which regulates crucial cellular processes such as local invasion and migration. The network integrates multiple signaling branches relevant in cancer biology, where its dysregulation is associated with metastatic dissemination and patient mortality. Focusing on TGF-beta-driven epithelial-to-mesenchymal transition in lung cancer and validated against transcriptome dynamics and mouse models, the model incorporates key
+components and interactions derived from extensive literature curation.</p>
+<p style="font-size:90%; color:gray;"><p>Cohen DPA, Martignetti L, Robine S, Barillot E, Zinovyev A, et al. (2015).
+Mathematical Modelling of Molecular Pathways Enabling Tumour Cell Invasion and Migration.
+PLOS Computational Biology 11(11): e1004571.
+<a class="reference external" href="https://doi.org/10.1371/journal.pcbi.1004571">https://doi.org/10.1371/journal.pcbi.1004571</a></p>
+</p><div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Run analysis</span>
+<span class="c1"># Select model and convert SBML to BoolNet format</span>
+<span class="n">model_name</span> <span class="o">=</span> <span class="n">models_repo</span><span class="p">[</span><span class="mi">8</span><span class="p">]</span>
+<span class="n">model_path</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">bnet_dir</span><span class="si">}{</span><span class="n">model_name</span><span class="si">}</span><span class="s2">.bnet&quot;</span>
+<span class="n">sbml2bnet</span><span class="p">((</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">sbml_dir</span><span class="si">}{</span><span class="n">model_name</span><span class="si">}</span><span class="s2">.sbml&quot;</span><span class="p">),</span> <span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">bnet_dir</span><span class="si">}{</span><span class="n">model_name</span><span class="si">}</span><span class="s2">.bnet&quot;</span><span class="p">))</span>
+<span class="c1"># Load the BoolNet model, extract nodes and count paths</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">blv</span><span class="o">.</span><span class="n">Load</span><span class="p">(</span><span class="n">model_path</span><span class="p">)</span>
+<span class="n">nodes</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">Nodes</span><span class="p">;</span> <span class="n">edges</span> <span class="o">=</span> <span class="mi">218</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">stdout</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">devnull</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span>
+<span class="n">start_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+<span class="n">pc</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">CountPaths</span><span class="p">(</span><span class="n">nodes</span><span class="p">,</span> <span class="n">ss_wise</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+<span class="n">end_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">stdout</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">__stdout__</span>
+<span class="n">sim_time</span> <span class="o">=</span> <span class="n">end_time</span> <span class="o">-</span> <span class="n">start_time</span>
+<span class="n">ls</span><span class="p">,</span> <span class="n">paths</span> <span class="o">=</span> <span class="n">Report</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">pc</span><span class="p">)</span> <span class="c1"># ls will contain stable state analysis results and paths will contain BooLEVARD&#39;s results</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Plot Report</span>
+<span class="n">sim_sum9</span> <span class="o">=</span> <span class="n">simmulation_summary</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">pc</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">sim_sum9</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">hide</span><span class="p">(</span><span class="n">axis</span> <span class="o">=</span> <span class="s2">&quot;index&quot;</span><span class="p">))</span>
+<span class="k">with</span> <span class="n">contextlib</span><span class="o">.</span><span class="n">redirect_stdout</span><span class="p">(</span><span class="n">io</span><span class="o">.</span><span class="n">StringIO</span><span class="p">()):</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">3</span><span class="p">));</span> <span class="n">ls</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">3</span><span class="p">));</span> <span class="n">paths</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">1</span><span class="p">));</span> <span class="n">ls</span><span class="o">.</span><span class="n">plot_legends</span><span class="p">()</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">1</span><span class="p">));</span> <span class="n">paths</span><span class="o">.</span><span class="n">plot_legends</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="Cancer_Metastasis.html" class="btn btn-neutral float-left" title="Cancer Metastasis" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../citation.html" class="btn btn-neutral float-right" title="Citation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Marco Fariñas.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
