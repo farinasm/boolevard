@@ -16,6 +16,7 @@ BooLEVARD is a Python package designed to compute the number of paths leading to
 
    installation
    tutorial
+   background
 
 .. toctree::
    :maxdepth: 2

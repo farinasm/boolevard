@@ -20,6 +20,7 @@ html_theme_options = {
     "logo_only": True,
     "display_version": True,
 }
+html_extra_path = ['Background.pdf']
 
 # Automatically generate index from README if exists
 readme = pathlib.Path().absolute().parents[1].joinpath('README.rst')

@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BooLEVARD: User Manual &mdash; BooLEVARD 0.1.1 documentation</title>
+  <title>Background &mdash; BooLEVARD 0.1.1 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
 
@@ -20,12 +20,11 @@
         <script src="_static/doctools.js?v=9bcbadda"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-        <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-        <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="API Reference" href="api.html" /> 
+    <link rel="next" title="Citation" href="citation.html" />
+    <link rel="prev" title="Processing Boolean Models from Cell Collective" href="tutorials/Processing_Boolean_Models_from_Cell_Collective.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -36,7 +35,7 @@
 
           
           
-          <a href="#">
+          <a href="index.html">
             
               <img src="https://raw.githubusercontent.com/farinasm/boolevard/main/src/Logo_white.png" class="logo" alt="Logo"/>
           </a>
@@ -56,10 +55,10 @@
 <li class="toctree-l1"><a class="reference internal" href="api.html">API Reference</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">User Guide</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tutorial.html">Tutorials</a></li>
-<li class="toctree-l1"><a class="reference internal" href="background.html">Background</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Background</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Citation</span></p>
 <ul>
@@ -72,17 +71,17 @@
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="#">BooLEVARD</a>
+          <a href="index.html">BooLEVARD</a>
       </nav>
 
       <div class="wy-nav-content">
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="#" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">BooLEVARD: User Manual</li>
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Background</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/background.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -90,53 +89,16 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="boolevard-user-manual">
-<h1>BooLEVARD: User Manual<a class="headerlink" href="#boolevard-user-manual" title="Link to this heading"></a></h1>
-<p>BooLEVARD is a Python package designed to compute the number of paths leading to node activation or inactivation in Boolean models. For latest releases, visit <a class="reference external" href="https://github.com/farinasm/boolevard">BooLEVARD’s GitHub Repository</a></p>
-<div class="toctree-wrapper compound">
-<p class="caption" role="heading"><span class="caption-text">API</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="api.html">API Reference</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="api.html#loading-an-object-of-boolev-class">Loading an object of BooLEV class</a></li>
-<li class="toctree-l2"><a class="reference internal" href="api.html#using-boolev-objects">Using BooLEV objects</a></li>
-<li class="toctree-l2"><a class="reference internal" href="api.html#exporting-boolev-objects">Exporting BooLEV objects</a></li>
-</ul>
-</li>
-</ul>
-</div>
-<div class="toctree-wrapper compound">
-<p class="caption" role="heading"><span class="caption-text">User Guide</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="installation.html#features">Features</a></li>
-<li class="toctree-l2"><a class="reference internal" href="installation.html#instalation-from-pypi">Instalation from PyPI</a></li>
-<li class="toctree-l2"><a class="reference internal" href="installation.html#installation-with-conda">Installation with conda</a></li>
-<li class="toctree-l2"><a class="reference internal" href="installation.html#installation-from-source">Installation from source</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="tutorial.html">Tutorials</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="tutorials/Quick_Start.html">Quick Start</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tutorials/Guard_Cell_Abscisic_Acid.html">Guard Cell Abscinic Acid</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tutorials/Cancer_Metastasis.html">Cancer Metastasis</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tutorials/Processing_Boolean_Models_from_Cell_Collective.html">Processing Boolean Models from Cell Collective</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="background.html">Background</a></li>
-</ul>
-</div>
-<div class="toctree-wrapper compound">
-<p class="caption" role="heading"><span class="caption-text">Citation</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="citation.html">Citation</a></li>
-</ul>
-</div>
-</section>
+  <section id="background">
+<h1>Background<a class="headerlink" href="#background" title="Link to this heading"></a></h1>
+<embed src="Background.pdf" type="application/pdf" width="100%" height="800px"></section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="api.html" class="btn btn-neutral float-right" title="API Reference" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="tutorials/Processing_Boolean_Models_from_Cell_Collective.html" class="btn btn-neutral float-left" title="Processing Boolean Models from Cell Collective" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="citation.html" class="btn btn-neutral float-right" title="Citation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
